@@ -1,1 +1,3 @@
-/Users/david/.gvimrc.after
+colorscheme solarized
+set guifont=Menlo:h13
+set guioptions-=T

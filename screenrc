@@ -1,1 +1,35 @@
-/Users/david/.screenrc
+# Turn off the annoying startup message
+startup_message off
+
+defscrollback 10000
+hardcopy_append on
+defutf8 on
+vbell off
+
+term xterm-color
+termcapinfo xterm*|Eterm|mlterm|rxvt 'hs:ts=\E]0;:fs=\007:ds=\E]0;screen\007'
+# 8-16 Color Support
+termcap  xterm AF=\E[3%dm
+terminfo xterm AF=\E[3%p1%dm
+termcap  xterm AB=\E[4%dm
+terminfo xterm AB=\E[4%p1%dm
+
+# 256 Color Support
+terminfo xterm Co=256
+termcap  xterm Co=256
+termcap  xterm AF=\E[38;5;%dm
+terminfo xterm AF=\E[38;5;%p1%dm
+termcap  xterm AB=\E[48;5;%dm
+terminfo xterm AB=\E[48;5;%p1%dm  
+
+# Set status line in window title, preview:
+# ( rsk )         0$ top  3-$ watch  (4*$ bash)        ( load: 0,01 0,01 0,00 ) (14:59 PM - 2009-02-10)
+hardstatus alwayslastline "%{yk}( %{Y}%H %{y})%=  %{wk}%?%-Lw%?%{R}(%{W}%n*%f %t%?(%u)%?%{R})%{w}%?%+Lw%?%?%= %{y}( %{Y}load: %l %{y}) (%C %A - %Y-%m-%d)"
+
+# use F7-F8 to turn on|off the status bar off at the bottom of the screen
+bindkey -k k7 hardstatus alwayslastline
+bindkey -k k8 hardstatus alwaysignore
+
+# Set left and right meta key mods ALT-,. 
+bindkey "^[," prev
+bindkey "^[." next

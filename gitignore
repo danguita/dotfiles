@@ -1,1 +1,3 @@
-/Users/david/.gitignore
+.DS_Store
+*~
+.*.swp
