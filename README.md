@@ -18,8 +18,8 @@ I use [ZSH](http://www.zsh.org/) as my default shell. This config file is pretty
 There's nothing to say, these are the most well-known terminal multiplexers. For now my choice is GNU screen.
 
 ### Other files
-* `.rvmrc` defines [Ruby Version Manager](http://beginrescueend.com/) path.
-* `.gitignore` sets the default ignored files in a git repo.
+* `.rvmrc` defines [Ruby Version Manager](http://beginrescueend.com/) path
+* `.gitignore` sets the default ignored files in a git repo
 
 ## License
 For config files?! Feel free to use any of them.
