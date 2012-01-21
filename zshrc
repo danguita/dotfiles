@@ -55,7 +55,7 @@ export ZSH=$HOME/.oh-my-zsh
 sshs() { ssh -t $1 screen -r; }
 
 # attach tmux thought ssh
-ssht() { ssh -t $1 tmux attach; }
+ssht() { ssh -t $1 tmux attach -t $2; }
 
 # aliases:
 
