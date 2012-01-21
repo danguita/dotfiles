@@ -6,7 +6,6 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
-# ZSH_THEME="terminalparty"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -41,13 +40,22 @@ export EDITOR=vim
 # ZSH export
 export ZSH=$HOME/.oh-my-zsh
 
+# TERM export for 256color mode
+# export TERM=screen-256color
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # functions:
 
 # attach screen thought ssh
 sshs() { ssh -t $1 screen -r; }
+
+# attach tmux thought ssh
+ssht() { ssh -t $1 tmux attach; }
 
 # aliases:
 
@@ -58,6 +66,9 @@ alias mv='mv -i'
 
 # cakephp console
 alias cakeconsole='../cake/console/cake'
+
+# tmux 256color mode
+# alias tmux='TERM=screen-256color tmux'
 
 # ack options
 export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"

@@ -15,7 +15,7 @@ I use [ZSH](http://www.zsh.org/) as my default shell. This config file is pretty
 ### GNU screen & tmux
 `.screenrc`, `.tmux.conf`
 
-There's nothing to say, these are the most well-known terminal multiplexers. For now my choice is GNU screen.
+There's nothing to say, these are the most well-known terminal multiplexers. I was using screen for years but I'm currently switching to tmux + [tmuxinator](https://github.com/aziz/tmuxinator).
 
 ### Other files
 * `.rvmrc` defines [Ruby Version Manager](http://beginrescueend.com/) path
