@@ -51,10 +51,10 @@ export ZSH=$HOME/.oh-my-zsh
 
 # functions:
 
-# attach screen thought ssh
+# attach screen through ssh
 sshs() { ssh -t $1 screen -r; }
 
-# attach tmux thought ssh
+# attach tmux through ssh
 ssht() { ssh -t $1 tmux attach -t $2; }
 
 # aliases:
