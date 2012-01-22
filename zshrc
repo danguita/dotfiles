@@ -40,9 +40,6 @@ export EDITOR=vim
 # ZSH export
 export ZSH=$HOME/.oh-my-zsh
 
-# TERM export for 256color mode
-# export TERM=screen-256color
-
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
@@ -51,10 +48,12 @@ export ZSH=$HOME/.oh-my-zsh
 
 # functions:
 
-# attach screen through ssh
+# attach single GNU screen through ssh
+# usage: sshs user_name@server_name
 sshs() { ssh -t $1 screen -r; }
 
-# attach tmux through ssh
+# attach tmux session through ssh
+# usage: ssht user_name@server_name session_name
 ssht() { ssh -t $1 tmux attach -t $2; }
 
 # aliases:
@@ -67,16 +66,16 @@ alias mv='mv -i'
 # cakephp console
 alias cakeconsole='../cake/console/cake'
 
-# tmux 256color mode
+# force tmux 256color mode
 # alias tmux='TERM=screen-256color tmux'
 
-# ack options
+# ack options (CakePHP and CoffeeScript templates)
 export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"
 
 # replace built-in vim by MacVim's compiled version w/ ruby support
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
-# custom prompt
+# customize prompt
 # PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 # ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
 # ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
