@@ -1,4 +1,1 @@
 let mapleader = ","
-
-call janus#disable_plugin('hammer')
-call janus#disable_plugin('buffergator')
