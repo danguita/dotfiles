@@ -21,7 +21,7 @@ ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow rvm)
+plugins=(git git-flow rvm brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,8 +63,11 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# cakephp console
-alias cakeconsole='../cake/console/cake'
+# cakephp1.3 console
+alias cakeconsole13='../cake/console/cake'
+
+# cakephp2 console
+alias cakeconsole='./Console/cake'
 
 # force tmux 256color mode
 # alias tmux='TERM=screen-256color tmux'
