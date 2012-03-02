@@ -22,3 +22,12 @@ inoremap jk <Esc>
 " Set useful status line
 " http://vimbits.com/bits/95
 set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%04l,%04v][%p%%]\ [LEN=%L]
+
+" ignorelist
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
+
+" CtrlP path mode
+" 0 - don’t manage working directory.
+" 1 - the parent directory of the current file.
+" 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .bzr/ _darcs/ root.dir
+let g:ctrlp_working_path_mode = 1
