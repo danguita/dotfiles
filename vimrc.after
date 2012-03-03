@@ -30,4 +30,4 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 " 0 - don’t manage working directory.
 " 1 - the parent directory of the current file.
 " 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .bzr/ _darcs/ root.dir
-let g:ctrlp_working_path_mode = 1
+let g:ctrlp_working_path_mode = 2
