@@ -1,0 +1,27 @@
+# Me
+set from = "you@gmail.com"
+set realname = "Your Real Name"
+
+# My credentials
+set smtp_url = "smtp://you@gmail.com@smtp.gmail.com:587/"
+set imap_user = "you@gmail.com"
+
+# My mailboxes
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+
+# Where to put the stuff
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+
+# Misc
+set mail_check = 30
+set move = no
+set imap_keepalive = 900
+set sort = threads
+set editor = "vim"
+
+# GnuPG bootstrap
+# source ~/.mutt/gpg.rc
