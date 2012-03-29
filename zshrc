@@ -29,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
 export NODE_PATH="/usr/local/lib/node"
 
 # PATH export
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/.rvm/bin
 
 # PYTHONPATH export
 export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
@@ -76,7 +76,7 @@ alias cakeconsole='./Console/cake'
 export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"
 
 # replace built-in vim by MacVim's compiled version w/ ruby support
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # customize prompt
 # PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
