@@ -31,3 +31,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 " 1 - the parent directory of the current file.
 " 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .bzr/ _darcs/ root.dir
 let g:ctrlp_working_path_mode = 2
+
+" Enable NERDCommenter leader mapping (Janus syntax)
+" https://github.com/carlhuda/janus/commit/bacfa1774fe166ec16a319e9cf1f34637ec83f32
+call janus#add_mapping('nerdcommenter', 'map', '<leader>/', '<plug>NERDCommenterToggle<CR>')
+call janus#add_mapping('nerdcommenter', 'imap', '<leader>/', '<Esc><plug>NERDCommenterToggle<CR>i')
