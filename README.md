@@ -17,9 +17,19 @@ I use [ZSH](http://www.zsh.org/) as my default shell. This config file is pretty
 
 There's nothing to say, these are the most well-known terminal multiplexers. I was using screen for years but I'm currently switching to tmux + [tmuxinator](https://github.com/aziz/tmuxinator).
 
+### Mutt
+`.muttrc`
+
+There's a config template for the [Mutt](http://www.mutt.org/) E-mail
+client.
+
+My own parameters have been removed from this file so feel free to set yours up
+the same way.
+
 ### Other files
 * `.rvmrc` defines [Ruby Version Manager](http://beginrescueend.com/) path
 * `.gitignore` sets the default ignored files in a git repo
+* `.gemrc` contains system-wide settings for [rubygems](http://rubygems.org/)
 
 ## License
 For config files?! Feel free to use any of them.
