@@ -26,6 +26,10 @@ client.
 My own parameters have been removed from this file so feel free to set yours up
 the same way.
 
+### /script
+* `osx.sh`: Script for auto-setting lots of system preferences in Mac OS X.
+  Forked from [this gist](https://gist.github.com/2260182). 
+
 ### Other files
 * `.rvmrc` defines [Ruby Version Manager](http://beginrescueend.com/) path
 * `.gitignore` sets the default ignored files in a git repo
