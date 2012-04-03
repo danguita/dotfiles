@@ -1,10 +1,19 @@
 set nobackup
 set wrap
 
-colorscheme ir_black
+" colors
+set background=dark
+
+" solarized colorscheme options
+let g:solarized_termcolors=16
+let g:solarized_visibility='high'
+let g:solarized_contrast='high'
+
+" colorscheme
+colorscheme solarized
 
 " TagList w/ Exuberant Ctags
-let Tlist_Use_Right_Window = 1
+let Tlist_Use_Right_Window=1
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
 " Enable CakePHP templating files (ctp) typed as PHP files
@@ -30,12 +39,12 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 " 0 - don’t manage working directory.
 " 1 - the parent directory of the current file.
 " 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .bzr/ _darcs/ root.dir
-let g:ctrlp_working_path_mode = 2
+let g:ctrlp_working_path_mode=2
 
 " Enable NERDCommenter leader mapping (Janus syntax)
 " https://github.com/carlhuda/janus/commit/bacfa1774fe166ec16a319e9cf1f34637ec83f32
-call janus#add_mapping('nerdcommenter', 'map', '<leader>/', '<plug>NERDCommenterToggle<CR>')
-call janus#add_mapping('nerdcommenter', 'imap', '<leader>/', '<Esc><plug>NERDCommenterToggle<CR>i')
+"call janus#add_mapping('nerdcommenter', 'map', '<leader>/', '<plug>NERDCommenterToggle<CR>')
+"call janus#add_mapping('nerdcommenter', 'imap', '<leader>/', '<Esc><plug>NERDCommenterToggle<CR>i')
 
 " Disable plugins
 call janus#disable_plugin('autoclose')
