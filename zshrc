@@ -21,7 +21,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow rvm osx gem vagrant brew rails3)
+plugins=(git git-flow rvm rails3 gem rake osx vagrant brew)
 
 source $ZSH/oh-my-zsh.sh
 
