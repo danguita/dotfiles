@@ -4,13 +4,8 @@ set wrap
 " colors
 set background=dark
 
-" solarized colorscheme options
-let g:solarized_termcolors=16
-let g:solarized_visibility='high'
-let g:solarized_contrast='high'
-
 " colorscheme
-colorscheme solarized
+colorscheme molokai
 
 " TagList w/ Exuberant Ctags
 let Tlist_Use_Right_Window=1
