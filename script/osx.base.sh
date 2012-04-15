@@ -31,8 +31,8 @@ defaults write com.apple.dock expose-animation-duration -int 0
 echo "Disable New Window Animation (Lion)"
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
 
-echo "Restore New Window Animation (Lion)"
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool YES
+#echo "Restore New Window Animation (Lion)"
+#defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool YES
 
 echo "Restart Dock"
 killall Dock
