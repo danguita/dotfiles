@@ -18,3 +18,21 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 echo "Avoid creating .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+echo "Disable Mission Control's launch animation (Lion)"
+defaults write com.apple.dock expose-animation-duration -int 0
+
+#echo "Restore Mission Control's launch animation"
+#defaults write com.apple.dock expose-animation-duration
+
+#echo "Change Mission Control's launch animation speed"
+#defaults write com.apple.dock expose-animation-duration -float 0.1
+
+echo "Disable New Window Animation (Lion)"
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
+
+echo "Restore New Window Animation (Lion)"
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool YES
+
+echo "Restart Dock"
+killall Dock
