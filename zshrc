@@ -40,6 +40,9 @@ export EDITOR=vim
 # ZSH export
 export ZSH=$HOME/.oh-my-zsh
 
+# BYOBU_PREFIX export
+export BYOBU_PREFIX=`brew --prefix`
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
