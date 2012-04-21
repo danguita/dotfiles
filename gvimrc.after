@@ -1,3 +1,2 @@
-colorscheme molokai
-set guifont=Menlo:h14
+set guifont=Mensch\ for\ Powerline:h14
 set guioptions-=T
