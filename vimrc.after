@@ -1,13 +1,13 @@
 set nobackup
 set wrap
 
-" colors
+" Colors
 set background=dark
 
-" colorscheme
+" Colorscheme
 colorscheme molokai
 
-" encoding
+" Encoding
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,latin1
 
@@ -29,9 +29,9 @@ inoremap jk <Esc>
 
 " Set useful status line
 " http://vimbits.com/bits/95
-set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%04l,%04v][%p%%]\ [LEN=%L]
+"set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%04l,%04v][%p%%]\ [LEN=%L]
 
-" ignorelist
+" Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 
 " CtrlP path mode
@@ -40,10 +40,9 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 " 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .bzr/ _darcs/ root.dir
 let g:ctrlp_working_path_mode=2
 
-" Enable NERDCommenter leader mapping (Janus syntax)
-" https://github.com/carlhuda/janus/commit/bacfa1774fe166ec16a319e9cf1f34637ec83f32
-"call janus#add_mapping('nerdcommenter', 'map', '<leader>/', '<plug>NERDCommenterToggle<CR>')
-"call janus#add_mapping('nerdcommenter', 'imap', '<leader>/', '<Esc><plug>NERDCommenterToggle<CR>i')
+" Powerline fancy symbols
+" https://github.com/Lokaltog/vim-powerline
+"let g:Powerline_symbols = 'fancy'
 
-" Disable plugins
+" Disable Janus plugins
 call janus#disable_plugin('autoclose')
