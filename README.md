@@ -7,6 +7,8 @@ These are some of the dotfiles I need everyday. Note that each depends on a libr
 
 These are not regular Vim files, they depend on [Janus Vim distribution](https://github.com/carlhuda/janus), which provides a master `.vimrc` file and tons of auto-managed plugins.
 
+* `janus-plugins` contains all additional vim plugins that are loaded within Janus. It is auto-generated using a command [ike this](https://gist.github.com/2436641).
+
 ### Zsh
 `.zshrc`
 
