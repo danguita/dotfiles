@@ -1,10 +1,8 @@
 set nobackup
 set wrap
 
-" Colors
-set background=dark
-
 " Colorscheme
+set background=dark
 colorscheme molokai
 
 " Encoding
