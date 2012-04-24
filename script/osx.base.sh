@@ -10,6 +10,9 @@ defaults write com.apple.screencapture disable-shadow -bool true
 echo "Change screenshots location"
 defaults write com.apple.screencapture location ~/Pictures/screenshots
 
+echo "Change screenshots format"
+defaults write com.apple.screencapture type jpg
+
 echo "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 0.02
 
