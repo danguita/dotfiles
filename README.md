@@ -37,7 +37,8 @@ Binaries path at $HOME, only for user purposes. You might like to add it
 to your system $PATH.
 
 * `battery`: Thanks to [richoH](https://github.com/richoH) ([source](https://github.com/richoH/dotfiles/blob/master/bin/battery)). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
-* `adium-unread`: Thanks to [lukaszkorecki](https://github.com/lukaszkorecki) ([source](https://github.com/lukaszkorecki/DotFiles/blob/master/bins/Adium.scpt)). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
+* `adium-unread.applescript`: Thanks to [lukaszkorecki](https://github.com/lukaszkorecki) ([source](https://github.com/lukaszkorecki/DotFiles/blob/master/bins/Adium.scpt)). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
+* `spotify.applescript`: Thanks to [elliottkember](https://github.com/elliottkember)'s [gist](https://gist.github.com/1884925). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
 
 ### Other files
 * `.rvmrc` defines [Ruby Version Manager](http://beginrescueend.com/) path
