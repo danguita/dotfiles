@@ -43,6 +43,9 @@ export ZSH=$HOME/.oh-my-zsh
 # BYOBU_PREFIX export
 export BYOBU_PREFIX=`brew --prefix`
 
+# Auto-correct sucks hard
+unsetopt correct_all
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
@@ -79,8 +82,4 @@ alias cakeconsole='./Console/cake'
 export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"
 
 # replace built-in vim by MacVim's compiled version w/ ruby support
-alias vim='nocorrect ~/Applications/MacVim.app/Contents/MacOS/Vim'
-
-# disable ZSH's auto-correct for autotest command
-alias autotest='nocorrect autotest'
-
+alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
