@@ -21,7 +21,12 @@ au BufNewFile,BufRead *.ctp set filetype=php
 vnoremap < <gv
 vnoremap > >gv
 
-" Use jk as <Esc>
+" Use <Tab> as <Esc>
+nnoremap <Tab> <Esc>
+vnoremap <Tab> <Esc>gV
+onoremap <Tab> <Esc>
+
+" Use jk as <Esc> (INSERT mode)
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 inoremap jk <Esc>
 
