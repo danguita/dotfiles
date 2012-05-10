@@ -1,2 +1,4 @@
-set guifont=Mensch\ for\ Powerline:h14
-set guioptions-=T
+set guifont=Mensch\ for\ Powerline:h14 " Font
+set guioptions-=T                      " Hide toolbar
+set guioptions-=r                      " Hide right scrollbar
+set guioptions-=L                      " Hide left scrollbar
