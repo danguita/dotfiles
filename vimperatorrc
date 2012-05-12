@@ -1,11 +1,8 @@
-" danguita vimperatorrc
+" visual
+set toolbars=none
+
+" colorscheme from https://github.com/vimpr/vimperator-colors
+colorscheme indigo
 
 " Disable global keybindings on all Google Apps
 autocmd LocationChange .* js modes.passAllKeys = /google\.com/.test(buffer.URL)
-
-" replace Vimperator by Mozilla Firefox in page title
-set titlestring="Mozilla Firefox"
-
-" visual
-colorscheme solarized
-highlight Bell display: none;
