@@ -37,6 +37,9 @@ export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
 # EDITOR export
 export EDITOR=vim
 
+# SHELL export
+export SHELL=/usr/local/bin/zsh
+
 # ZSH export
 export ZSH=$HOME/.oh-my-zsh
 
@@ -75,11 +78,11 @@ alias cakeconsole13='../cake/console/cake'
 # cakephp2 console
 alias cakeconsole='./Console/cake'
 
-# force tmux 256color mode
-# alias tmux='TERM=screen-256color tmux'
-
 # ack options (CakePHP and CoffeeScript templates)
 export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"
 
 # replace built-in vim by MacVim's compiled version w/ ruby support
 alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
+
+# tmux with explicit UTF-8 and 256-color support
+alias tmux='tmux -u2'
