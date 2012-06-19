@@ -71,6 +71,11 @@ ssht() { ssh -t $1 tmux attach -t $2; }
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias o='open'
+alias O='open .'
+
+# misc
+alias serve='python -m SimpleHTTPServer'
 
 # cakephp1.3 console
 alias cakeconsole13='../cake/console/cake'
@@ -83,6 +88,9 @@ export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"
 
 # replace built-in vim by MacVim's compiled version w/ ruby support
 alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
+alias v='vim'
+alias V='vim .'
 
 # tmux with explicit UTF-8 and 256-color support
 alias tmux='tmux -u2'
+alias tm='tmux'
