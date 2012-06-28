@@ -42,9 +42,5 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 " 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .bzr/ _darcs/ root.dir
 let g:ctrlp_working_path_mode=2
 
-" Powerline fancy symbols
-" https://github.com/Lokaltog/vim-powerline
-let g:Powerline_symbols = 'fancy'
-
 " Disable Janus plugins
 call janus#disable_plugin('autoclose')

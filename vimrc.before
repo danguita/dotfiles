@@ -1,1 +1,5 @@
 let mapleader = ","
+
+" Powerline fancy symbols
+" https://github.com/Lokaltog/vim-powerline
+let g:Powerline_symbols = 'fancy'
