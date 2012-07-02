@@ -14,10 +14,14 @@ These are not regular Vim files, they depend on [Janus Vim distribution](https:/
 
 I use [ZSH](http://www.zsh.org/) as my default shell. This config file is pretty brief because [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) manages most of the config and plugins.
 
-### GNU screen & tmux
+### GNU Screen & tmux
 `.screenrc`, `.tmux.conf`
 
-There's nothing to say, these are the most well-known terminal multiplexers. I was using screen for years but I'm currently switching to tmux + [tmuxinator](https://github.com/aziz/tmuxinator).
+There's nothing to say, these are the most well-known terminal multiplexers. I was using GNU Screen for years but I'm currently switching to tmux + [tmuxinator](https://github.com/aziz/tmuxinator).
+
+My tmux setup is powered by tmuxinator templates like these:
+* [tmuxinator template for Rails projects](https://gist.github.com/3023433) (gist)
+* [tmuxinator template for CakePHP projects](https://gist.github.com/3033284) (gist)
 
 ### Mutt
 `.muttrc`
