@@ -9,6 +9,9 @@ colorscheme molokai
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,latin1
 
+" Mouse reporting
+set mouse=a
+
 " TagList w/ Exuberant Ctags
 let Tlist_Use_Right_Window=1
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
