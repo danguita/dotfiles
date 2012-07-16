@@ -5,7 +5,6 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="af-magic"
 
 # Set to this to use case-sensitive completion
@@ -47,8 +46,13 @@ export ZSH=$HOME/.oh-my-zsh
 # BYOBU_PREFIX export
 export BYOBU_PREFIX=`brew --prefix`
 
-# Auto-correct sucks hard
+# ack options (CakePHP and CoffeeScript templates)
+export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"
+
+# ZSH's auto-correct sucks hard
 unsetopt correct_all
+
+# imports:
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
@@ -84,9 +88,6 @@ alias cakeconsole13='../cake/console/cake'
 # cakephp2 console
 alias cakeconsole='./Console/cake'
 
-# ack options (CakePHP and CoffeeScript templates)
-export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"
-
 # replace built-in vim by MacVim's compiled version w/ ruby support
 alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
 alias v='vim'
@@ -95,3 +96,6 @@ alias V='vim .'
 # tmux with explicit UTF-8 and 256-color support
 alias tmux='tmux -u2'
 alias tm='tmux'
+
+# git
+alias gx='gitx'
