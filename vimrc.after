@@ -33,6 +33,11 @@ onoremap <Tab> <Esc>
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 inoremap jk <Esc>
 
+" Use <Ctrl+w> to write current buffer
+noremap <silent> <C-W> :update<CR>
+vnoremap <silent> <C-W> <C-C>:update<CR>
+inoremap <silent> <C-W> <C-O>:update<CR>
+
 " Set useful status line
 set statusline=\ %F%m%r%h%w\ (%l,%v,%L)\ %p%%%=\ %Y\ /\ %{&ff}\ 
 
