@@ -43,9 +43,6 @@ export SHELL=/usr/local/bin/zsh
 # ZSH export
 export ZSH=$HOME/.oh-my-zsh
 
-# BYOBU_PREFIX export
-export BYOBU_PREFIX=`brew --prefix`
-
 # ack options (CakePHP and CoffeeScript templates)
 export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee"
 
