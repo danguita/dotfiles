@@ -1,5 +1,5 @@
 " visual
-set toolbars=none,tabs
+set toolbars=none,navigation,tabs
 
 " colorscheme from https://github.com/vimpr/vimperator-colors
 colorscheme indigo
