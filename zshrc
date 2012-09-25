@@ -51,6 +51,9 @@ unsetopt correct_all
 
 # imports:
 
+# zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
@@ -96,3 +99,7 @@ alias tm='tmux'
 
 # git
 alias gx='gitx'
+
+# heroku
+alias h='heroku' # heroku gem
+alias ht='/usr/bin/heroku' # heroku toolbelt binary
