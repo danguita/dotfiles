@@ -51,11 +51,8 @@ unsetopt correct_all
 
 # imports:
 
-# zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
-
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
@@ -95,7 +92,7 @@ alias V='vim .'
 
 # tmux with explicit UTF-8 and 256-color support
 alias tmux='tmux -u2'
-alias tm='tmux'
+alias t='tmux'
 
 # git
 alias gx='gitx'
