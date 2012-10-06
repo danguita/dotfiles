@@ -2,8 +2,8 @@ vim-align
 origin	git://github.com/pix/vim-align.git (fetch)
 origin	git://github.com/pix/vim-align.git (push)
 vim-autoclose
-origin	https://github.com/blueyed/vim-autoclose.git (fetch)
-origin	https://github.com/blueyed/vim-autoclose.git (push)
+origin	https://github.com/Townk/vim-autoclose.git (fetch)
+origin	https://github.com/Townk/vim-autoclose.git (push)
 vim-powerline
 origin	https://github.com/Lokaltog/vim-powerline.git (fetch)
 origin	https://github.com/Lokaltog/vim-powerline.git (push)
