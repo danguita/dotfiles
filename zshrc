@@ -67,8 +67,6 @@ sshs() { ssh -t $1 screen -r; }
 # usage: ssht user_name@server_name session_name
 ssht() { ssh -t $1 tmux attach -t $2; }
 
-# aliases:
-
 # common actions
 alias rm='rm -i'
 alias cp='cp -i'
@@ -85,8 +83,8 @@ alias cakeconsole13='../cake/console/cake'
 # cakephp2 console
 alias cakeconsole='./Console/cake'
 
-# replace built-in vim by MacVim's compiled version w/ ruby support
-alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
+# vim
+alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim' # replace built-in vim by MacVim's compiled version w/ ruby support
 alias v='vim'
 alias V='vim .'
 
@@ -105,3 +103,7 @@ alias ht='/usr/bin/heroku' # heroku toolbelt binary
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias pgrestart='pgstop && pgstart'
+
+# clipboard
+alias pbc='pbcopy'
+alias pbp='pbpaste'
