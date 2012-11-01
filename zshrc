@@ -30,7 +30,7 @@ unsetopt correct_all # ZSH's auto-correct sucks hard
 # environment ------------------------------------------------------------------
 
 # PATH
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/.rvm/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/.rvm/bin
 
 # EDITOR
 export EDITOR=vim
