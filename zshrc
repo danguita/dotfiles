@@ -50,6 +50,10 @@ export NODE_PATH="/usr/local/lib/node"
 # ACK
 export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee" # CakePHP and CoffeeScript templates
 
+# locale
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+
 # imports ----------------------------------------------------------------------
 
 # rvm
