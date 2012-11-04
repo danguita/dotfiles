@@ -38,9 +38,6 @@ noremap <silent> <C-S> :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
 inoremap <silent> <C-S> <C-O>:update<CR>
 
-" Set useful status line
-set statusline=\ %F%m%r%h%w\ (%l,%v,%L)\ %p%%%=\ %Y\ /\ %{&ff}\ 
-
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 
@@ -49,8 +46,3 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 " 1 - the parent directory of the current file.
 " 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .bzr/ _darcs/ root.dir
 let g:ctrlp_working_path_mode=2
-
-" Disable Janus plugins
-call janus#disable_plugin('autoclose')
-call janus#disable_plugin('syntastic')
-call janus#disable_plugin('vroom')
