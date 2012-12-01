@@ -30,7 +30,7 @@ unsetopt correct_all # ZSH's auto-correct sucks hard
 # environment ------------------------------------------------------------------
 
 # PATH
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/.rvm/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 # EDITOR
 export EDITOR=vim
@@ -82,7 +82,6 @@ alias o='open'
 alias O='open .'
 
 # vim
-alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim' # replace built-in vim by MacVim's compiled version w/ ruby support
 alias v='vim'
 alias V='vim .'
 
