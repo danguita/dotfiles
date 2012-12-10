@@ -21,7 +21,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm rails3 osx bundler vi-mode)
+plugins=(git rvm rails3 osx bundler)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,6 +84,7 @@ alias O='open .'
 # vim
 alias v='vim'
 alias V='vim .'
+alias altvim='~/Applications/MacVim.app/Contents/MacOS/Vim' # replace built-in vim by MacVim's compiled version w/ ruby support
 
 # tmux
 alias tmux='tmux -u2' # explicit UTF-8 and 256-color support
