@@ -98,6 +98,9 @@ alias v='vim'
 alias V='vim .'
 alias altvim='~/Applications/MacVim.app/Contents/MacOS/Vim' # replace built-in vim by MacVim's compiled version w/ ruby support
 
+# sed
+alias sed='gsed' # replace built-in sed (BSD) by GNU sed
+
 # tmux
 alias tmux='tmux -u2' # explicit UTF-8 and 256-color support
 alias t='tmux'
