@@ -6,8 +6,8 @@ if adiumisrunning then
     repeat with loopi from 1 to tabs
       set unreads to unreads + (unread message count of chat loopi)
     end repeat
-    return "IM " & unreads
+    return unreads
   end tell
 else
-  return "IM is off"
+  return "off"
 end if
