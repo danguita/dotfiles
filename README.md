@@ -26,6 +26,18 @@ My Tmux setup is powered by tmuxinator templates like these:
 * [tmuxinator template for Rails projects](https://gist.github.com/3023433) (gist)
 * [tmuxinator template for CakePHP projects](https://gist.github.com/3033284) (gist)
 
+A Tmux + tmuxinator session looks like this (Rails project):
+
+![tmux statusbar](https://raw.github.com/danguita/dotfiles/master/images/tmux-statusbar.jpg)
+
+## Slate
+
+`.slate`
+
+[Slate](https://github.com/jigish/slate) is an **extremely configurable** window management application for OSX.
+
+I have defined some key bindings for support my daily workflow, app switching and window tiling. It's definitely a must have productivity tool.
+
 ### Mutt
 
 `.muttrc`

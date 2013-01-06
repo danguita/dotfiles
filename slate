@@ -1,0 +1,73 @@
+config windowHintsShowIcons true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+config defaultToCurrentScreen true
+
+# Screens
+alias laptop 1
+alias external 2
+
+# Keys
+alias master ctrl;alt;cmd
+alias hyper shift;ctrl;alt;cmd
+
+# Sizes
+alias centered 0.85
+
+# Resize Bindings
+bind right:alt      resize +10% +0
+bind left:alt       resize -10% +0
+bind up:alt         resize +0   -10%
+bind down:alt       resize +0   +10%
+
+bind right:ctrl;alt resize -10% +0 bottom-right
+bind left:ctrl;alt  resize +10% +0 bottom-right
+bind up:ctrl;alt    resize +0   +10% bottom-right
+bind down:ctrl;alt  resize +0   -10% bottom-right
+
+# Push Bindings
+bind right:${master} push right bar-resize:screenSizeX/2
+bind left:${master}  push left  bar-resize:screenSizeX/2
+bind up:${master}    push up    bar-resize:screenSizeY/2
+bind down:${master}  push down  bar-resize:screenSizeY/2
+
+# Nudge Bindings
+bind right:shift;alt nudge +10% +0
+bind left:shift;alt  nudge -10% +0
+bind up:shift;alt    nudge +0   -10%
+bind down:shift;alt  nudge +0   +10%
+
+# Throw Bindings
+bind 1:ctrl;alt     throw 0 resize
+bind 2:ctrl;alt     throw 1 resize
+bind 3:ctrl;alt     throw 2 resize
+
+bind right:ctrl;alt throw right resize
+bind left:ctrl;alt  throw left  resize
+bind up:ctrl;alt    throw up    resize
+bind down:ctrl;alt  throw down  resize
+
+# Screen size Bindings
+bind m:${master} push up bar-resize:screenSizeX
+bind c:${master} move screenOriginX+0.5*(screenSizeX-screenSizeX*${centered});screenOriginY+0.5*(screenSizeY-screenSizeY*${centered}) screenSizeX*${centered};screenSizeY*${centered}
+
+# Focus Bindings (vi mode)
+bind l:${master} focus right
+bind h:${master} focus left
+bind j:${master} focus below
+bind k:${master} focus above
+
+# App Bindings
+bind b:${master} focus 'Google Chrome'
+bind t:${master} focus 'iTerm'
+bind w:${master} focus 'Finder'
+bind v:${master} focus 'Virtual Box'
+bind m:${master} focus 'Adium'
+
+# Window Hints
+bind space:${hyper} hint ASDFJKLGHNMVC
+
+# Relaunch and Load Config
+bind delete:${hyper} relaunch
