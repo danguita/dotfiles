@@ -30,7 +30,7 @@ A Tmux + tmuxinator session looks like this (Rails project):
 
 ![tmux statusbar](https://raw.github.com/danguita/dotfiles/master/images/tmux-statusbar.jpg)
 
-## Slate
+### Slate
 
 `.slate`
 
