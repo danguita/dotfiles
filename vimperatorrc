@@ -4,5 +4,8 @@ set toolbars=none,tabs
 " colorscheme from https://github.com/vimpr/vimperator-colors
 colorscheme indigo
 
+" set hintchars (letters instead of numbers)
+set hintchars='asdf'
+
 " Disable global keybindings on all Google Apps
 autocmd LocationChange .* js modes.passAllKeys = /google\.com/.test(buffer.URL)
