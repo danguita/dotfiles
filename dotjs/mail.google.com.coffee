@@ -1,6 +1,6 @@
 css =
 """
-td > div, div.Bk, body.editable, textarea {
+td > div, div.Bk, div.editable, textarea {
   font-family: Menlo, Monaco, DejaVu Sans Mono, Courier, monospace !important;
 }
 """
