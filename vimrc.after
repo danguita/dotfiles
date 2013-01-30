@@ -15,6 +15,9 @@ set mouse=a
 " External commands shell
 set shell=/usr/local/bin/zsh
 
+" Use system's clipboard
+" set clipboard=unnamed
+
 " TagList w/ Exuberant Ctags
 let Tlist_Use_Right_Window=1
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
