@@ -32,6 +32,9 @@ alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias pgrestart='pgstop && pgstart'
 
+# rails
+alias em="ls db/migrate/* | tail -n1 | xargs -o $EDITOR" # edit last migration
+
 # cakephp
 alias cakeconsole13='../cake/console/cake' # 1.3 console
 alias cakeconsole='./Console/cake' # 2.x console
