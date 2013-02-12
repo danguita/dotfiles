@@ -10,6 +10,7 @@
 --ignore-dir=build
 --ignore-dir=.git
 --ignore-dir=.sass-cache
+--ignore-dir=.idea
 
 # Add Markdown, Textile, and reStructuredText
 --type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt,.asciidoc,.asc
