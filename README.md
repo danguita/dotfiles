@@ -12,9 +12,11 @@ These are not regular Vim files, they depend on [Janus Vim distribution](https:/
 
 ### Zsh
 
-`.zshrc`
+`.zshrc`, `zsh/custom/*`
 
 I use [ZSH](http://www.zsh.org/) as my default shell. This config file is pretty brief because [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) manages most of the config and plugins.
+
+My local config, aliases, functions and env variables are located at `$ZSH_CUSTOM` ($DOTFILES/zsh/custom).
 
 ### Tmux & GNU Screen
 
