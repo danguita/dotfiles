@@ -11,11 +11,11 @@ cat /dev/null > $PLUGIN_ARCHIVE
 
 # Populate plugin archive
 for i in $(ls -1 $PLUGINS); do
-	if [ -d $PLUGINS/$i ]; then
-		echo "--> Adding $i"
+  if [ -d $PLUGINS/$i ]; then
+    echo "--> Adding $i"
 
-		plugin_info=$(cd $PLUGINS/$i && $PLUGIN_ACTION)
+    plugin_info=$(cd $PLUGINS/$i && $PLUGIN_ACTION)
 
-		printf $ARCHIVE_FORMAT $i $plugin_info >> $PLUGIN_ARCHIVE
- 	fi
+    printf $ARCHIVE_FORMAT $i $plugin_info >> $PLUGIN_ARCHIVE
+  fi
 done
