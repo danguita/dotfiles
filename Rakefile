@@ -53,7 +53,7 @@ def backup_file(file)
   backup_file = "#{file}.old"
 
   prompt "Backing up .#{file} as #{backup_file}"
-  system %{cp -r -f "#{file}" "#{backup_file}"}
+  system %{cp -rf "#{file}" "#{backup_file}"}
 end
 
 # ZSH framework
@@ -81,10 +81,7 @@ def install_janus
   prompt "install Janus? [ynq] ", :action
   case STDIN.gets.chomp
   when 'y'
-    if File.exists?(File.join(ENV['HOME'], ".vim"))
-      prompt "found ~/.vim, backing up it"
-      backup_file("$HOME/.vim")
-    end
+    backup_file("$HOME/.vim") if File.exists?(File.join(ENV['HOME'], ".vim"))
 
     prompt "installing Janus"
     system %{git clone https://github.com/carlhuda/janus.git "$HOME/.vim"}
