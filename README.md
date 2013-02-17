@@ -1,22 +1,25 @@
-# @danguita's dotfiles
+# David Anguita dotfiles
 
-These are some of the dotfiles I need everyday. Note that each depends on a library or a specific software:
+## Features
 
 ### Vim
 
 `.vimrc.after`, `.vimrc.before`, `.gvimrc.after`
 
-These are not regular Vim files, they depend on [Janus Vim distribution](https://github.com/carlhuda/janus), which provides a master `.vimrc` file and tons of auto-managed plugins.
+These are not regular Vim files, they depend on [Janus Vim
+distribution](https://github.com/carlhuda/janus), which provides a master `.vimrc` file and tons of managed plugins.
 
-* `janus-plugins` contains all additional vim plugins that are loaded within Janus. It is auto-generated using a script [like this](https://gist.github.com/2436641). I update `~/.janus` plugins with [this script](https://gist.github.com/3845652).
+* `script/janus/plugin-archive` has all additional vim plugins that are loaded within Janus.
+It is auto-generated using [this script](https://github.com/danguita/dotfiles/blob/master/script/janus/update-plugin-archive.sh).
+I update these additional plugins by running [this script](https://github.com/danguita/dotfiles/blob/master/script/janus/update-plugins.sh).
 
 ### Zsh
 
 `.zshrc`, `zsh/custom/*`
 
-I use [ZSH](http://www.zsh.org/) as my default shell. This config file is pretty brief because [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) manages most of the config and plugins.
+I use [Zsh](http://www.zsh.org/) as my default shell. This config file is pretty brief because [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) manages most of the config and plugins.
 
-My local config, aliases, functions and env variables are located at `$ZSH_CUSTOM` ($DOTFILES/zsh/custom).
+My local config, aliases, functions and env variables are located at `$ZSH_CUSTOM` (`$DOTFILES/zsh/custom`).
 
 ### Tmux & GNU Screen
 
@@ -30,13 +33,14 @@ My Tmux setup is powered by tmuxinator templates like these:
 
 A Tmux + tmuxinator session looks like this (Rails project):
 
-![tmux statusbar](https://raw.github.com/danguita/dotfiles/master/images/tmux-statusbar.jpg)
+![tmux
+statusbar](https://raw.github.com/danguita/dotfiles/master/screenshots/tmux-statusbar.jpg)
 
 ### Slate
 
 `.slate`
 
-[Slate](https://github.com/jigish/slate) is an **extremely configurable** window management application for OSX.
+[Slate](https://github.com/jigish/slate) is an extremely configurable window management application for OSX.
 
 I have defined some key bindings for support my daily workflow, app switching and window tiling. It's definitely a must have productivity tool.
 
@@ -64,10 +68,16 @@ Binaries path at $HOME, only for user purposes. You might like to add it to your
 
 ### Other files
 
-* `.rvmrc` defines [Ruby Version Manager](http://beginrescueend.com/) path
+* `.rvmrc` sets the [Ruby Version Manager](http://beginrescueend.com/) path
 * `.gitignore` sets the default ignored files in a git repo
 * `.gemrc` contains system-wide settings for [rubygems](http://rubygems.org/)
 * `.vimperatorrc` sets some preferences for [Vimperator](http://www.vimperator.org/vimperator) [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/vimperator/)
+
+## Installation
+
+    git clone git://github.com/danguita/dotfiles.git ~/work/dotfiles
+    cd ~/work/dotfiles
+    rake install
 
 ## License
 
