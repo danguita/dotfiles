@@ -79,6 +79,12 @@ Binaries path at $HOME, only for user purposes. You might like to add it to your
     cd ~/work/dotfiles
     rake install
 
+### All tasks
+
+    rake install              # Install dotfiles and related libraries
+    rake install_vim_plugins  # Install vim plugins
+    rake update_vim_plugins   # Update vim plugins
+
 ## License
 
 For config files?! Feel free to use any of them.

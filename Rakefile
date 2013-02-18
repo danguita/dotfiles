@@ -44,13 +44,23 @@ task :install do
   end
 end
 
+desc "Install vim plugins"
+task :install_vim_plugins do
+  install_vim_plugins
+end
+
+desc "Update vim plugins"
+task :update_vim_plugins do
+  update_vim_plugins
+end
+
 # ZSH framework
 # https://github.com/robbyrussell/oh-my-zsh
 def install_oh_my_zsh
   if File.exists?(File.join(ENV['HOME'], ".oh-my-zsh"))
-    prompt "found ~/.oh-my-zsh"
+    prompt "Found ~/.oh-my-zsh"
   else
-    prompt "install oh-my-zsh? [ynq] ", :action
+    prompt "Install oh-my-zsh? [ynq] ", :action
     case STDIN.gets.chomp
     when 'y'
       prompt "Installing oh-my-zsh"
@@ -58,42 +68,82 @@ def install_oh_my_zsh
     when 'q'
       exit
     else
-      prompt "skipping oh-my-zsh, you will need to change ~/.zshrc"
+      prompt "Skipping oh-my-zsh, you will need to change ~/.zshrc"
     end
   end
 end
 
-# Vim distribution
+# Vim distribution and plugins
 # https://github.com/carlhuda/janus
 def install_janus
-  prompt "install Janus? [ynq] ", :action
+  prompt "Install Janus? [ynq] ", :action
   case STDIN.gets.chomp
   when 'y'
     backup_file("$HOME/.vim") if File.exists?(File.join(ENV['HOME'], ".vim"))
 
-    prompt "installing Janus"
+    prompt "Installing Janus"
     system %{git clone https://github.com/carlhuda/janus.git "$HOME/.vim"}
     system %{cd "$HOME/.vim" && rake}
+
+    prompt "Installing plugins"
+    install_vim_plugins
   when 'q'
     exit
   else
-    prompt "skipping Janus"
+    prompt "Skipping Janus"
+  end
+end
+
+def install_vim_plugins
+  plugin_archive = File.join(Dir.pwd, 'script', 'janus', 'plugin-archive')
+  plugin_archive_delimiter = ','
+  plugin_dir = File.join(ENV['HOME'], '.janus')
+
+  # Create ~/.janus if not exists
+  Dir.mkdir(plugin_dir) unless File.exists?(plugin_dir)
+
+  # Parse plugin archive
+  File.open(plugin_archive, 'r').each_line do |plugin_definition|
+    name, repo = plugin_definition.split plugin_archive_delimiter
+    name, repo = name.strip, repo.strip
+
+    target = File.join(plugin_dir, name)
+
+    if File.exists? target
+      prompt "Plugin #{name} already installed"
+    else
+      prompt "Installing plugin: #{name} (#{repo})"
+      system %{git clone "#{repo}" "#{target}"}
+    end
+  end
+end
+
+def update_vim_plugins
+  scripts_dir = File.join(Dir.pwd, 'script')
+  scripts = []
+
+  scripts << File.join(scripts_dir, 'janus', 'update-plugins.sh')
+  scripts << File.join(scripts_dir, 'janus', 'update-plugin-archive.sh')
+
+  scripts.each do |script|
+    prompt "Launching #{script}"
+    system(script) if File.exists?(script)
   end
 end
 
 def switch_to_zsh
   if ENV["SHELL"] =~ /zsh/
-    prompt "using zsh"
+    prompt "Using zsh"
   else
-    prompt "switch to zsh? (recommended) [ynq] ", :action
+    prompt "Switch to zsh? (recommended) [ynq] ", :action
     case STDIN.gets.chomp
     when 'y'
-      prompt "switching to zsh"
+      prompt "Switching to zsh"
       system "chsh -s `which zsh`"
     when 'q'
       exit
     else
-      prompt "skipping zsh"
+      prompt "Skipping zsh"
     end
   end
 end
