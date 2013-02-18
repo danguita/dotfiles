@@ -44,18 +44,6 @@ task :install do
   end
 end
 
-def link_file(file, target)
-  prompt "Linking .#{file}"
-  system %{ln -sf "$PWD/#{file}" "#{target}"}
-end
-
-def backup_file(file)
-  backup_file = "#{file}.old"
-
-  prompt "Backing up .#{file} as #{backup_file}"
-  system %{cp -rf "#{file}" "#{backup_file}"}
-end
-
 # ZSH framework
 # https://github.com/robbyrussell/oh-my-zsh
 def install_oh_my_zsh
@@ -108,6 +96,18 @@ def switch_to_zsh
       prompt "skipping zsh"
     end
   end
+end
+
+def link_file(file, target)
+  prompt "Linking .#{file}"
+  system %{ln -sf "$PWD/#{file}" "#{target}"}
+end
+
+def backup_file(file)
+  backup_filename = "#{file}.old"
+
+  prompt "Backing up .#{file} as #{backup_filename}"
+  system %{cp -rf "#{file}" "#{backup_filename}"}
 end
 
 def prompt(text = nil, type = :status)
