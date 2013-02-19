@@ -81,9 +81,13 @@ Binaries path at $HOME, only for user purposes. You might like to add it to your
 
 ### All tasks
 
-    rake install              # Install dotfiles and related libraries
-    rake install_vim_plugins  # Install vim plugins
-    rake update_vim_plugins   # Update vim plugins
+    rake dotfiles:install  # Install dotfiles
+    rake install           # Install dotfiles and related libraries
+    rake shell:install     # Install Oh-My-Zsh and change default shell
+    rake shell:update      # Update Oh-My-Zsh
+    rake update            # Update vim and shell libraries
+    rake vim:install       # Install Janus and vim plugins
+    rake vim:update        # Update Janus and vim plugins
 
 ## License
 

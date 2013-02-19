@@ -7,14 +7,50 @@
 require 'rake'
 
 desc "Install dotfiles and related libraries"
-task :install do
+task :install => ['dotfiles:install', 'shell:install', 'vim:install']
 
-  # Install libraries and specific software
-  install_oh_my_zsh
-  switch_to_zsh
-  install_janus
+desc "Update vim and shell libraries"
+task :update => ['vim:update', 'shell:update']
 
-  # Install dotfiles
+namespace :vim do
+  desc "Install Janus and vim plugins"
+  task :install do
+    install_janus
+    install_vim_plugins
+  end
+
+  desc "Update Janus and vim plugins"
+  task :update do
+    update_janus
+    update_vim_plugins
+  end
+end
+
+namespace :shell do
+  desc "Install Oh-My-Zsh and change default shell"
+  task :install do
+    install_oh_my_zsh
+    switch_to_zsh
+  end
+
+  desc "Update Oh-My-Zsh"
+  task :update do
+    update_oh_my_zsh
+  end
+end
+
+namespace :dotfiles do
+  desc "Install dotfiles"
+  task :install do
+    install_dotfiles
+  end
+end
+
+# -- Methods -------------------------------------------------------------------
+
+def install_dotfiles
+  prompt "Installing dotfiles"
+
   dotfiles = Dir.glob('*').select { |f| File.file?(f) } - %w(Rakefile README.md)
 
   overwrite_all = false
@@ -44,16 +80,6 @@ task :install do
   end
 end
 
-desc "Install vim plugins"
-task :install_vim_plugins do
-  install_vim_plugins
-end
-
-desc "Update vim plugins"
-task :update_vim_plugins do
-  update_vim_plugins
-end
-
 # ZSH framework
 # https://github.com/robbyrussell/oh-my-zsh
 def install_oh_my_zsh
@@ -61,6 +87,7 @@ def install_oh_my_zsh
     prompt "Found ~/.oh-my-zsh"
   else
     prompt "Install oh-my-zsh? [ynq] ", :action
+
     case STDIN.gets.chomp
     when 'y'
       prompt "Installing oh-my-zsh"
@@ -73,15 +100,26 @@ def install_oh_my_zsh
   end
 end
 
+def update_oh_my_zsh
+  prompt "Updating Oh-My-Zsh"
+
+  oh_my_zsh_dir = File.join(ENV['HOME'], '.oh-my-zsh')
+
+  system %{cd "#{oh_my_zsh_dir}" && git pull origin master} if File.exists?(oh_my_zsh_dir)
+end
+
 # Vim distribution and plugins
 # https://github.com/carlhuda/janus
 def install_janus
   prompt "Install Janus? [ynq] ", :action
+
   case STDIN.gets.chomp
   when 'y'
-    backup_file("$HOME/.vim") if File.exists?(File.join(ENV['HOME'], ".vim"))
-
     prompt "Installing Janus"
+
+    janus_dir = File.join(ENV['HOME'], ".vim")
+    backup_file(janus_dir) if File.exists?(janus_dir)
+
     system %{git clone https://github.com/carlhuda/janus.git "$HOME/.vim"}
     system %{cd "$HOME/.vim" && rake}
 
@@ -95,6 +133,8 @@ def install_janus
 end
 
 def install_vim_plugins
+  prompt "Installing Vim plugins"
+
   plugin_archive = File.join(Dir.pwd, 'script', 'janus', 'plugin-archive')
   plugin_archive_delimiter = ','
   plugin_dir = File.join(ENV['HOME'], '.janus')
@@ -118,7 +158,17 @@ def install_vim_plugins
   end
 end
 
+def update_janus
+  prompt "Updating Janus"
+
+  janus_dir = File.join(ENV['HOME'], '.vim')
+
+  system %{cd "#{janus_dir}" && git pull origin master} if File.exists?(janus_dir)
+end
+
 def update_vim_plugins
+  prompt "Updating Vim plugins"
+
   scripts_dir = File.join(Dir.pwd, 'script')
   scripts = []
 
@@ -150,6 +200,7 @@ end
 
 def link_file(file, target)
   prompt "Linking .#{file}"
+
   system %{ln -sf "$PWD/#{file}" "#{target}"}
 end
 
