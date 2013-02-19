@@ -12,6 +12,13 @@ task :install => ['dotfiles:install', 'shell:install', 'vim:install']
 desc "Update vim and shell libraries"
 task :update => ['vim:update', 'shell:update']
 
+namespace :dotfiles do
+  desc "Install dotfiles"
+  task :install do
+    install_dotfiles
+  end
+end
+
 namespace :vim do
   desc "Install Janus and vim plugins"
   task :install do
@@ -39,12 +46,7 @@ namespace :shell do
   end
 end
 
-namespace :dotfiles do
-  desc "Install dotfiles"
-  task :install do
-    install_dotfiles
-  end
-end
+task :default => :install
 
 # -- Methods -------------------------------------------------------------------
 
@@ -63,7 +65,9 @@ def install_dotfiles
 
     if File.exists?(target) || File.symlink?(target)
       unless overwrite_all || backup_all
-        prompt "File already exists: #{target}, what do you want to do? [s]kip, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all ", :action
+        prompt "File already exists: #{target}, what do you want to do? [s]kip" \
+               "[o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all ", :action
+
         case STDIN.gets.chomp
         when 'o' then overwrite     = true
         when 'b' then backup        = true
@@ -122,9 +126,6 @@ def install_janus
 
     system %{git clone https://github.com/carlhuda/janus.git "$HOME/.vim"}
     system %{cd "$HOME/.vim" && rake}
-
-    prompt "Installing plugins"
-    install_vim_plugins
   when 'q'
     exit
   else
@@ -133,28 +134,35 @@ def install_janus
 end
 
 def install_vim_plugins
-  prompt "Installing Vim plugins"
+  prompt "Install Vim plugins? [ynq] ", :action
 
-  plugin_archive = File.join(Dir.pwd, 'script', 'janus', 'plugin-archive')
-  plugin_archive_delimiter = ','
-  plugin_dir = File.join(ENV['HOME'], '.janus')
+  case STDIN.gets.chomp
+  when 'y'
+    plugin_dir         = File.join(ENV['HOME'], '.janus')
+    plugin_archive     = File.join(Dir.pwd, 'script', 'janus', 'plugin-archive')
+    plugin_archive_del = ','
 
-  # Create ~/.janus if not exists
-  Dir.mkdir(plugin_dir) unless File.exists?(plugin_dir)
+    # Create ~/.janus if not exists
+    Dir.mkdir(plugin_dir) unless File.exists?(plugin_dir)
 
-  # Parse plugin archive
-  File.open(plugin_archive, 'r').each_line do |plugin_definition|
-    name, repo = plugin_definition.split plugin_archive_delimiter
-    name, repo = name.strip, repo.strip
+    # Parse plugin archive
+    File.open(plugin_archive, 'r').each_line do |plugin_definition|
+      name, repo = plugin_definition.split plugin_archive_del
+      name, repo = name.strip, repo.strip
 
-    target = File.join(plugin_dir, name)
+      target = File.join(plugin_dir, name)
 
-    if File.exists? target
-      prompt "Plugin #{name} already installed"
-    else
-      prompt "Installing plugin: #{name} (#{repo})"
-      system %{git clone "#{repo}" "#{target}"}
+      if File.exists? target
+        prompt "Plugin #{name} already installed"
+      else
+        prompt "Installing plugin: #{name} (#{repo})"
+        system %{git clone "#{repo}" "#{target}"}
+      end
     end
+  when 'q'
+    exit
+  else
+    prompt "Skipping Vim plugins"
   end
 end
 
@@ -206,8 +214,8 @@ end
 
 def backup_file(file)
   backup_filename = "#{file}.old"
-
   prompt "Backing up .#{file} as #{backup_filename}"
+
   system %{cp -rf "#{file}" "#{backup_filename}"}
 end
 
