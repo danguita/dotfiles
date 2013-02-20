@@ -1,8 +1,8 @@
 vim-align,git://github.com/pix/vim-align.git
-vim-autoclose,https://github.com/Townk/vim-autoclose.git
+vim-autoclose,git://github.com/Townk/vim-autoclose.git
 vim-easymotion,git://github.com/Lokaltog/vim-easymotion.git
 vim-markdown,git://github.com/plasticboy/vim-markdown.git
-vim-powerline,https://github.com/Lokaltog/vim-powerline.git
-vim-smartinput,https://github.com/kana/vim-smartinput.git
-vimux,https://github.com/benmills/vimux.git
-zencoding-vim,https://github.com/mattn/zencoding-vim.git
+vim-powerline,git://github.com/Lokaltog/vim-powerline.git
+vim-smartinput,git://github.com/kana/vim-smartinput.git
+vimux,git://github.com/benmills/vimux.git
+zencoding-vim,git://github.com/mattn/zencoding-vim.git
