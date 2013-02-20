@@ -66,7 +66,7 @@ def install_dotfiles
     if File.exists?(target) || File.symlink?(target)
       unless overwrite_all || backup_all
         prompt "File already exists: #{target}, what do you want to do? [s]kip" \
-               "[o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all ", :action
+               " [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all ", :action
 
         case STDIN.gets.chomp
         when 'o' then overwrite     = true
@@ -212,11 +212,12 @@ def link_file(file, target)
   system %{ln -sf "$PWD/#{file}" "#{target}"}
 end
 
-def backup_file(file)
+def backup_file(file, remove = true)
   backup_filename = "#{file}.old"
   prompt "Backing up .#{file} as #{backup_filename}"
 
   system %{cp -rf "#{file}" "#{backup_filename}"}
+  system %{rm -rf "#{file}"} if remove
 end
 
 def prompt(text = nil, type = :status)
