@@ -1,0 +1,3 @@
+---
+:notifier: growl
+:tmux: true
