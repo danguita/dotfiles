@@ -82,10 +82,11 @@ Binaries path at $HOME, only for user purposes. You might like to add it to your
 ### All tasks
 
     rake dotfiles:install  # Install dotfiles
+    rake dotfiles:update   # Update dotfiles
     rake install           # Install dotfiles and related libraries
     rake shell:install     # Install Oh-My-Zsh and change default shell
     rake shell:update      # Update Oh-My-Zsh
-    rake update            # Update vim and shell libraries
+    rake update            # Update dotfiles, vim and shell libraries
     rake vim:install       # Install Janus and vim plugins
     rake vim:update        # Update Janus and vim plugins
 
