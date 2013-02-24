@@ -1,6 +1,6 @@
 # editor
 export EDITOR=vim
-export VIM="$HOME/.vim"
+export VIM_FILES="$HOME/.vim"
 
 # locale
 export LC_ALL=en_US.UTF-8
