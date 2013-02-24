@@ -127,6 +127,8 @@ def update_oh_my_zsh
 
   if zsh_dir
     system %{cd "#{zsh_dir}" && #{update_action}} if File.exists?(zsh_dir)
+  else
+    prompt "$ZSH not found", :error
   end
 end
 
@@ -144,6 +146,7 @@ def install_janus
 
     system %{git clone https://github.com/carlhuda/janus.git "$HOME/.vim"}
     system %{cd "$HOME/.vim" && rake}
+    system %{export VIM_FILES="#{vim_dir}"}
   when 'q'
     exit
   else
@@ -187,11 +190,13 @@ end
 def update_janus
   prompt "Updating Janus"
 
-  vim_dir       = ENV['VIM']
+  vim_dir       = ENV['VIM_FILES']
   update_action = 'git pull origin master'
 
   if vim_dir
     system %{cd "#{vim_dir}" && #{update_action}} if File.exists?(vim_dir)
+  else
+    prompt "$VIM_FILES not found", :error
   end
 end
 
@@ -244,7 +249,8 @@ end
 def prompt(text = nil, type = :status)
   case type
   when :status then prefix = '-->'
-  when :action then prefix = '!!!'
+  when :action then prefix = '>>>'
+  when :error  then prefix = '!!!'
   end
 
   puts [prefix, text].join(' ')
