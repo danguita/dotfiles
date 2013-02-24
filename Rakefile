@@ -9,13 +9,18 @@ require 'rake'
 desc "Install dotfiles and related libraries"
 task :install => ['dotfiles:install', 'shell:install', 'vim:install']
 
-desc "Update vim and shell libraries"
-task :update => ['vim:update', 'shell:update']
+desc "Update dotfiles, vim and shell libraries"
+task :update => ['dotfiles:update', 'vim:update', 'shell:update']
 
 namespace :dotfiles do
   desc "Install dotfiles"
   task :install do
     install_dotfiles
+  end
+
+  desc "Update dotfiles"
+  task :update do
+    update_dotfiles
   end
 end
 
@@ -46,7 +51,7 @@ namespace :shell do
   end
 end
 
-task :default => :install
+task :default => :update
 
 # -- Methods -------------------------------------------------------------------
 
@@ -84,6 +89,15 @@ def install_dotfiles
   end
 end
 
+def update_dotfiles
+  prompt "Updating dotfiles"
+
+  dotfiles_dir  = Dir.pwd
+  update_action = 'git pull origin master'
+
+  system %{cd "#{dotfiles_dir}" && #{update_action}} if File.exists?(dotfiles_dir)
+end
+
 # ZSH framework
 # https://github.com/robbyrussell/oh-my-zsh
 def install_oh_my_zsh
@@ -95,7 +109,8 @@ def install_oh_my_zsh
     case STDIN.gets.chomp
     when 'y'
       prompt "Installing oh-my-zsh"
-      system %{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
+      system %{git clone https://github.com/robbyrussell/oh-my-zsh.git" \
+              " $HOME/.oh-my-zsh"}
     when 'q'
       exit
     else
@@ -107,9 +122,12 @@ end
 def update_oh_my_zsh
   prompt "Updating Oh-My-Zsh"
 
-  oh_my_zsh_dir = File.join(ENV['HOME'], '.oh-my-zsh')
+  zsh_dir       = ENV['ZSH']
+  update_action = 'git pull origin master'
 
-  system %{cd "#{oh_my_zsh_dir}" && git pull origin master} if File.exists?(oh_my_zsh_dir)
+  if zsh_dir
+    system %{cd "#{zsh_dir}" && #{update_action}} if File.exists?(zsh_dir)
+  end
 end
 
 # Vim distribution and plugins
@@ -121,8 +139,8 @@ def install_janus
   when 'y'
     prompt "Installing Janus"
 
-    janus_dir = File.join(ENV['HOME'], ".vim")
-    backup_file(janus_dir) if File.exists?(janus_dir)
+    vim_dir = File.join(ENV['HOME'], ".vim")
+    backup_file(vim_dir) if File.exists?(vim_dir)
 
     system %{git clone https://github.com/carlhuda/janus.git "$HOME/.vim"}
     system %{cd "$HOME/.vim" && rake}
@@ -169,9 +187,12 @@ end
 def update_janus
   prompt "Updating Janus"
 
-  janus_dir = File.join(ENV['HOME'], '.vim')
+  vim_dir       = ENV['VIM']
+  update_action = 'git pull origin master'
 
-  system %{cd "#{janus_dir}" && git pull origin master} if File.exists?(janus_dir)
+  if vim_dir
+    system %{cd "#{vim_dir}" && #{update_action}} if File.exists?(vim_dir)
+  end
 end
 
 def update_vim_plugins
@@ -184,7 +205,7 @@ def update_vim_plugins
   scripts << File.join(scripts_dir, 'janus', 'update-plugin-archive.sh')
 
   scripts.each do |script|
-    prompt "Launching #{script}"
+    prompt "Running #{script}"
     system(script) if File.exists?(script)
   end
 end
