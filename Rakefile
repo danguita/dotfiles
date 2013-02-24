@@ -109,8 +109,8 @@ def install_oh_my_zsh
     case STDIN.gets.chomp
     when 'y'
       prompt "Installing oh-my-zsh"
-      system %{git clone https://github.com/robbyrussell/oh-my-zsh.git" \
-              " $HOME/.oh-my-zsh"}
+      system %{git clone https://github.com/robbyrussell/oh-my-zsh.git \
+              $HOME/.oh-my-zsh}
     when 'q'
       exit
     else
