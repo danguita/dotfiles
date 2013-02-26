@@ -6,13 +6,14 @@ alias o='open'
 alias O='open .'
 
 # Misc aliases
-alias sed='gsed' # replace built-in sed (BSD) by GNU sed
 alias gx='gitx'
 alias c='clear'
 alias a='ack'
 alias h='heroku'
-alias ht='/usr/bin/heroku' # heroku toolbelt
+alias sed='gsed'               # replace built-in sed (BSD) by GNU sed
+alias ht='/usr/bin/heroku'     # heroku toolbelt
 alias weechat='weechat-curses' # IRC client
+alias hs='history | ack'       # History search
 
 # Vim
 alias v='vim'
