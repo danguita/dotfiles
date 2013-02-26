@@ -9,8 +9,8 @@ require 'rake'
 desc "Install dotfiles and related libraries"
 task :install => ['dotfiles:install', 'shell:install', 'vim:install']
 
-desc "Update dotfiles, vim and shell libraries"
-task :update => ['dotfiles:update', 'vim:update', 'shell:update']
+desc "Update dotfiles and related libraries"
+task :update => ['dotfiles:update', 'shell:update', 'vim:update']
 
 namespace :dotfiles do
   desc "Install dotfiles"
@@ -53,20 +53,22 @@ end
 
 task :default => :update
 
-# -- Methods -------------------------------------------------------------------
+# -- Task methods --------------------------------------------------------------
 
 def install_dotfiles
   prompt "Installing dotfiles"
 
-  dotfiles = Dir.glob('*').select { |f| File.file?(f) } - %w(Rakefile README.md)
-
   overwrite_all = false
   backup_all    = false
 
+  dotfiles = Dir.glob('*') - %w(Rakefile README.md \
+                                zsh script screenshots fonts bin)
+
   dotfiles.each do |dotfile|
-    overwrite = false
-    backup    = false
-    target    = File.join(ENV['HOME'], ".#{dotfile}")
+    overwrite   = false
+    backup      = false
+    target_name = dotfile_target(dotfile)
+    target      = File.join(ENV['HOME'], target_name)
 
     if File.exists?(target) || File.symlink?(target)
       unless overwrite_all || backup_all
@@ -154,6 +156,7 @@ def install_janus
   end
 end
 
+# $HOME/.janus plugins
 def install_vim_plugins
   prompt "Install Vim plugins? [ynq] ", :action
 
@@ -204,7 +207,7 @@ def update_vim_plugins
   prompt "Updating Vim plugins"
 
   scripts_dir = File.join(Dir.pwd, 'script')
-  scripts = []
+  scripts     = []
 
   scripts << File.join(scripts_dir, 'janus', 'update-plugins.sh')
   scripts << File.join(scripts_dir, 'janus', 'update-plugin-archive.sh')
@@ -232,8 +235,25 @@ def switch_to_zsh
   end
 end
 
+# -- Helpers -------------------------------------------------------------------
+
+# Default dotfile filename format
+def dotfile_format(dotfile)
+  ['.', dotfile].join
+end
+
+# Dotfile to target filename translation
+def dotfile_target(dotfile)
+  dotfile_target_map = {
+    'dotcss' => '.css',
+    'dotjs'  => '.js'
+  }
+
+  dotfile_target_map[dotfile] || dotfile_format(dotfile)
+end
+
 def link_file(file, target)
-  prompt "Linking .#{file}"
+  prompt "Linking #{file}"
 
   system %{ln -sf "$PWD/#{file}" "#{target}"}
 end
