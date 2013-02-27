@@ -15,6 +15,10 @@ set mouse=a
 " External commands shell
 set shell=/usr/local/bin/zsh
 
+" Show break line symbol
+" http://www.bestofvim.com/tip/better-line-wraps/
+set showbreak=↪
+
 " Use system's clipboard
 " set clipboard=unnamed
 
@@ -43,6 +47,10 @@ inoremap jk <Esc>
 noremap <silent> <C-S> :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
 inoremap <silent> <C-S> <C-O>:update<CR>
+
+" Switch Off The Current Search
+" http://www.bestofvim.com/tip/switch-off-current-search/
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 " Vimux keymaps
 " Run the current file with rspec
