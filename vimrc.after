@@ -43,14 +43,8 @@ onoremap <Tab> <Esc>
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 inoremap jk <Esc>
 
-" Use <Ctrl+s> to write current buffer
-noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S> <C-C>:update<CR>
-inoremap <silent> <C-S> <C-O>:update<CR>
-
-" Switch Off The Current Search
-" http://www.bestofvim.com/tip/switch-off-current-search/
-nnoremap <silent> <Leader>/ :nohlsearch<CR>
+" Shortcut to write current buffer
+nnoremap <silent> <Leader>w :write<CR>
 
 " Vimux keymaps
 " Run the current file with rspec
