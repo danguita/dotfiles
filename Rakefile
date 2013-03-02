@@ -7,10 +7,10 @@
 require 'rake'
 
 desc "Install dotfiles and related libraries"
-task :install => ['dotfiles:install', 'shell:install', 'vim:install']
+task :install => %w(dotfiles:install shell:install vim:install)
 
 desc "Update dotfiles and related libraries"
-task :update => ['dotfiles:update', 'shell:update', 'vim:update']
+task :update => %w(dotfiles:update shell:update vim:update)
 
 namespace :dotfiles do
   desc "Install dotfiles"
@@ -235,7 +235,7 @@ def switch_to_zsh
   end
 end
 
-# -- Helpers -------------------------------------------------------------------
+# -- Helper methods ------------------------------------------------------------
 
 # Default dotfile filename format
 def dotfile_format(dotfile)
