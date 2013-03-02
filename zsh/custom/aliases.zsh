@@ -14,6 +14,7 @@ alias sed='gsed'               # replace built-in sed (BSD) by GNU sed
 alias ht='/usr/bin/heroku'     # heroku toolbelt
 alias weechat='weechat-curses' # IRC client
 alias hs='history | ack'       # History search
+alias tm='ps -ef | ack'        # Process search
 
 # Vim
 alias v='vim'
