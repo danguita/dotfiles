@@ -1,6 +1,8 @@
 [user]
   name = David Anguita
   email = david@davidanguita.name
+[github]
+  user = danguita
 [color]
   ui = auto
 [color "branch"]
@@ -23,3 +25,6 @@
   tool = opendiff
 [push]
   default = current
+[instaweb]
+  local = true
+  httpd = webrick
