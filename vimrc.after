@@ -46,6 +46,9 @@ inoremap jk <Esc>
 " Shortcut to write current buffer
 nnoremap <silent> <Leader>w :write<CR>
 
+" Add markup preview
+map <Leader>p :Hammer<CR>
+
 " Vimux keymaps
 " Run the current file with rspec
 map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
