@@ -1,3 +1,4 @@
+hammer.vim,git://github.com/matthias-guenther/hammer.vim.git
 vim-align,git://github.com/pix/vim-align.git
 vim-autoclose,git://github.com/Townk/vim-autoclose.git
 vim-easymotion,git://github.com/Lokaltog/vim-easymotion.git
