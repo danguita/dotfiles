@@ -194,7 +194,7 @@ def update_janus
   prompt "Updating Janus"
 
   vim_dir       = ENV['VIM_FILES']
-  update_action = 'git pull origin master'
+  update_action = 'git pull origin master && rake default'
 
   if vim_dir
     system %{cd "#{vim_dir}" && #{update_action}} if File.exists?(vim_dir)
