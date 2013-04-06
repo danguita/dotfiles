@@ -1,5 +1,7 @@
+" Global options
 set nobackup
 set wrap
+set relativenumber
 
 " Colorscheme
 set background=dark
