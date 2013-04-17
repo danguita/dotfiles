@@ -1,0 +1,10 @@
+source "http://rubygems.org"
+
+gem 'bundler'
+gem 'rails'
+gem 'gist'
+gem 'git'
+gem 'vmail'
+gem 'termtter'
+gem 'pomo'
+gem 'hirb'
