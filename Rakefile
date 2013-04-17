@@ -72,8 +72,8 @@ def install_dotfiles
 
     if File.exists?(target) || File.symlink?(target)
       unless overwrite_all || backup_all
-        prompt "File already exists: #{target}, what do you want to do? [s]kip" \
-               " [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all ", :action
+        prompt "File already exists: #{target}, what do you want to do? " \
+        "[s]kip [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all ", :action
 
         case STDIN.gets.chomp
         when 'o' then overwrite     = true
@@ -242,13 +242,16 @@ def dotfile_format(dotfile)
   ['.', dotfile].join
 end
 
-# Dotfile to target filename translation
-def dotfile_target(dotfile)
-  dotfile_target_map = {
+# Specific filename mappings
+def dotfile_target_map
+  {
     'dotcss' => '.css',
     'dotjs'  => '.js'
   }
+end
 
+# Dotfile to target filename translation
+def dotfile_target(dotfile)
   dotfile_target_map[dotfile] || dotfile_format(dotfile)
 end
 
@@ -267,11 +270,11 @@ def backup_file(file, remove = true)
 end
 
 def prompt(text = nil, type = :status)
-  case type
-  when :status then prefix = '-->'
-  when :action then prefix = '>>>'
-  when :error  then prefix = '!!!'
-  end
+  prefix = case type
+           when :status then '-->'
+           when :action then '>>>'
+           when :error  then '!!!'
+           end
 
   puts [prefix, text].join(' ')
 end
