@@ -4,7 +4,7 @@ set wrap
 
 " Colorscheme
 set background=dark
-colorscheme railscasts
+colorscheme vimbrant
 
 " Encoding
 set encoding=utf-8
