@@ -1,57 +1,88 @@
-config windowHintsShowIcons true
+# References:
+#
+# https://github.com/jigish/dotfiles/blob/master/slate.js
+# https://github.com/dmacdougall/dotfiles/blob/master/.slate
+# https://github.com/sjl/dotfiles/blob/master/slate
+
+# Config
+config windowHintsFontSize 100
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
+config windowHintsTopLeftX (windowSizeX/2)-(windowHintsWidth/2)
+config windowHintsTopLeftY (windowSizeY/2)-(windowHintsHeight/2)
 config defaultToCurrentScreen true
 
-# Screens
-alias laptop 1
+# Keys aliases
+alias master cmd;ctrl
+alias alt    ctrl;alt
+alias hyper  ctrl;alt;cmd
+
+# Screens aliases
+alias laptop   1
 alias external 2
 
-# Keys
-alias master ctrl;alt;cmd
-alias hyper shift;ctrl;alt;cmd
+# General aliases
+alias sox screenOriginX
+alias soy screenOriginY
+alias ssx screenSizeX
+alias ssy screenSizeY
 
-# Sizes
-alias centered 0.85
+# Position aliases
+alias centered ${sox}+${ssx}/8;${soy}+${ssy}/8 ${ssx}/8*6;${ssy}/8*6
+alias fullscreen ${sox};${soy} ${ssx};${ssy}
+alias leftHalf ${sox};${soy} ${ssx}/2;${ssy}
+alias bottomHalf ${sox};${soy}+${ssy}/2 ${ssx};${ssy}/2
+alias topHalf ${sox};${soy} ${ssx};${ssy}/2
+alias rightHalf ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}
+alias topLeftQuarter ${sox};${soy} ${ssx}/2;${ssy}/2
+alias topRightQuarter ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}/2
+alias bottomLeftQuarter ${sox};${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
+alias bottomRightQuarter ${sox}+${ssx}/2;${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
 
-# Push Bindings
-bind right:${master} push right bar-resize:screenSizeX/2
-bind left:${master}  push left  bar-resize:screenSizeX/2
-bind up:${master}    push up    bar-resize:screenSizeY/2
-bind down:${master}  push down  bar-resize:screenSizeY/2
+# Layouts
+layout default 'Google Chrome'                move ${fullscreen}
+layout default 'iTerm'                        move ${fullscreen}
+layout default 'Finder'                       move ${rightHalf}
+layout default 'iTunes'                       move ${centered}
+layout default 'Adium':TITLE_ORDER='Contacts' move ${sox};${soy} ${ssx}/9;${ssy}
+layout split 'Google Chrome'                  move ${leftHalf}
+layout split 'iTerm'                          move ${rightHalf}
+layout split 'Finder'                         move ${rightHalf}
 
-# Throw Bindings
-bind 1:ctrl;alt     throw 0 resize
-bind 2:ctrl;alt     throw 1 resize
-bind 3:ctrl;alt     throw 2 resize
-
-bind right:ctrl;alt throw right resize
-bind left:ctrl;alt  throw left  resize
-bind up:ctrl;alt    throw up    resize
-bind down:ctrl;alt  throw down  resize
-
-# Screen size Bindings
-bind m:${master} push up bar-resize:screenSizeX
-bind c:${master} move screenOriginX+0.5*(screenSizeX-screenSizeX*${centered});screenOriginY+0.5*(screenSizeY-screenSizeY*${centered}) screenSizeX*${centered};screenSizeY*${centered}
-
-# Focus Bindings (vi mode)
-bind l:${master} focus right
-bind h:${master} focus left
-bind j:${master} focus below
-bind k:${master} focus above
-
-# App Bindings
+# Bindings
 bind b:${master} focus 'Google Chrome'
-bind f:${master} focus 'Firefox'
 bind t:${master} focus 'iTerm'
-bind w:${master} focus 'Finder'
+bind f:${master} focus 'Finder'
 bind v:${master} focus 'VirtualBox'
-bind m:${master} focus 'Adium'
 
-# Window Hints
-bind space:${hyper} hint ASDFJKLGHNMVC
+bind g:${master} move ${centered}
+bind o:${master} move ${fullscreen}
+bind h:${master} move ${leftHalf}
+bind j:${master} move ${bottomHalf}
+bind k:${master} move ${topHalf}
+bind l:${master} move ${rightHalf}
+bind u:${master} move ${topLeftQuarter}
+bind i:${master} move ${topRightQuarter}
+bind n:${master} move ${bottomLeftQuarter}
+bind m:${master} move ${bottomRightQuarter}
+
+bind 7:${master} hint ASDFJKLGH
+bind ,:${master} throw previous
+
+bind right:${master} resize +10% +0
+bind left:${master}  resize -10% +0
+bind up:${master}    resize +0 -10%
+bind down:${master}  resize +0 +10%
+
+bind right:${alt} nudge +10% +0
+bind left:${alt}  nudge -10% +0
+bind up:${alt}    nudge +0 -10%
+bind down:${alt}  nudge +0 +10%
+
+bind d:${hyper} layout default
+bind s:${hyper} layout split
 
 # Relaunch and Load Config
 bind delete:${hyper} relaunch
