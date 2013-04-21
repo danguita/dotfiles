@@ -15,6 +15,7 @@ alias ht='/usr/bin/heroku'     # heroku toolbelt
 alias weechat='weechat-curses' # IRC client
 alias hs='history | ack'       # History search
 alias tm='ps -ef | ack'        # Process search
+alias get='curl -O'            # Get a file via cURL
 
 # Vim
 alias v='vim'
