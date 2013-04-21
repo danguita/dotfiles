@@ -62,7 +62,7 @@ def install_dotfiles
   backup_all    = false
 
   dotfiles = Dir.glob('*') - %w(Rakefile README.md \
-                                zsh script screenshots fonts bin)
+                                zsh vim script screenshots fonts bin iterm2)
 
   dotfiles.each do |dotfile|
     overwrite   = false
