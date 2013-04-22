@@ -31,10 +31,6 @@
 --type-add=vim=vimrc,gvimrc
 --type-add=js=json
 
-# Search *all* plaintext files
---all-types
---text
-
 # Types to ignore by default
 --nogettext
 --noxml
