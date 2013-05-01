@@ -1,3 +1,13 @@
+# shell
+export SHELL=/usr/local/bin/zsh
+
+# path
+export PATH=/usr/X11/bin:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export PATH=/usr/local/share/python:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 # editor
 export EDITOR=vim
 export VIM_FILES="$HOME/.vim"

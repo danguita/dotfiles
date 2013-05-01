@@ -5,17 +5,19 @@ alias mv='mv -i' # confirm
 alias o='open'
 alias O='open .'
 
-# Misc aliases
-alias gx='gitx'
+# Misc
 alias c='clear'
 alias a='ack'
-alias h='heroku'
 alias sed='gsed'               # replace built-in sed (BSD) by GNU sed
-alias ht='/usr/bin/heroku'     # heroku toolbelt
-alias weechat='weechat-curses' # IRC client
 alias hs='history | ack'       # History search
 alias tm='ps -ef | ack'        # Process search
 alias get='curl -O'            # Get a file via cURL
+
+# Launchers
+alias gx='gitx'
+alias h='heroku'
+alias ht='/usr/bin/heroku'     # heroku toolbelt
+alias weechat='weechat-curses' # IRC client
 
 # Vim
 alias v='vim'
@@ -41,8 +43,6 @@ alias cakeconsole='./Console/cake' # 2.x console
 # Clipboard
 alias pbc='pbcopy'
 alias pbp='pbpaste'
-
-# Utils -----------------------------------------------------------------------
 
 # Launch Python based HTTP Server
 alias serve='python -m SimpleHTTPServer'
