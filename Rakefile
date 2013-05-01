@@ -62,7 +62,7 @@ def install_dotfiles
   backup_all    = false
 
   dotfiles = Dir.glob('*') - %w(Rakefile README.md \
-                                zsh vim script screenshots fonts bin iterm2)
+                                zsh vim gem script screenshots fonts bin iterm2)
 
   dotfiles.each do |dotfile|
     overwrite   = false
@@ -94,7 +94,7 @@ end
 def update_dotfiles
   prompt "Updating dotfiles"
 
-  dotfiles_dir  = Dir.pwd
+  dotfiles_dir  = ENV['DOTFILES']
   update_action = 'git pull origin master'
 
   system %{cd "#{dotfiles_dir}" && #{update_action}} if File.exists?(dotfiles_dir)
@@ -164,7 +164,7 @@ def install_vim_plugins
   when 'y'
     plugin_dir         = File.join(ENV['HOME'], '.janus')
     plugin_archive     = File.join(Dir.pwd, 'script', 'janus', 'plugin-archive')
-    plugin_archive_del = ','
+    plugin_archive_del = ';'
 
     # Create ~/.janus if not exists
     Dir.mkdir(plugin_dir) unless File.exists?(plugin_dir)
@@ -206,7 +206,7 @@ end
 def update_vim_plugins
   prompt "Updating Vim plugins"
 
-  scripts_dir = File.join(Dir.pwd, 'script')
+  scripts_dir = File.join(ENV['DOTFILES'], 'script')
   scripts     = []
 
   scripts << File.join(scripts_dir, 'janus', 'update-plugins.sh')

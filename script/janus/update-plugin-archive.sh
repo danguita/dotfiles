@@ -1,10 +1,9 @@
 #!/bin/sh
 
-DOTFILES="$HOME/work/dotfiles"
 PLUGIN_ARCHIVE="$DOTFILES/script/janus/plugin-archive"
 PLUGINS="$HOME/.janus"
 PLUGIN_ACTION="git config --get remote.origin.url"
-ARCHIVE_FORMAT="%s,%s\n"
+ARCHIVE_FORMAT="%s;%s\n"
 
 # Empty plugin archive
 cat /dev/null > $PLUGIN_ARCHIVE
@@ -16,6 +15,8 @@ for i in $(ls -1 $PLUGINS); do
 
     plugin_info=$(cd $PLUGINS/$i && $PLUGIN_ACTION)
 
-    printf $ARCHIVE_FORMAT $i $plugin_info >> $PLUGIN_ARCHIVE
+    if [ $plugin_info ]; then
+      printf $ARCHIVE_FORMAT $i $plugin_info >> $PLUGIN_ARCHIVE
+    fi
   fi
 done
