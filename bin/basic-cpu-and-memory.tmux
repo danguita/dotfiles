@@ -12,7 +12,7 @@ and code from psutil top.py.
 import os
 import sys
 if os.name != 'posix':
-        sys.exit('platform not supported')
+    sys.exit('platform not supported')
 import psutil
 
 
@@ -21,21 +21,28 @@ def get_dashes(perc):
     empty_dashes = " " * (10 - len(dashes))
     return dashes, empty_dashes
 
+def mixed_info():
+    return "%s %s" % (mem_info(), cpu_info())
 
-def info():
-    phymem = psutil.phymem_usage()
-
-    line = "RAM %s%% CPU %s%%" % (
-        str((phymem.used * 100) / phymem.total),
-        psutil.cpu_percent(interval=0.1),
-    )
+def cpu_info():
+    line = "CPU %s%%" % (
+            psutil.cpu_percent(interval=0.1),
+            )
 
     return line
 
+def mem_info():
+    phymem = psutil.phymem_usage()
+
+    line = "RAM %s%%" % (
+            str((phymem.used * 100) / phymem.total),
+            )
+
+    return line
 
 def main():
     try:
-        print info()
+        print mem_info()
     except (KeyboardInterrupt, SystemExit):
         pass
 
