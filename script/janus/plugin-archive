@@ -1,6 +1,7 @@
 hammer.vim;git://github.com/matthias-guenther/hammer.vim.git
 vim-align;git://github.com/pix/vim-align.git
 vim-autoclose;git://github.com/Townk/vim-autoclose.git
+vim-bundler;git://github.com/tpope/vim-bundler.git
 vim-easymotion;git://github.com/Lokaltog/vim-easymotion.git
 vim-markdown;git://github.com/plasticboy/vim-markdown.git
 vim-powerline;git://github.com/Lokaltog/vim-powerline.git
