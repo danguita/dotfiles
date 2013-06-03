@@ -28,7 +28,7 @@ set shell=/usr/local/bin/zsh
 set showbreak=↪
 
 " Use system's clipboard
-" set clipboard=unnamed
+set clipboard=unnamed
 
 " TagList w/ Exuberant Ctags
 let Tlist_Use_Right_Window=1
