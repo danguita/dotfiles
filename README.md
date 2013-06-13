@@ -60,17 +60,14 @@ My own parameters have been removed from this file so feel free to set yours up 
 
 Binaries path at $HOME, only for user purposes. You might like to add it to your system $PATH.
 
-* `battery`: Thanks to [richoH](https://github.com/richoH) ([source](https://github.com/richoH/dotfiles/blob/master/bin/battery)). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
 * `adium-unread.applescript`: Thanks to [lukaszkorecki](https://github.com/lukaszkorecki) ([source](https://github.com/lukaszkorecki/DotFiles/blob/master/bins/Adium.scpt)). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
-* `spotify.applescript`: Thanks to [elliottkember](https://github.com/elliottkember)'s [gist](https://gist.github.com/1884925). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
 * `itunes.applescript`: Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
-* `basic-cpu-and-memory.tmux`: Original script from [zaiste](https://github.com/zaiste/tmuxified/blob/master/scripts/basic-cpu-and-memory.tmux). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
+* `spotify.applescript`: Thanks to [elliottkember](https://github.com/elliottkember)'s [gist](https://gist.github.com/1884925). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
 
 ### Other files
 
-* `.rvmrc` sets the [Ruby Version Manager](http://beginrescueend.com/) path
 * `.gitignore` sets the default ignored files in a git repo
-* `.gemrc` contains system-wide settings for [rubygems](http://rubygems.org/)
+* `.ackrc` sets the default options for [ack](http://beyondgrep.com/) text finder
 * `.vimperatorrc` sets some preferences for [Vimperator](http://www.vimperator.org/vimperator) [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/vimperator/)
 
 ## Installation
