@@ -16,8 +16,9 @@ alias get='curl -O'            # Get a file via cURL
 # Launchers
 alias gx='gitx'
 alias h='heroku'
-alias ht='/usr/bin/heroku'     # heroku toolbelt
-alias weechat='weechat-curses' # IRC client
+alias ht='/usr/bin/heroku'       # Heroku toolbelt
+alias vagrant='/usr/bin/vagrant' # Vagrant package
+alias weechat='weechat-curses'   # IRC client
 
 # Vim
 alias v='vim'
