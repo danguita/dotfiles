@@ -1,6 +1,6 @@
 " Global options
 set nobackup
-set wrap
+set nowrap
 
 " Colorscheme
 set background=dark
@@ -9,6 +9,7 @@ colorscheme vimbrant
 " Highlight colors
 hi Visual ctermfg=253 ctermbg=25
 hi Search ctermfg=253 ctermbg=162
+hi ColorColumn ctermfg=253 ctermbg=235
 
 " Set transparent terminal background
 " hi Normal ctermbg=NONE
@@ -26,6 +27,10 @@ set shell=/usr/local/bin/zsh
 " Show break line symbol
 " http://www.bestofvim.com/tip/better-line-wraps/
 set showbreak=↪
+
+" Highlight 81 column
+set textwidth=80
+set colorcolumn=+1
 
 " Use system's clipboard
 set clipboard=unnamed
@@ -87,3 +92,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 " 1 - the parent directory of the current file.
 " 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .bzr/ _darcs/ root.dir
 let g:ctrlp_working_path_mode=2
+
+" CtrlP user command
+" Specify an external tool to use for listing files instead of using Vim's
+" globpath()
+let g:ctrlp_user_command = 'find %s -type f'
