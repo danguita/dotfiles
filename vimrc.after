@@ -9,7 +9,7 @@ colorscheme vimbrant
 " Highlight colors
 hi Visual ctermfg=253 ctermbg=25
 hi Search ctermfg=253 ctermbg=162
-hi ColorColumn ctermfg=253 ctermbg=235
+hi ColorColumn ctermbg=234
 
 " Set transparent terminal background
 " hi Normal ctermbg=NONE
