@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
 gem 'bundler'
-gem 'rails'
+gem 'rails', '3.2.13'
 gem 'gist'
 gem 'git'
 gem 'vmail'
