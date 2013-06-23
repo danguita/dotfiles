@@ -94,14 +94,14 @@ fi
 if [ -z "$degree" ]; then
     weather_data=$(curl --max-time 4 -s "http://weather.yahooapis.com/forecastrss?w=${location}&u=${unit}")
     if [ "$?" -eq "0" ]; then
-        error=$(echo "$weather_data" | grep "problem_cause\|DOCTYPE");
+        error=$(echo "$weather_data" | ggrep "problem_cause\|DOCTYPE");
         if [ -n "$error" ]; then
             echo "error"
             exit 1
         fi
 # <yweather:units temperature="F" distance="mi" pressure="in" speed="mph"/>
-    unit=$(echo "$weather_data" | grep -PZo "<yweather:units [^<>]*/>" | sed 's/.*temperature="\([^"]*\)".*/\1/')
-    condition=$(echo "$weather_data" | grep -PZo "<yweather:condition [^<>]*/>")
+    unit=$(echo "$weather_data" | ggrep -PZo "<yweather:units [^<>]*/>" | sed 's/.*temperature="\([^"]*\)".*/\1/')
+    condition=$(echo "$weather_data" | ggrep -PZo "<yweather:condition [^<>]*/>")
 # <yweather:condition  text="Clear"  code="31"  temp="66"  date="Mon, 01 Oct 2012 8:00 pm CST" />
     degree=$(echo "$condition" | sed 's/.*temp="\([^"]*\)".*/\1/')
     condition=$(echo "$condition" | sed 's/.*text="\([^"]*\)".*/\1/')
