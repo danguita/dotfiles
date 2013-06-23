@@ -2,22 +2,24 @@
 alias rm='rm -i' # confirm
 alias cp='cp -i' # confirm
 alias mv='mv -i' # confirm
-alias o='open'
-alias O='open .'
+alias o='open'   # open on OSX
+alias O='open .' # open on OSX (current dir)
 
 # Misc
 alias c='clear'
 alias a='ack'
-alias sed='gsed'               # replace built-in sed (BSD) by GNU sed
-alias hs='history | ack'       # History search
-alias tm='ps -ef | ack'        # Process search
-alias get='curl -O'            # Get a file via cURL
+alias sed='gsed'         # replace built-in sed (BSD) by GNU sed
+alias grep='ggrep'       # replace built-in grep by Homebrew's one
+alias hs='history | ack' # History search
+alias tm='ps -ef | ack'  # Process search
+alias get='curl -O'      # Get a file via cURL
 
-# Launchers
-alias gx='gitx'
-alias h='heroku'
-alias ht='/usr/bin/heroku'       # Heroku toolbelt
-alias vagrant='/usr/bin/vagrant' # Vagrant package
+# Helpers
+alias gx='gitx'                  # GitX short
+alias h='heroku'                 # Heroku short (gem)
+alias ht='/usr/bin/heroku'       # Heroku short (toolbelt)
+alias vagrant='/usr/bin/vagrant' # Vagrant binary (forget gem)
+alias vg='vagrant'               # Vagrant short
 alias weechat='weechat-curses'   # IRC client
 
 # Vim
