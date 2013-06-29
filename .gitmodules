@@ -1,0 +1,33 @@
+[submodule "janus/vim-easymotion"]
+	path = janus/vim-easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "janus/hammer.vim"]
+	path = janus/hammer.vim
+	url = git://github.com/matthias-guenther/hammer.vim.git
+[submodule "janus/vim-align"]
+	path = janus/vim-align
+	url = git://github.com/pix/vim-align.git
+[submodule "janus/vim-autoclose"]
+	path = janus/vim-autoclose
+	url = git://github.com/Townk/vim-autoclose.git
+[submodule "janus/vim-bundler"]
+	path = janus/vim-bundler
+	url = git://github.com/tpope/vim-bundler.git
+[submodule "janus/vim-markdown"]
+	path = janus/vim-markdown
+	url = git://github.com/plasticboy/vim-markdown.git
+[submodule "janus/vim-powerline"]
+	path = janus/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "janus/vim-rvm"]
+	path = janus/vim-rvm
+	url = git://github.com/tpope/vim-rvm.git
+[submodule "janus/vim-smartinput"]
+	path = janus/vim-smartinput
+	url = git://github.com/kana/vim-smartinput.git
+[submodule "janus/vimux"]
+	path = janus/vimux
+	url = git://github.com/benmills/vimux.git
+[submodule "janus/zencoding-vim"]
+	path = janus/zencoding-vim
+	url = git://github.com/mattn/zencoding-vim.git
