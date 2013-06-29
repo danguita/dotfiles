@@ -1,0 +1,44 @@
+[submodule "janus/vim-easymotion"]
+  path = janus/vim-easymotion
+  url = git://github.com/Lokaltog/vim-easymotion.git
+  ignore = dirty
+[submodule "janus/hammer.vim"]
+  path = janus/hammer.vim
+  url = git://github.com/matthias-guenther/hammer.vim.git
+  ignore = dirty
+[submodule "janus/vim-align"]
+  path = janus/vim-align
+  url = git://github.com/pix/vim-align.git
+  ignore = dirty
+[submodule "janus/vim-autoclose"]
+  path = janus/vim-autoclose
+  url = git://github.com/Townk/vim-autoclose.git
+  ignore = dirty
+[submodule "janus/vim-bundler"]
+  path = janus/vim-bundler
+  url = git://github.com/tpope/vim-bundler.git
+  ignore = dirty
+[submodule "janus/vim-markdown"]
+  path = janus/vim-markdown
+  url = git://github.com/plasticboy/vim-markdown.git
+  ignore = dirty
+[submodule "janus/vim-powerline"]
+  path = janus/vim-powerline
+  url = git://github.com/Lokaltog/vim-powerline.git
+  ignore = dirty
+[submodule "janus/vim-rvm"]
+  path = janus/vim-rvm
+  url = git://github.com/tpope/vim-rvm.git
+  ignore = dirty
+[submodule "janus/vim-smartinput"]
+  path = janus/vim-smartinput
+  url = git://github.com/kana/vim-smartinput.git
+  ignore = dirty
+[submodule "janus/vimux"]
+  path = janus/vimux
+  url = git://github.com/benmills/vimux.git
+  ignore = dirty
+[submodule "janus/zencoding-vim"]
+  path = janus/zencoding-vim
+  url = git://github.com/mattn/zencoding-vim.git
+  ignore = dirty

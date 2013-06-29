@@ -9,10 +9,6 @@
 These are not regular Vim files, they depend on [Janus Vim
 distribution](https://github.com/carlhuda/janus), which provides a master `.vimrc` file and tons of managed plugins.
 
-* `script/janus/plugin-archive` has all additional vim plugins that are loaded within Janus.
-It is auto-generated using [this script](https://github.com/danguita/dotfiles/blob/master/script/janus/update-plugin-archive.sh).
-I update these additional plugins by running [this script](https://github.com/danguita/dotfiles/blob/master/script/janus/update-plugins.sh).
-
 ### Zsh
 
 `.zshrc`, `zsh/custom/*`

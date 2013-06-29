@@ -61,8 +61,10 @@ def install_dotfiles
   overwrite_all = false
   backup_all    = false
 
-  dotfiles = Dir.glob('*') - %w(Rakefile README.md \
-                                zsh vim gem script screenshots fonts bin iterm2)
+  excluded_files = %w(Rakefile README.md \
+                      zsh vim gem script screenshots fonts bin iterm2)
+
+  dotfiles = Dir.glob('*') - excluded_files
 
   dotfiles.each do |dotfile|
     overwrite   = false
@@ -156,33 +158,14 @@ def install_janus
   end
 end
 
-# $HOME/.janus plugins
+# $HOME/.janus submodules
 def install_vim_plugins
   prompt "Install Vim plugins? [ynq] ", :action
 
   case STDIN.gets.chomp
   when 'y'
-    plugin_dir         = File.join(ENV['HOME'], '.janus')
-    plugin_archive     = File.join(Dir.pwd, 'script', 'janus', 'plugin-archive')
-    plugin_archive_del = ';'
-
-    # Create ~/.janus if not exists
-    Dir.mkdir(plugin_dir) unless File.exists?(plugin_dir)
-
-    # Parse plugin archive
-    File.open(plugin_archive, 'r').each_line do |plugin_definition|
-      name, repo = plugin_definition.split plugin_archive_del
-      name, repo = name.strip, repo.strip
-
-      target = File.join(plugin_dir, name)
-
-      if File.exists? target
-        prompt "Plugin #{name} already installed"
-      else
-        prompt "Installing plugin: #{name} (#{repo})"
-        system %{git clone "#{repo}" "#{target}"}
-      end
-    end
+    prompt "Initializing submodules"
+    system %{git submodule init}
   when 'q'
     exit
   else
@@ -205,17 +188,7 @@ end
 
 def update_vim_plugins
   prompt "Updating Vim plugins"
-
-  scripts_dir = File.join(ENV['DOTFILES'], 'script')
-  scripts     = []
-
-  scripts << File.join(scripts_dir, 'janus', 'update-plugins.sh')
-  scripts << File.join(scripts_dir, 'janus', 'update-plugin-archive.sh')
-
-  scripts.each do |script|
-    prompt "Running #{script}"
-    system(script) if File.exists?(script)
-  end
+  system %{git submodule update}
 end
 
 def switch_to_zsh
