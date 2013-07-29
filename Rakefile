@@ -166,6 +166,7 @@ def install_vim_plugins
   when 'y'
     prompt "Initializing submodules"
     system %{git submodule init}
+    system %{git submodule update}
   when 'q'
     exit
   else
