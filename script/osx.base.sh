@@ -25,17 +25,14 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 echo "Disable Mission Control's launch animation (Lion)"
 defaults write com.apple.dock expose-animation-duration -int 0
 
-#echo "Restore Mission Control's launch animation"
-#defaults write com.apple.dock expose-animation-duration
-
-#echo "Change Mission Control's launch animation speed"
-#defaults write com.apple.dock expose-animation-duration -float 0.1
-
 echo "Disable New Window Animation (Lion)"
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
 
-#echo "Restore New Window Animation (Lion)"
-#defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool YES
+echo "Allow key holding"
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+echo "Disable smooth scrolling"
+defaults write -g NSScrollAnimationEnabled -bool NO
 
 echo "Restart Dock"
 killall Dock
