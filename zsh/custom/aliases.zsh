@@ -16,15 +16,14 @@ alias get='curl -O'      # Get a file via cURL
 
 # Helpers
 alias gx='gitx'                  # GitX short
-alias h='heroku'                 # Heroku short (gem)
-alias ht='/usr/bin/heroku'       # Heroku short (toolbelt)
-alias vagrant='/usr/bin/vagrant' # Vagrant binary (forget gem)
+alias h='/usr/bin/heroku'        # Heroku toolbelt
+alias vagrant='/usr/bin/vagrant' # Vagrant binary
 alias vg='vagrant'               # Vagrant short
 alias weechat='weechat-curses'   # IRC client
 
 # Vim
-alias v='vim'
-alias V='vim .'
+alias v='/usr/local/bin/vim'
+alias V='v .'
 alias altvim='~/Applications/MacVim.app/Contents/MacOS/Vim' # MacVim's vim
 
 # Tmux
@@ -38,6 +37,11 @@ alias pgrestart='pgstop && pgstart'
 
 # Rails
 alias em="ls db/migrate/* | tail -n1 | xargs -o $EDITOR" # edit last migration
+
+# Rubygems
+alias chg="chgems ."
+alias cbe="chgems . bundle exec"
+alias be="bundle exec"
 
 # CakePHP
 alias cakeconsole13='../cake/console/cake' # 1.3 console
