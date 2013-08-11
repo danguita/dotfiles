@@ -38,7 +38,7 @@
   path = janus/vimux
   url = git://github.com/benmills/vimux.git
   ignore = dirty
-[submodule "janus/zencoding-vim"]
-  path = janus/zencoding-vim
-  url = git://github.com/mattn/zencoding-vim.git
+[submodule "janus/emmet-vim"]
+  path = janus/emmet-vim
+  url = git@github.com:mattn/emmet-vim.git
   ignore = dirty
