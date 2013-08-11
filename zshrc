@@ -6,7 +6,7 @@ export DISABLE_AUTO_TITLE="true"
 export DOTFILES=$HOME/work/dotfiles
 export ZSH_CUSTOM=$DOTFILES/zsh/custom
 
-plugins=(git rvm rails3 osx bundler)
+plugins=(git ruby rails3 rails4 osx)
 
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
