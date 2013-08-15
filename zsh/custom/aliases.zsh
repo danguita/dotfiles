@@ -15,11 +15,12 @@ alias tm='ps -ef | ack'  # Process search
 alias get='curl -O'      # Get a file via cURL
 
 # Helpers
-alias gx='gitx'                  # GitX short
-alias h='/usr/bin/heroku'        # Heroku toolbelt
-alias vagrant='/usr/bin/vagrant' # Vagrant binary
-alias vg='vagrant'               # Vagrant short
-alias weechat='weechat-curses'   # IRC client
+alias gx='gitx'                                        # GitX short
+alias h='/usr/bin/heroku'                              # Heroku toolbelt
+alias vagrant='/usr/bin/vagrant'                       # Vagrant binary
+alias vg='vagrant'                                     # Vagrant short
+alias weechat='weechat-curses'                         # IRC client
+alias perl='/usr/local/Cellar/perl518/5.18.0/bin/perl' # Updated Perl
 
 # Vim
 alias v='/usr/local/bin/vim'
