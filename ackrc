@@ -9,6 +9,7 @@
 --ignore-dir=log
 --ignore-dir=build
 --ignore-dir=.git
+--ignore-dir=.gem
 --ignore-dir=.sass-cache
 --ignore-dir=.idea
 
