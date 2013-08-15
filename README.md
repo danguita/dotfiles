@@ -68,7 +68,8 @@ Binaries path at $HOME, only for user purposes. You might like to add it to your
 
 ## Installation
 
-    git clone git://github.com/danguita/dotfiles.git ~/work/dotfiles
+    mkdir ~/work
+    git clone https://github.com/danguita/dotfiles.git ~/work/dotfiles
     cd ~/work/dotfiles
     rake install
 
