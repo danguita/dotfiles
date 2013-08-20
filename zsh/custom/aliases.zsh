@@ -21,6 +21,7 @@ alias vagrant='/usr/bin/vagrant'                       # Vagrant binary
 alias vg='vagrant'                                     # Vagrant short
 alias weechat='weechat-curses'                         # IRC client
 alias perl='/usr/local/Cellar/perl518/5.18.0/bin/perl' # Updated Perl
+alias curl='/usr/local/Cellar/curl/7.32.0/bin/curl'    # Updated curl
 
 # Vim
 alias v='/usr/local/bin/vim'
