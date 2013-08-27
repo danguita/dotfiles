@@ -37,6 +37,9 @@ alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias pgrestart='pgstop && pgstart'
 
+# Elasticsearch
+alias esstart='elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
+
 # Rails
 alias em="ls db/migrate/* | tail -n1 | xargs -o $EDITOR" # edit last migration
 
