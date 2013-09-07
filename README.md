@@ -73,7 +73,12 @@ Binaries path at $HOME, only for user purposes. You might like to add it to your
     cd ~/work/dotfiles
     rake install
 
-### All tasks
+### Remember to set up your git user
+
+    $ git config --global user.name "John Doe"
+    $ git config --global user.email johndoe@example.com
+
+### Updating. All tasks
 
     rake dotfiles:install  # Install dotfiles
     rake dotfiles:update   # Update dotfiles
