@@ -7,4 +7,3 @@ let g:Powerline_symbols = 'fancy'
 " Disable Janus plugins
 call janus#disable_plugin('autoclose')
 call janus#disable_plugin('syntastic')
-call janus#disable_plugin('vroom')
