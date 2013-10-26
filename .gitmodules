@@ -6,10 +6,6 @@
   path = janus/hammer.vim
   url = git://github.com/matthias-guenther/hammer.vim.git
   ignore = dirty
-[submodule "janus/vim-align"]
-  path = janus/vim-align
-  url = git://github.com/pix/vim-align.git
-  ignore = dirty
 [submodule "janus/vim-autoclose"]
   path = janus/vim-autoclose
   url = git://github.com/Townk/vim-autoclose.git
@@ -42,3 +38,6 @@
   path = janus/emmet-vim
   url = git@github.com:mattn/emmet-vim.git
   ignore = dirty
+[submodule "janus/tabular"]
+	path = janus/tabular
+	url = https://github.com/godlygeek/tabular.git
