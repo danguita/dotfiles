@@ -69,8 +69,8 @@ map <Leader>p :Hammer<CR>
 map ,x :call VimuxRunCommand("change ".expand("%"))<CR>
 
 " Vroom using chgems and Vimux
-let g:vroom_spec_command = 'chgems . bundle exec rspec '
-let g:vroom_cucumber_path = 'chgems . bundle exec rspec '
+let g:vroom_spec_command = 'CI=true chgems . bundle exec rspec '
+let g:vroom_cucumber_path = 'CI=true chgems . bundle exec rspec '
 let g:vroom_use_bundle_exec = 0
 let g:vroom_use_vimux = 1
 
