@@ -22,8 +22,6 @@ alias vg='vagrant'                                     # Vagrant short
 alias sshv='ssh localhost -p 2222'                     # Vagrant machine SSH
 alias tv='chgems . bundle exec travis'                 # Travis CI CLI (gem)
 alias weechat='weechat-curses'                         # IRC client
-alias perl='/usr/local/Cellar/perl518/5.18.0/bin/perl' # Updated Perl
-alias curl='/usr/local/Cellar/curl/7.32.0/bin/curl'    # Updated curl
 
 # Vim
 alias v='/usr/local/bin/vim'
