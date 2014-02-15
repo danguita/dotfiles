@@ -29,7 +29,6 @@ alias V='v .'
 alias altvim='~/Applications/MacVim.app/Contents/MacOS/Vim' # MacVim's vim
 
 # Tmux
-alias tmux='tmux -u2' # explicit UTF-8 and 256-color support
 alias t='tmux'
 
 # Postgresql
