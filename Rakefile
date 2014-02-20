@@ -62,7 +62,8 @@ def install_dotfiles
   backup_all    = false
 
   excluded_files = %w(Rakefile README.md \
-                      zsh vim gem script screenshots fonts bin iterm2)
+                      zsh vim gem script screenshots fonts bin iterm2 \
+                      keyremap4macbook)
 
   dotfiles = Dir.glob('*') - excluded_files
 
