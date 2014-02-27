@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
 gem 'bundler'
-gem 'rails', '3.2.13'
+gem 'rails'
 gem 'gist'
 gem 'git'
 gem 'vmail'
@@ -12,3 +12,4 @@ gem 'hirb'
 gem 'pry'
 gem 'gimli'
 gem 'pt'
+gem 'lolcommits'
