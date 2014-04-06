@@ -1,0 +1,16 @@
+" Disable global keybindings on all Google Apps
+autocmd LocationChange google.com :normal! <C-z>
+
+" Set solarized colorscheme
+colorscheme solarized-dark
+
+" Disable smooth scrolling
+set scrollsteps=1
+set scrolltime=0
+
+" Use chars for hints
+set hintkeys=asdflkj
+
+" Increase font size
+hi FontFixed -append font-size: 9pt !important;
+hi -a Hint -append font-size: 9pt !important;
