@@ -15,6 +15,9 @@ export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
 # nodejs
 export NODE_PATH="/usr/local/lib/node"
 
+# Go
+export GOPATH="$HOME/.go"
+
 # ack
 export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee" # CakePHP and CoffeeScript templates
 
