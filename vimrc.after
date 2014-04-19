@@ -56,9 +56,6 @@ onoremap <Tab> <Esc>
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 inoremap jk <Esc>
 
-" Shortcut to write current buffer
-nnoremap <silent> <Leader>w :write<CR>
-
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 
