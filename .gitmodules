@@ -1,7 +1,3 @@
-[submodule "janus/vim-easymotion"]
-  path = janus/vim-easymotion
-  url = https://github.com/Lokaltog/vim-easymotion.git
-  ignore = dirty
 [submodule "janus/hammer.vim"]
   path = janus/hammer.vim
   url = https://github.com/matthias-guenther/hammer.vim.git
