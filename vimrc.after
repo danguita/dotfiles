@@ -11,6 +11,9 @@ hi Visual ctermfg=253 ctermbg=25
 hi Search ctermfg=253 ctermbg=162
 hi ColorColumn ctermbg=235
 
+" Highlight cursor line
+set cursorline
+
 " Set transparent terminal background
 " hi Normal ctermbg=NONE
 
