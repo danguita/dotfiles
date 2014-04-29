@@ -7,3 +7,6 @@ source /usr/local/share/chruby/auto.sh
 
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh ]]
+
+# DMSTK tools
+eval "$($HOME/work/domestika-tools/bin/dmstk init -)"
