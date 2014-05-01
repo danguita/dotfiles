@@ -10,6 +10,7 @@ colorscheme molokai
 hi Visual ctermfg=253 ctermbg=25
 hi Search ctermfg=253 ctermbg=162
 hi ColorColumn ctermbg=235
+hi CursorLine ctermbg=235
 
 " Set transparent terminal background
 hi Normal ctermbg=NONE
