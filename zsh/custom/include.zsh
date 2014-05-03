@@ -8,8 +8,5 @@ source /usr/local/share/chruby/auto.sh
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh ]]
 
-# gh alias git
-[[ -s `brew --prefix`/bin/gh ]] && eval "$(gh alias -s)"
-
 # DMSTK tools
 [[ -s "$HOME/work/domestika-tools/bin/dmstk" ]] && eval "$($HOME/work/domestika-tools/bin/dmstk init -)"
