@@ -16,6 +16,7 @@ alias get='curl -O'      # Get a file via cURL
 
 # Helpers
 alias gx='gitx'                                        # GitX short
+alias t='tig'                                          # Tig short
 alias h='/usr/bin/heroku'                              # Heroku toolbelt
 alias vagrant='/usr/bin/vagrant'                       # Vagrant binary
 alias vg='vagrant'                                     # Vagrant short
@@ -26,9 +27,6 @@ alias tv='chgems . bundle exec travis'                 # Travis CI CLI (gem)
 alias v='/usr/local/bin/vim'
 alias V='v .'
 alias altvim='~/Applications/MacVim.app/Contents/MacOS/Vim' # MacVim's vim
-
-# Tmux
-alias t='tmux'
 
 # Postgresql
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
