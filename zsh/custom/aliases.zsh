@@ -15,13 +15,13 @@ alias tm='ps -ef | ack'  # Process search
 alias get='curl -O'      # Get a file via cURL
 
 # Helpers
-alias gx='gitx'                                        # GitX short
-alias t='tig'                                          # Tig short
-alias h='/usr/bin/heroku'                              # Heroku toolbelt
-alias vagrant='/usr/bin/vagrant'                       # Vagrant binary
-alias vg='vagrant'                                     # Vagrant short
-alias sshv='ssh localhost -p 2222'                     # Vagrant machine SSH
-alias tv='chgems . bundle exec travis'                 # Travis CI CLI (gem)
+alias gx='gitx'                            # GitX short
+alias t='tig'                              # Tig short
+alias h='/usr/bin/heroku'                  # Heroku toolbelt
+alias vagrant='/usr/bin/vagrant'           # Vagrant binary
+alias vg='vagrant'                         # Vagrant short
+alias sshv='ssh vagrant@localhost -p 2222' # Vagrant machine SSH
+alias tv='bundle exec travis'              # Travis CI CLI (gem)
 
 # Vim
 alias v='/usr/local/bin/vim'
@@ -46,7 +46,7 @@ alias be="bundle exec"
 
 # CakePHP
 alias cakeconsole13='../cake/console/cake' # 1.3 console
-alias cakeconsole='./Console/cake' # 2.x console
+alias cakeconsole='./Console/cake'         # 2.x console
 
 # Clipboard
 alias pbc='pbcopy'
