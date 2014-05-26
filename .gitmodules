@@ -37,3 +37,6 @@
 [submodule "janus/tabular"]
 	path = janus/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "janus/golden-ratio"]
+	path = janus/golden-ratio
+	url = https://github.com/roman/golden-ratio.git
