@@ -57,3 +57,6 @@ alias serve='python -m SimpleHTTPServer'
 
 # Copy SSH pubkey to clipboard
 alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo 'Public key copied to clipboard'"
+
+# Play sound
+alias beep="afplay /System/Library/Sounds/Ping.aiff -v 10"
