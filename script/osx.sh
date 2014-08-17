@@ -64,6 +64,9 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
+# Better font smoothing on main display
+defaults -currentHost write NSGlobalDomain AppleFontSmoothing -int 1
+
 # Show status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
