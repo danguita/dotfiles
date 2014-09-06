@@ -1,9 +1,9 @@
 # Filesystem
-alias cp='cp -i'   # confirm
-alias mv='mv -i'   # confirm
-alias rm='rmtrash' # move to trash
-alias o='open'     # open on OSX
-alias O='open .'   # open on OSX (cwd)
+alias cp='cp -i' # confirm
+alias mv='mv -i' # confirm
+alias rm='rm -i' # confirm
+alias o='open'   # open on OSX
+alias O='open .' # open on OSX (cwd)
 
 # Misc
 alias c='clear'
