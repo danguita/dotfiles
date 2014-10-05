@@ -1,38 +1,40 @@
-# David Anguita dotfiles
+# David Anguita's dotfiles
 
-## Features
+## What's here
 
-### Vim
+Here's my UNIX environment. I'm also maintaining a gist with notes about [setting up a OS X machine for software development](https://gist.github.com/danguita/6242852).
+
+## Components
+
+#### Vim
 
 `.vimrc.after`, `.vimrc.before`, `.gvimrc.after`
 
-These are not regular Vim files, they depend on [Janus Vim
-distribution](https://github.com/carlhuda/janus), which provides a master `.vimrc` file and tons of managed plugins.
+These are not regular Vim files, they depend on [Janus Vim distribution](https://github.com/carlhuda/janus), which provides a master `.vimrc` file and tons of managed plugins.
 
-### Zsh
+#### Zsh
 
 `.zshrc`, `zsh/custom/*`
 
 I use [Zsh](http://www.zsh.org/) as my default shell. This config file is pretty brief because [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) manages most of the config and plugins.
 
-My local config, aliases, functions and env variables are located at `$ZSH_CUSTOM` (`$DOTFILES/zsh/custom`).
+My local config, aliases, functions and environment are located in `$ZSH_CUSTOM` (`$DOTFILES/zsh/custom`).
 
-### Tmux & GNU Screen
+#### Tmux & GNU Screen
 
 `.tmux.conf`, `.screenrc`
 
 There's nothing to say, these are the most well-known terminal multiplexers. I was using GNU Screen for years but I switched to Tmux + [tmuxinator](https://github.com/aziz/tmuxinator) and I'm really enjoying it.
 
-My Tmux setup is powered by tmuxinator templates like these:
+My Tmux setup is powered by tmuxinator templates like these (probably outdated):
 * [tmuxinator template for Rails projects](https://gist.github.com/3023433) (gist)
 * [tmuxinator template for CakePHP projects](https://gist.github.com/3033284) (gist)
 
-A Tmux + tmuxinator session looks like this (Rails project):
+A Tmux + tmuxinator session looks like this in a regular Rails project:
 
-![tmux
-statusbar](https://raw.github.com/danguita/dotfiles/master/screenshots/tmux-statusbar.jpg)
+![tmux statusbar](https://raw.github.com/danguita/dotfiles/master/screenshots/tmux-statusbar.jpg)
 
-### Slate
+#### Slate
 
 `.slate`
 
@@ -40,31 +42,15 @@ statusbar](https://raw.github.com/danguita/dotfiles/master/screenshots/tmux-stat
 
 I have defined some key bindings for support my daily workflow, app switching and window tiling. It's definitely a must have productivity tool.
 
-### Mutt
+#### /script
 
-`.muttrc`
+* `osx-system.sh`: Script for setting some defaults in OS X. Forked from [this gist](https://gist.github.com/2260182).
 
-There's a config template for the [Mutt](http://www.mutt.org/) E-mail client.
+#### Other files
 
-My own parameters have been removed from this file so feel free to set yours up the same way.
-
-### /script
-
-* `osx.sh`: Script for auto-setting lots of system preferences in Mac OS X. Forked from [this gist](https://gist.github.com/2260182). 
-
-### /bin
-
-Binaries path at $HOME, only for user purposes. You might like to add it to your system $PATH.
-
-* `adium-unread.applescript`: Thanks to [lukaszkorecki](https://github.com/lukaszkorecki) ([source](https://github.com/lukaszkorecki/DotFiles/blob/master/bins/Adium.scpt)). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
-* `itunes.applescript`: Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
-* `spotify.applescript`: Thanks to [elliottkember](https://github.com/elliottkember)'s [gist](https://gist.github.com/1884925). Used in [tmux](https://github.com/danguita/dotfiles/blob/master/tmux.conf) status bar.
-
-### Other files
-
-* `.gitignore` sets the default ignored files in a git repo
-* `.ackrc` sets the default options for [ack](http://beyondgrep.com/) text finder
-* `.vimperatorrc` sets some preferences for [Vimperator](http://www.vimperator.org/vimperator) [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/vimperator/)
+* `.ackrc` for [Ack](http://beyondgrep.com/) text finder
+* `.tigrc` for [Tig](http://jonas.nitro.dk/tig/) git client
+* `.pentadactylrc` for [Pentadactyl](http://5digits.org/pentadactyl/) [Firefox add-on](https://addons.mozilla.org/es/firefox/addon/pentadactyl/)
 
 ## Installation
 
@@ -73,12 +59,12 @@ Binaries path at $HOME, only for user purposes. You might like to add it to your
     cd ~/work/dotfiles
     rake install
 
-### Remember to set up your git user
+### Remember to set up your own git user
 
     $ git config --global user.name "John Doe"
     $ git config --global user.email johndoe@example.com
 
-### Updating. All tasks
+### All tasks: Install & Update
 
     rake dotfiles:install  # Install dotfiles
     rake dotfiles:update   # Update dotfiles
@@ -89,6 +75,7 @@ Binaries path at $HOME, only for user purposes. You might like to add it to your
     rake vim:install       # Install Janus and vim plugins
     rake vim:update        # Update Janus and vim plugins
 
-## License
+## Feedback please
 
-For config files?! Feel free to use any of them.
+Feel free to use and [contribute](https://github.com/danguita/dotfiles/issues)!
+
