@@ -7,7 +7,7 @@ alias O='open .' # open on OSX (cwd)
 
 # Misc
 alias c='clear'
-alias a='ack'
+alias a='ag'             # The Silver Searcher
 alias sed='gsed'         # replace built-in sed (BSD) by GNU sed
 alias grep='ggrep'       # replace built-in grep by Homebrew's one
 alias hs='history | ack' # History search

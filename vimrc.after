@@ -92,3 +92,6 @@ let g:ctrlp_user_command = 'find %s -type d -name .git -prune -o -type d -name t
 
 " Listing files via ACK
 " let g:ctrlp_user_command = 'ack -f %s --ignore-dir=.git'
+
+" Use The Silver Searcher (ag) as default text searching tool
+let g:ackprg = 'ag --nogroup --nocolor --column'
