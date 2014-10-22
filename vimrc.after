@@ -95,3 +95,6 @@ let g:ctrlp_user_command = 'find %s -type d -name .git -prune -o -type d -name t
 
 " Use The Silver Searcher (ag) as default text searching tool
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Unfolded Markdown by default
+let g:vim_markdown_folding_disabled=1
