@@ -14,10 +14,6 @@
   path = janus/vim-markdown
   url = https://github.com/plasticboy/vim-markdown.git
   ignore = dirty
-[submodule "janus/vim-powerline"]
-  path = janus/vim-powerline
-  url = https://github.com/Lokaltog/vim-powerline.git
-  ignore = dirty
 [submodule "janus/vim-rvm"]
   path = janus/vim-rvm
   url = https://github.com/tpope/vim-rvm.git
@@ -41,4 +37,8 @@
 [submodule "janus/indentLine"]
   path = janus/indentLine
   url = https://github.com/Yggdroot/indentLine.git
+  ignore = dirty
+[submodule "janus/vim-airline"]
+  path = janus/vim-airline
+  url = https://github.com/bling/vim-airline.git
   ignore = dirty
