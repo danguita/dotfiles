@@ -190,7 +190,7 @@ end
 
 def update_vim_plugins
   prompt "Updating Vim plugins"
-  system %{git submodule update}
+  system %{git submodule init && git submodule update}
 end
 
 def switch_to_zsh
