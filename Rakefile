@@ -7,10 +7,12 @@
 require 'rake'
 
 desc "Install dotfiles and related libraries"
-task :install => %w(dotfiles:install shell:install vim:install)
+task install: %w(dotfiles:install shell:install vim:install)
 
 desc "Update dotfiles and related libraries"
-task :update => %w(dotfiles:update shell:update vim:update)
+task update: %w(dotfiles:update shell:update vim:update)
+
+task default: :update
 
 namespace :dotfiles do
   desc "Install dotfiles"
@@ -50,8 +52,6 @@ namespace :shell do
     update_oh_my_zsh
   end
 end
-
-task :default => :update
 
 # -- Task methods --------------------------------------------------------------
 
@@ -100,7 +100,9 @@ def update_dotfiles
   dotfiles_dir  = ENV['DOTFILES']
   update_action = 'git pull origin master'
 
-  system %{cd "#{dotfiles_dir}" && #{update_action}} if File.exists?(dotfiles_dir)
+  if File.exists?(dotfiles_dir)
+    system %{cd "#{dotfiles_dir}" && #{update_action}}
+  end
 end
 
 # ZSH framework
@@ -220,14 +222,14 @@ end
 # Specific filename mappings
 def dotfile_target_map
   {
-    'dotcss' => '.css',
-    'dotjs'  => '.js'
+    dotcss: '.css',
+    dotjs: '.js'
   }
 end
 
 # Dotfile to target filename translation
 def dotfile_target(dotfile)
-  dotfile_target_map[dotfile] || dotfile_format(dotfile)
+  dotfile_target_map[dotfile.to_sym] || dotfile_format(dotfile)
 end
 
 def link_file(file, target)
