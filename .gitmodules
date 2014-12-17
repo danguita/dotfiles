@@ -34,10 +34,6 @@
   path = janus/tabular
   url = https://github.com/godlygeek/tabular.git
   ignore = dirty
-[submodule "janus/indentLine"]
-  path = janus/indentLine
-  url = https://github.com/Yggdroot/indentLine.git
-  ignore = dirty
 [submodule "janus/vim-airline"]
   path = janus/vim-airline
   url = https://github.com/bling/vim-airline.git
