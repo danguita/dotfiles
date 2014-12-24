@@ -1,6 +1,9 @@
 # shell
 export SHELL=/usr/local/bin/zsh
 
+# term
+export TERM="screen-256color"
+
 # editor
 export EDITOR=vim
 export VIM_FILES="$HOME/.vim"
