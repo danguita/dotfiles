@@ -59,11 +59,6 @@ I have defined some key bindings for support my daily workflow, app switching an
     cd ~/work/dotfiles
     rake install
 
-### Remember to set up your own git user
-
-    $ git config --global user.name "John Doe"
-    $ git config --global user.email johndoe@example.com
-
 ### All tasks: Install & Update
 
     rake dotfiles:install  # Install dotfiles
