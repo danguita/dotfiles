@@ -60,10 +60,8 @@ onoremap <Tab> <Esc>
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 inoremap jk <Esc>
 
-" Easy switching between buffers and tabs
+" Easy switching between tabs
 " http://syskall.com/my-biggest-vim-productivity-boost/
-map <C-J> :bnext<CR>
-map <C-K> :bprev<CR>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
 
