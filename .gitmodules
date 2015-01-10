@@ -38,3 +38,7 @@
   path = janus/vim-airline
   url = https://github.com/bling/vim-airline.git
   ignore = dirty
+[submodule "janus/golden-ratio"]
+  path = janus/golden-ratio
+  url = https://github.com/roman/golden-ratio.git
+  ignore = dirty
