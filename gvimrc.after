@@ -1,4 +1,4 @@
-set guifont=Source\ code\ Pro:h15 " Font
-set guioptions-=T                 " Hide toolbar
-set guioptions-=r                 " Hide right scrollbar
-set guioptions-=L                 " Hide left scrollbar
+set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h14
+set guioptions-=T " Hide toolbar
+set guioptions-=r " Hide right scrollbar
+set guioptions-=L " Hide left scrollbar
