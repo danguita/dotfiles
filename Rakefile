@@ -246,12 +246,14 @@ def backup_file(file, remove = true)
   system %{rm -rf "#{file}"} if remove
 end
 
-def prompt(text = nil, type = :status)
-  prefix = case type
-           when :status then '-->'
-           when :action then '>>>'
-           when :error  then '!!!'
-           end
+def prompt(text, type = :status)
+  prompt_format =
+    case type
+    when :status then "\e[32m==> %s\e[0m\n"
+    when :action then "\e[33m>>> %s\e[0m\n"
+    when :error  then "\e[31m!!! %s\e[0m\n"
+    else "%s"
+    end
 
-  puts [prefix, text].join(' ')
+  printf(prompt_format, text)
 end
