@@ -4,16 +4,7 @@ set nowrap
 
 " Colorscheme
 set background=dark
-colorscheme molokai
-
-" Highlight colors
-hi Visual ctermfg=253 ctermbg=25
-hi Search ctermfg=253 ctermbg=162
-hi ColorColumn ctermbg=235
-hi CursorLine ctermbg=235
-
-" Set transparent terminal background
-hi Normal ctermbg=NONE
+colorscheme Tomorrow-Night
 
 " Highlight cursor line
 set cursorline
