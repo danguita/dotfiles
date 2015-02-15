@@ -43,6 +43,9 @@ alias chg="chgems ."
 alias cbe="chgems . bundle exec"
 alias be="cbe"
 
+# Git
+alias ggup="chgems . git up"
+
 # CakePHP
 alias cakeconsole13="../cake/console/cake" # 1.3 console
 alias cakeconsole="./Console/cake"         # 2.x console
