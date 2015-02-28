@@ -38,3 +38,7 @@
   path = janus/vim-airline
   url = https://github.com/bling/vim-airline.git
   ignore = dirty
+[submodule "janus/vim-rubocop"]
+  path = janus/vim-rubocop
+  url = git@github.com:ngmy/vim-rubocop.git
+  ignore = dirty

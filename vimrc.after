@@ -94,3 +94,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Unfolded Markdown by default
 let g:vim_markdown_folding_disabled = 1
+
+" Rubocop command
+let g:vimrubocop_rubocop_cmd = 'chgems . rubocop '
