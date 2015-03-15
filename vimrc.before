@@ -16,3 +16,4 @@ let g:airline_right_sep = ''
 " Disable Janus plugins
 call janus#disable_plugin('autoclose')
 call janus#disable_plugin('syntastic')
+call janus#disable_plugin('multiple-cursors')
