@@ -35,13 +35,15 @@ alias pgrestart="pgstop && pgstart"
 # Elasticsearch
 alias esstart="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
 
-# Rails
-alias em="ls db/migrate/* | tail -n1 | xargs -o $EDITOR" # edit last migration
-
 # Rubygems
 alias chg="chgems ."
 alias cbe="chgems . bundle exec"
+alias bundle="chgems . bundle"
 alias be="cbe"
+
+# Rails
+alias rails="be rails"
+alias rake="be rake"
 
 # Git
 alias ggup="chgems . git up"
