@@ -42,3 +42,7 @@
   path = janus/vim-rubocop
   url = git@github.com:ngmy/vim-rubocop.git
   ignore = dirty
+[submodule "janus/neocomplete.vim"]
+  path = janus/neocomplete.vim
+  url = git@github.com:Shougo/neocomplete.vim.git
+  ignore = dirty
