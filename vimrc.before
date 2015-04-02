@@ -1,11 +1,5 @@
 let mapleader = ","
 
-" Disable Janus plugins
-call janus#disable_plugin('autoclose')
-call janus#disable_plugin('syntastic')
-call janus#disable_plugin('multiple-cursors')
-call janus#disable_plugin('supertab')
-
 " Customize airline
 " https://github.com/bling/vim-airline
 let g:airline_powerline_fonts = 1
@@ -19,17 +13,7 @@ endif
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
-" Neocomplete
-" https://github.com/Shougo/neocomplete.vim
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+" Disable Janus plugins
+call janus#disable_plugin('autoclose')
+call janus#disable_plugin('syntastic')
+call janus#disable_plugin('multiple-cursors')
