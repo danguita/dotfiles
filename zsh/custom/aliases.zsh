@@ -23,9 +23,8 @@ alias vg="vagrant"               # Vagrant short
 alias tv="bundle exec travis"    # Travis CI CLI (gem)
 
 # Vim
-alias v="/usr/local/bin/vim"
-alias V="v ."
-alias altvim="~/Applications/MacVim.app/Contents/MacOS/Vim" # MacVim's vim
+alias vi="/usr/local/bin/vim"
+alias Vi="vi ."
 
 # Postgresql
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
