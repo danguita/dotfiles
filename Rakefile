@@ -161,20 +161,25 @@ def install_janus
   end
 end
 
-# $HOME/.janus submodules
+# $DOTFILES/janus submodules
 def install_vim_plugins
   prompt "Install Vim plugins? [ynq] ", :action
 
   case STDIN.gets.chomp
   when 'y'
-    prompt "Initializing submodules"
-    system %{git submodule init}
-    system %{git submodule update}
+    sync_vim_plugins
   when 'q'
     exit
   else
     prompt "Skipping Vim plugins"
   end
+end
+
+# $DOTFILES/janus submodules
+def update_vim_plugins
+  prompt "Updating Vim plugins"
+
+  sync_vim_plugins
 end
 
 def update_janus
@@ -188,11 +193,6 @@ def update_janus
   else
     prompt "$VIM_FILES not found", :error
   end
-end
-
-def update_vim_plugins
-  prompt "Updating Vim plugins"
-  system %{git submodule init && git submodule update}
 end
 
 def switch_to_zsh
@@ -244,6 +244,14 @@ def backup_file(file, remove = true)
 
   system %{cp -rf "#{file}" "#{backup_filename}"}
   system %{rm -rf "#{file}"} if remove
+end
+
+def sync_vim_plugins
+  prompt "Sync submodules"
+  system %{git submodule sync}
+
+  prompt "Update submodules"
+  system %{git submodule update --init}
 end
 
 def prompt(text, type = :status)
