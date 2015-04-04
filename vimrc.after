@@ -19,6 +19,10 @@ set mouse=a
 " External commands shell
 set shell=/usr/local/bin/zsh
 
+" Fast redraw
+set lazyredraw
+set ttyfast
+
 " Show break line symbol
 " http://www.bestofvim.com/tip/better-line-wraps/
 set showbreak=↪
