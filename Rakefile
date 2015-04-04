@@ -56,7 +56,7 @@ end
 # -- Task methods --------------------------------------------------------------
 
 def install_dotfiles
-  prompt "Installing dotfiles"
+  say "Installing dotfiles"
 
   overwrite_all = false
   backup_all    = false
@@ -75,8 +75,8 @@ def install_dotfiles
 
     if File.exists?(target) || File.symlink?(target)
       unless overwrite_all || backup_all
-        prompt "File already exists: #{target}, what do you want to do? " \
-        "[s]kip [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all ", :action
+        say "File already exists: #{target}, what do you want to do? " \
+        "[s]kip [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all ", :prompt
 
         case STDIN.gets.chomp
         when 'o' then overwrite     = true
@@ -95,7 +95,7 @@ def install_dotfiles
 end
 
 def update_dotfiles
-  prompt "Updating dotfiles"
+  say "Updating dotfiles"
 
   dotfiles_dir  = ENV['DOTFILES']
   update_action = 'git pull origin master'
@@ -109,25 +109,25 @@ end
 # https://github.com/robbyrussell/oh-my-zsh
 def install_oh_my_zsh
   if File.exists?(File.join(ENV['HOME'], ".oh-my-zsh"))
-    prompt "Found ~/.oh-my-zsh"
+    say "Found ~/.oh-my-zsh"
   else
-    prompt "Install oh-my-zsh? [ynq] ", :action
+    say "Install oh-my-zsh? [ynq] ", :prompt
 
     case STDIN.gets.chomp
     when 'y'
-      prompt "Installing oh-my-zsh"
+      say "Installing oh-my-zsh"
       system %{git clone https://github.com/robbyrussell/oh-my-zsh.git \
               $HOME/.oh-my-zsh}
     when 'q'
       exit
     else
-      prompt "Skipping oh-my-zsh, you will need to change ~/.zshrc"
+      say "Skipping oh-my-zsh, you will need to change ~/.zshrc"
     end
   end
 end
 
 def update_oh_my_zsh
-  prompt "Updating Oh-My-Zsh"
+  say "Updating Oh-My-Zsh"
 
   zsh_dir       = ENV['ZSH']
   update_action = 'git pull origin master'
@@ -135,18 +135,18 @@ def update_oh_my_zsh
   if zsh_dir
     system %{cd "#{zsh_dir}" && #{update_action}} if File.exists?(zsh_dir)
   else
-    prompt "$ZSH not found", :error
+    say "$ZSH not found", :error
   end
 end
 
 # Vim distribution and plugins
 # https://github.com/carlhuda/janus
 def install_janus
-  prompt "Install Janus? [ynq] ", :action
+  say "Install Janus? [ynq] ", :prompt
 
   case STDIN.gets.chomp
   when 'y'
-    prompt "Installing Janus"
+    say "Installing Janus"
 
     vim_dir = File.join(ENV['HOME'], ".vim")
     backup_file(vim_dir) if File.exists?(vim_dir)
@@ -157,13 +157,13 @@ def install_janus
   when 'q'
     exit
   else
-    prompt "Skipping Janus"
+    say "Skipping Janus"
   end
 end
 
 # $DOTFILES/janus submodules
 def install_vim_plugins
-  prompt "Install Vim plugins? [ynq] ", :action
+  say "Install Vim plugins? [ynq] ", :prompt
 
   case STDIN.gets.chomp
   when 'y'
@@ -171,19 +171,19 @@ def install_vim_plugins
   when 'q'
     exit
   else
-    prompt "Skipping Vim plugins"
+    say "Skipping Vim plugins"
   end
 end
 
 # $DOTFILES/janus submodules
 def update_vim_plugins
-  prompt "Updating Vim plugins"
+  say "Updating Vim plugins"
 
   sync_vim_plugins
 end
 
 def update_janus
-  prompt "Updating Janus"
+  say "Updating Janus"
 
   vim_dir       = ENV['VIM_FILES']
   update_action = 'rake default'
@@ -191,23 +191,23 @@ def update_janus
   if vim_dir
     system %{cd "#{vim_dir}" && #{update_action}} if File.exists?(vim_dir)
   else
-    prompt "$VIM_FILES not found", :error
+    say "$VIM_FILES not found", :error
   end
 end
 
 def switch_to_zsh
   if ENV["SHELL"] =~ /zsh/
-    prompt "Using zsh"
+    say "Using zsh"
   else
-    prompt "Switch to zsh? (recommended) [ynq] ", :action
+    say "Switch to zsh? (recommended) [ynq] ", :prompt
     case STDIN.gets.chomp
     when 'y'
-      prompt "Switching to zsh"
+      say "Switching to zsh"
       system "chsh -s `which zsh`"
     when 'q'
       exit
     else
-      prompt "Skipping zsh"
+      say "Skipping zsh"
     end
   end
 end
@@ -233,35 +233,35 @@ def dotfile_target(dotfile)
 end
 
 def link_file(file, target)
-  prompt "Linking #{file}"
+  say "Linking #{file}"
 
   system %{ln -sf "$PWD/#{file}" "#{target}"}
 end
 
 def backup_file(file, remove = true)
   backup_filename = "#{file}.old"
-  prompt "Backing up .#{file} as #{backup_filename}"
+  say "Backing up .#{file} as #{backup_filename}"
 
   system %{cp -rf "#{file}" "#{backup_filename}"}
   system %{rm -rf "#{file}"} if remove
 end
 
 def sync_vim_plugins
-  prompt "Sync submodules"
+  say "Sync submodules"
   system %{git submodule sync}
 
-  prompt "Update submodules"
+  say "Update submodules"
   system %{git submodule update --init}
 end
 
-def prompt(text, type = :status)
-  prompt_format =
+def say(text, type = :status)
+  say_format =
     case type
     when :status then "\e[32m==> %s\e[0m\n"
-    when :action then "\e[33m>>> %s\e[0m\n"
+    when :prompt then "\e[33m>>> %s\e[0m\n"
     when :error  then "\e[31m!!! %s\e[0m\n"
     else "%s"
     end
 
-  printf(prompt_format, text)
+  printf(say_format, text)
 end
