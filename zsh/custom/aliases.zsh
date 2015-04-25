@@ -23,7 +23,8 @@ alias vg="vagrant"               # Vagrant short
 alias tv="bundle exec travis"    # Travis CI CLI (gem)
 
 # Vim
-alias vi="/usr/local/bin/vim"
+alias vim="/usr/local/bin/vim"
+alias vi="vim"
 alias Vi="vi ."
 
 # Postgresql
