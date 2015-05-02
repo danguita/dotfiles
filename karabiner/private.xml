@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Allow Right Option+WASD keys to behave like arrow keys</name>
+    <identifier>private.wasd_as_arrow_keys</identifier>
+    <autogen>__KeyToKey__ KeyCode::W , ModifierFlag::OPTION_R, KeyCode::CURSOR_UP | ModifierFlag::NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::A , ModifierFlag::OPTION_R, KeyCode::CURSOR_LEFT | ModifierFlag::NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::S , ModifierFlag::OPTION_R, KeyCode::CURSOR_DOWN | ModifierFlag::NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::D , ModifierFlag::OPTION_R, KeyCode::CURSOR_RIGHT | ModifierFlag::NONE</autogen>
+  </item>
+</root>

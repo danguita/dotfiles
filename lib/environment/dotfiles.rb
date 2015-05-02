@@ -6,7 +6,7 @@ module Environment
 
     UPDATE_COMMAND = 'git pull origin master'
     EXCLUDED_FILES = %w(Rakefile README.md zsh vim gem script screenshots \
-                        janus fonts bin iterm2 keyremap4macbook lib)
+                        janus fonts bin iterm2 karabiner lib)
 
     def initialize(options = {})
       @path = options.fetch('path') do
