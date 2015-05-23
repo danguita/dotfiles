@@ -42,6 +42,8 @@ alias be="cbe"
 
 # Git
 alias ggup="chgems . git up"
+alias gcr="gc --reedit-message=HEAD"
+alias gcar="gca --reedit-message=HEAD"
 
 # CakePHP
 alias cakeconsole13="../cake/console/cake" # 1.3 console
