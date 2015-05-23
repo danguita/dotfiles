@@ -38,3 +38,7 @@
   path = janus/vim-rubocop
   url = git@github.com:ngmy/vim-rubocop.git
   ignore = dirty
+[submodule "janus/vim-elixir"]
+  path = janus/vim-elixir
+  url = git@github.com:elixir-lang/vim-elixir.git
+  ignore = dirty
