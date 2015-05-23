@@ -27,6 +27,9 @@ set ttyfast
 " http://www.bestofvim.com/tip/better-line-wraps/
 set showbreak=↪
 
+" Split separator character
+set fillchars+=vert:│
+
 " Highlight 81 column
 set textwidth=80
 set colorcolumn=+1
