@@ -39,6 +39,8 @@ alias esstart="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config
 alias chg="chgems ."
 alias bundle="chgems . bundle"
 alias be="bundle exec"
+alias ber="be rails"
+alias bek="be rake"
 
 # Git
 alias ggup="chgems . git up"
