@@ -1,7 +1,7 @@
-require_relative '../utils.rb'
-
 module Environment
   class Vim::Plugins
+    include Environment::Utils
+
     def install
       prompt "Install Vim plugins? [ynq]"
 

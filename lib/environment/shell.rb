@@ -1,9 +1,17 @@
-require_relative 'utils.rb'
-
 module Environment
   class Shell
+    include Environment::Utils
+
+    attr_reader :path
+
+    def initialize(options = {})
+      @path = options.fetch('path') do
+        File.join(ENV.fetch('HOME'), '.oh-my-zsh')
+      end
+    end
+
     def install
-      if File.exists?(File.join(ENV.fetch('HOME'), '.oh-my-zsh'))
+      if File.exists?(path)
         say "Found ~/.oh-my-zsh"
       else
         prompt "Install oh-my-zsh? [ynq]"
@@ -11,13 +19,12 @@ module Environment
         case STDIN.gets.chomp
         when 'y'
           say "Installing oh-my-zsh"
-          system %{git clone https://github.com/robbyrussell/oh-my-zsh.git \
-              $HOME/.oh-my-zsh}
+          system %{git clone https://github.com/robbyrussell/oh-my-zsh.git #{path}}
         when 'q'
           exit
-          else
-            say "Skipping oh-my-zsh, you will need to change ~/.zshrc"
-          end
+        else
+          say "Skipping oh-my-zsh, you will need to change ~/.zshrc"
+        end
       end
     end
 

@@ -1,7 +1,7 @@
-require_relative 'utils.rb'
-
 module Environment
   class Dotfiles
+    include Environment::Utils
+
     attr_reader :path
 
     UPDATE_COMMAND = 'git pull origin master'
