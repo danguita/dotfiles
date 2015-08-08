@@ -1,17 +1,17 @@
 source "https://rubygems.org"
 
-gem 'bundler'
-gem 'rails', '4.2.1'
-gem 'gist'
-gem 'git'
-gem 'tmuxinator'
-gem 'pry'
-gem 'interactive_editor'
-gem 'awesome_print'
-gem 'pt'
-gem 'hcl'
-gem 'lolcommits'
-gem 'vimgolf'
-gem 'nokogiri'
-gem 'git-up'
-gem 'rubocop'
+gem "bundler"
+gem "rails"
+gem "gist"
+gem "git"
+gem "tmuxinator"
+gem "pry"
+gem "interactive_editor"
+gem "awesome_print"
+gem "pt"
+gem "hcl"
+gem "lolcommits"
+gem "vimgolf"
+gem "nokogiri"
+gem "git-up"
+gem "rubocop"
