@@ -2,7 +2,7 @@
 
 ## What's here
 
-Here's my UNIX environment. I'm also maintaining a gist with notes about [setting up a OS X machine for software development](https://gist.github.com/danguita/6242852).
+Here's my UNIX environment. I'm also maintaining a repo about [Setting up your shiny OS X for software development](https://github.com/danguita/osx-for-developers).
 
 ## Components
 
