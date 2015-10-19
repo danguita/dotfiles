@@ -1,4 +1,4 @@
-set guifont=PragmataPro\ for\ Powerline:h14
+set guifont=Hack:h13
 set guioptions-=T " Hide toolbar
 set guioptions-=r " Hide right scrollbar
 set guioptions-=L " Hide left scrollbar
