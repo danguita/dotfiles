@@ -9,10 +9,6 @@ colorscheme base16-default
 " Highlight cursor line
 set cursorline
 
-" Encoding
-set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,latin1
-
 " Mouse reporting
 set mouse=a
 
@@ -34,15 +30,15 @@ set fillchars+=vert:│
 set textwidth=80
 set colorcolumn=+1
 
+" Avoid word wrapping
+set formatoptions-=t
+
 " Use system's clipboard
 set clipboard=unnamed
 
 " TagList w/ Exuberant Ctags
 let Tlist_Use_Right_Window=1
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
-
-" Enable CakePHP templating files (ctp) typed as PHP files
-au BufNewFile,BufRead *.ctp set filetype=php
 
 " Reselect visual block after indent/outdent
 " http://vimbits.com/bits/20
@@ -96,14 +92,8 @@ let g:ctrlp_user_command="find %s -type d -name .git -prune -o
                           \ -type d -name bower_components -prune -o
                           \ -type f"
 
-" Listing files via ACK
-" let g:ctrlp_user_command = 'ack -f %s --ignore-dir=.git'
-
 " Use The Silver Searcher (ag) as default text searching tool
 let g:ackprg='ag --nogroup --nocolor --column'
 
 " Unfolded Markdown by default
 let g:vim_markdown_folding_disabled=1
-
-" Rubocop command
-let g:vimrubocop_rubocop_cmd='chgems . rubocop '
