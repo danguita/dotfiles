@@ -25,7 +25,7 @@ alias tv="bundle exec travis"    # Travis CI CLI (gem)
 # Vim
 alias vim="/usr/local/bin/vim"
 alias vi="vim"
-alias Vi="vi ."
+alias Vi="vim ."
 
 # Docker
 alias dockerc="docker-compose"
