@@ -17,7 +17,6 @@ alias get="curl -O"      # Get a file via cURL
 # Shorts
 alias gx="gitx"                  # GitX short
 alias t="tig"                    # Tig short
-alias h="/usr/bin/heroku"        # Heroku toolbelt
 alias vagrant="/usr/bin/vagrant" # Vagrant binary
 alias vg="vagrant"               # Vagrant short
 alias tv="bundle exec travis"    # Travis CI CLI (gem)
