@@ -6,20 +6,12 @@ alias o="open"   # open on OSX
 alias O="open ." # open on OSX (cwd)
 
 # Misc
-alias c="clear"
 alias a="ag"             # The Silver Searcher
 alias sed="gsed"         # replace built-in sed (BSD) by GNU sed
 alias grep="ggrep"       # replace built-in grep by Homebrew"s one
 alias hs="history | ack" # History search
 alias tm="ps -ef | ack"  # Process search
 alias get="curl -O"      # Get a file via cURL
-
-# Shorts
-alias gx="gitx"                  # GitX short
-alias t="tig"                    # Tig short
-alias vagrant="/usr/bin/vagrant" # Vagrant binary
-alias vg="vagrant"               # Vagrant short
-alias tv="bundle exec travis"    # Travis CI CLI (gem)
 
 # Vim
 alias vim="/usr/local/bin/vim"
@@ -29,14 +21,6 @@ alias Vi="vim ."
 # Docker
 alias dockerc="docker-compose"
 alias dockerm="docker-machine"
-
-# Postgresql
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-alias pgrestart="pgstop && pgstart"
-
-# Elasticsearch
-alias esstart="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
 
 # Rubygems
 alias chg="chgems ."
@@ -49,10 +33,6 @@ alias bek="be rake"
 alias ggup="chgems . git up"
 alias gcr="gc --reedit-message=HEAD"
 alias gcar="gca --reedit-message=HEAD"
-
-# CakePHP
-alias cakeconsole13="../cake/console/cake" # 1.3 console
-alias cakeconsole="./Console/cake"         # 2.x console
 
 # Clipboard
 alias pbc="pbcopy"
