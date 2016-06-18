@@ -17,3 +17,6 @@ let g:airline_right_sep = ''
 call janus#disable_plugin('autoclose')
 call janus#disable_plugin('multiple-cursors')
 call janus#disable_plugin('vim-gitgutter')
+call janus#disable_plugin('gundo')
+call janus#disable_plugin('multiple-cursors')
+call janus#disable_plugin('easymotion')
