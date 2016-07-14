@@ -1,4 +1,0 @@
-set guifont=Hack:h14
-set guioptions-=T " Hide toolbar
-set guioptions-=r " Hide right scrollbar
-set guioptions-=L " Hide left scrollbar

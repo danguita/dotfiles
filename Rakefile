@@ -24,13 +24,13 @@ namespace :dotfiles do
 end
 
 namespace :vim do
-  desc "Install Janus and vim plugins"
+  desc "Install Vim plugins"
   task :install do
     Environment::Vim.new.install
     Environment::Vim::Plugins.new.install
   end
 
-  desc "Update Janus and vim plugins"
+  desc "Update Vim plugins"
   task :update do
     Environment::Vim.new.update
     Environment::Vim::Plugins.new.update

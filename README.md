@@ -8,9 +8,9 @@ Here's my UNIX environment. I'm also maintaining a repo about [Setting up your s
 
 #### Vim
 
-`.vimrc.after`, `.vimrc.before`, `.gvimrc.after`
+`.vimrc`
 
-These are not regular Vim files, they depend on [Janus Vim distribution](https://github.com/carlhuda/janus), which provides a master `.vimrc` file and tons of managed plugins.
+Here goes my favourite editor's settings and plugins, managed by [Vim-plug](https://github.com/junegunn/vim-plug).
 
 #### Zsh
 
@@ -67,8 +67,8 @@ I have defined some key bindings for support my daily workflow, app switching an
     rake shell:install     # Install Oh-My-Zsh and change default shell
     rake shell:update      # Update Oh-My-Zsh
     rake update            # Update dotfiles, vim and shell libraries
-    rake vim:install       # Install Janus and vim plugins
-    rake vim:update        # Update Janus and vim plugins
+    rake vim:install       # Install Vim plugins
+    rake vim:update        # Update Vim plugins
 
 ## Feedback please
 

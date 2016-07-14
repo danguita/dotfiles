@@ -24,11 +24,7 @@ module Environment
     private
 
     def sync_vim_plugins
-      say "Sync submodules"
-      system %{git submodule sync}
-
-      say "Update submodules"
-      system %{git submodule update --init}
+      system %{vim -c ':PlugUpdate | qa!'}
     end
   end
 end

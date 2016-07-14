@@ -4,8 +4,6 @@ module Environment
 
     attr_reader :path
 
-    UPDATE_COMMAND = 'rake default'
-
     def initialize(options = {})
       @path = options.fetch('path') do
         ENV.fetch('VIM_FILES') { File.join(ENV.fetch('HOME'), '.vim') }
@@ -13,29 +11,30 @@ module Environment
     end
 
     def install
-      prompt "Install Janus? [ynq]"
+      prompt "Install Vim-plug? [ynq]"
 
       case STDIN.gets.chomp
       when 'y'
-        say "Installing Janus"
+        say "Installing Vim-plug"
 
         backup_file(path) if File.exists?(path)
 
-        system %{git clone https://github.com/carlhuda/janus.git "$HOME/.vim"}
-        system %{cd "$HOME/.vim" && rake}
         system %{export VIM_FILES="#{path}"}
+        system %{mkdir -p #{path}/{_temp,_backup}}
+        system %{curl -fLo #{path}/autoload/plug.vim --create-dirs \
+                 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim}
       when 'q'
         exit
       else
-        say "Skipping Janus"
+        say "Skipping Vim-plug"
       end
     end
 
     def update
-      say "Updating Janus"
+      say "Upgrading Vim-plug and plugins"
 
       if path && File.exists?(path)
-        system %{cd "#{path}" && #{UPDATE_COMMAND}}
+        system %{vim -c ':PlugUpgrade | qa!'}
       else
         say "VIM_FILES not found", :error
       end
