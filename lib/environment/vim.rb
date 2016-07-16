@@ -20,7 +20,8 @@ module Environment
         backup_file(path) if File.exists?(path)
 
         system %{export VIM_FILES="#{path}"}
-        system %{mkdir -p #{path}/{_temp,_backup}}
+        system %{mkdir -p #{path}/_temp}
+        system %{mkdir -p #{path}/_backup}
         system %{curl -fLo #{path}/autoload/plug.vim --create-dirs \
                  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim}
       when 'q'
