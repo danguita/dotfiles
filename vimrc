@@ -173,16 +173,6 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 " .git/ .hg/ .bzr/ _darcs/ root.dir
 let g:ctrlp_working_path_mode = 2
 
-" CtrlP user command
-" Specify an external tool to use for listing files instead of using Vim's
-" globpath()
-let g:ctrlp_user_command = "find %s -type d -name .git -prune -o
-                            \ -type d -name tmp -prune -o
-                            \ -type d -name .gem -prune -o
-                            \ -type d -name node_modules -prune -o
-                            \ -type d -name bower_components -prune -o
-                            \ -type f"
-
 " Use The Silver Searcher (ag) as default text searching tool
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
