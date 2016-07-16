@@ -7,6 +7,7 @@ Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'ngmy/vim-rubocop', { 'on': 'RuboCop' }
 Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
