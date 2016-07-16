@@ -6,6 +6,7 @@ Plug 'scrooloose/nerdcommenter', { 'on':  '<plug>NERDCommenterToggle' }
 Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'ngmy/vim-rubocop', { 'on': 'RuboCop' }
+Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
