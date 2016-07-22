@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim', { 'on': 'Gist' }
 
 " Add plugins to &runtimepath
 call plug#end()
