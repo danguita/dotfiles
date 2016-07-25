@@ -57,6 +57,7 @@ set smartcase
 " Colorscheme
 set background=dark
 colorscheme base16-default-dark
+highlight Normal ctermbg=none
 
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
