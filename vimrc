@@ -40,6 +40,7 @@ set expandtab
 set list
 set backspace=indent,eol,start
 set cursorline
+set laststatus=2
 
 " Chars
 set listchars=""
