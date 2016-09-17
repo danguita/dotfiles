@@ -26,6 +26,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim', { 'on': 'Gist' }
+Plug 'jacoborus/tender'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -57,8 +58,7 @@ set smartcase
 
 " Colorscheme
 set background=dark
-colorscheme base16-default-dark
-highlight Normal ctermbg=none
+colorscheme tender
 
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
@@ -190,7 +190,10 @@ let g:vim_markdown_folding_disabled = 1
 " Airline configuration
 " https://github.com/vim-airline/vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'base16'
+" enable tender airline theme
+let g:tender_airline = 1
+" set airline theme
+let g:airline_theme = 'tender'
 
 " Disable some powerline symbols
 if !exists('g:airline_symbols')
