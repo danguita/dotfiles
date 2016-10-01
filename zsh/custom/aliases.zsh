@@ -31,8 +31,8 @@ alias bek="be rake"
 
 # Git
 alias ggup="chgems . git up"
-alias gcr="gc --reedit-message=HEAD"
-alias gcar="gca --reedit-message=HEAD"
+alias gca="git commit -S -v -a"
+alias gcam="git commit -S -a -m"
 
 # Clipboard
 alias pbc="pbcopy"
