@@ -19,7 +19,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript'] }
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
