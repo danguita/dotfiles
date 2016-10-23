@@ -27,6 +27,7 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim', { 'on': 'Gist' }
 Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
 
 " Add plugins to &runtimepath
 call plug#end()
