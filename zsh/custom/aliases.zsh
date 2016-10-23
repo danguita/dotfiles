@@ -31,7 +31,10 @@ alias bek="be rake"
 
 # Git
 alias ggup="chgems . git up"
+alias gc="git commit -S -v"
+alias gc!="gc --amend"
 alias gca="git commit -S -v -a"
+alias gca!="gca --amend"
 alias gcam="git commit -S -a -m"
 
 # Clipboard
