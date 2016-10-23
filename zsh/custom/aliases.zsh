@@ -18,10 +18,6 @@ alias vim="/usr/local/bin/vim"
 alias vi="vim"
 alias Vi="vim ."
 
-# Docker
-alias dockerc="docker-compose"
-alias dockerm="docker-machine"
-
 # Rubygems
 alias chg="chgems ."
 alias bundle="chgems . bundle"
