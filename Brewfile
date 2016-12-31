@@ -111,8 +111,6 @@ cask 'virtualbox'
 cask 'vlc'
 cask 'xbox360-controller-driver'
 mas 'Twitter', id: 409789998
-mas 'GarageBand', id: 682658836
-mas 'iMovie', id: 408981434
 mas 'Pages', id: 409201541
 mas 'Xcode', id: 497799835
 mas 'Slack', id: 803453959
