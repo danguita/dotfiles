@@ -29,7 +29,7 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write com.apple.dock expose-animation-duration -int 0
 
 # Remove the auto-hiding Dock delay
-defaults write com.apple.Dock autohide-delay -float 10000
+defaults write com.apple.Dock autohide-delay -float 0
 
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
