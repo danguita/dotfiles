@@ -18,15 +18,7 @@ alias vim="nvim"
 alias vi="vim"
 alias Vi="vim ."
 
-# Rubygems
-alias chg="chgems ."
-alias bundle="chgems . bundle"
-alias be="bundle exec"
-alias ber="be rails"
-alias bek="be rake"
-
 # Git
-alias ggup="chgems . git up"
 alias gc="git commit -S -v"
 alias gc!="gc --amend"
 alias gca="git commit -S -v -a"
