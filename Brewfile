@@ -91,7 +91,7 @@ brew 'tig'
 brew 'tmux'
 brew 'unibilium'
 brew 'vim'
-brew 'weechat'
+brew 'weechat', args: ['with-perl', 'with-ruby', 'with-python']
 brew 'wget'
 brew 'youtube-dl'
 brew 'zsh'
