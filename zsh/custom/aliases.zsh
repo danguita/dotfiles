@@ -25,10 +25,6 @@ alias gca="git commit -S -v -a"
 alias gca!="gca --amend"
 alias gcam="git commit -S -a -m"
 
-# Clipboard
-alias pbc="pbcopy"
-alias pbp="pbpaste"
-
 # Launch Python based HTTP Server
 alias serve="python -m SimpleHTTPServer"
 
