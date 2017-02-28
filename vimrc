@@ -19,7 +19,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript', 'javascript.jsx'] }
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -27,7 +27,8 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim', { 'on': 'Gist' }
 Plug 'elmcast/elm-vim', { 'for': 'elm' }
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript', 'javascript.jsx'] }
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -205,3 +206,6 @@ endif
 
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+
+" vim-jsx configuration
+let g:jsx_ext_required = 0
