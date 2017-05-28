@@ -12,7 +12,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-plugins=(git git-extras osx tmux)
+plugins=(git tmux)
 
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
