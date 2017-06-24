@@ -5,7 +5,7 @@ export SHELL=/usr/local/bin/zsh
 export TERM="screen-256color"
 
 # editor
-export EDITOR=vim
+export EDITOR=nvim
 export VIM_FILES="$HOME/.vim"
 
 # locale
