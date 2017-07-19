@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomtom/tlib_vim' | Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter', { 'on':  '<plug>NERDCommenterToggle' }
-Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'ngmy/vim-rubocop', { 'on': 'RuboCop' }
 Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
@@ -147,10 +146,6 @@ map <Leader>rt :TagbarToggle<CR>
 " Ack toggle
 map <Leader>f :Ack<space>
 
-" CtrlP toggle
-map <C-p> :CtrlP<CR>
-imap <C-p> <ESC>:CtrlP<CR>
-
 " Fugitive
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>gs :Gstatus<CR>
@@ -181,13 +176,6 @@ vmap <C-j> ]egv
 " TagList settings
 let Tlist_Use_Right_Window = 1
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-
-" CtrlP path mode
-" 0 - don't manage working directory.
-" 1 - the parent directory of the current file.
-" 2 - the nearest ancestor that contains one of these directories or files:
-" .git/ .hg/ .bzr/ _darcs/ root.dir
-let g:ctrlp_working_path_mode = 2
 
 " Use The Silver Searcher (ag) as default text searching tool
 let g:ackprg = 'ag --nogroup --nocolor --column'
