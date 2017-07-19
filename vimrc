@@ -31,6 +31,7 @@ Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript', 'javascript.jsx'] }
 Plug 'mhinz/vim-signify'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'rlue/vim-getting-things-down'
 
 " Add plugins to &runtimepath
 call plug#end()
