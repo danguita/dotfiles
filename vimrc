@@ -29,6 +29,8 @@ Plug 'elmcast/elm-vim', { 'for': 'elm' }
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript', 'javascript.jsx'] }
 Plug 'mhinz/vim-signify'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -172,6 +174,10 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 vmap <C-k> [egv
 vmap <C-j> ]egv
+
+" Open file finder
+nnoremap <C-p> :FZF<CR>
+inoremap <C-p> <ESC>:FZF<CR>
 
 " TagList settings
 let Tlist_Use_Right_Window = 1
