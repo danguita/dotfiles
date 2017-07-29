@@ -180,6 +180,9 @@ vmap <C-j> ]egv
 nnoremap <C-p> :FZF<CR>
 inoremap <C-p> <ESC>:FZF<CR>
 
+" Set file finder's custom command to respect `.gitignore`
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
 " TagList settings
 let Tlist_Use_Right_Window = 1
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
