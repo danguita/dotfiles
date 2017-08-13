@@ -16,7 +16,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ervandew/supertab'
-Plug 'scrooloose/syntastic'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript', 'javascript.jsx'] }
 Plug 'chriskempson/base16-vim'
@@ -32,6 +31,7 @@ Plug 'mhinz/vim-signify'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'rlue/vim-getting-things-down'
+Plug 'w0rp/ale'
 
 " Add plugins to &runtimepath
 call plug#end()
