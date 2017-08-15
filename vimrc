@@ -211,3 +211,7 @@ let g:jsx_ext_required = 0
 
 " w0rp/ale configuration
 let g:ale_lint_delay = 500
+
+let g:ale_linters = {'javascript': ['']}
+let g:ale_fixers = {'javascript': ['prettier']}
+let g:ale_fix_on_save = 1
