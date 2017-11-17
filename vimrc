@@ -94,6 +94,10 @@ set shell=/usr/local/bin/zsh
 set lazyredraw
 set ttyfast
 
+" Folding
+set foldlevel=0
+set foldmethod=manual
+
 " Show break line symbol
 " http://www.bestofvim.com/tip/better-line-wraps/
 set showbreak=↪
