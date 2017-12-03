@@ -14,17 +14,8 @@ module Environment
       if File.exists?(path)
         say "Found ~/.oh-my-zsh"
       else
-        prompt "Install oh-my-zsh? [ynq]"
-
-        case STDIN.gets.chomp
-        when 'y'
-          say "Installing oh-my-zsh"
-          system %{git clone https://github.com/robbyrussell/oh-my-zsh.git #{path}}
-        when 'q'
-          exit
-        else
-          say "Skipping oh-my-zsh, you will need to change ~/.zshrc"
-        end
+        say "Installing oh-my-zsh"
+        system %{git clone https://github.com/robbyrussell/oh-my-zsh.git #{path}}
       end
     end
 
@@ -45,17 +36,8 @@ module Environment
       if ENV['SHELL'] =~ /zsh/
         say "Using zsh"
       else
-        prompt "Switch to zsh? (recommended) [ynq]"
-
-        case STDIN.gets.chomp
-        when 'y'
-          say "Switching to zsh"
-          system "chsh -s `which zsh`"
-        when 'q'
-          exit
-        else
-          say "Skipping zsh"
-        end
+        say "Switching to zsh"
+        system "chsh -s `which zsh`"
       end
     end
   end
