@@ -11,24 +11,15 @@ module Environment
     end
 
     def install
-      prompt "Install Vim-plug? [ynq]"
+      say "Installing Vim-plug"
 
-      case STDIN.gets.chomp
-      when 'y'
-        say "Installing Vim-plug"
+      backup_file(path) if File.exists?(path)
 
-        backup_file(path) if File.exists?(path)
-
-        system %{export VIM_FILES="#{path}"}
-        system %{mkdir -p #{path}/_temp}
-        system %{mkdir -p #{path}/_backup}
-        system %{curl -fLo #{path}/autoload/plug.vim --create-dirs \
-                 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim}
-      when 'q'
-        exit
-      else
-        say "Skipping Vim-plug"
-      end
+      system %{export VIM_FILES="#{path}"}
+      system %{mkdir -p #{path}/_temp}
+      system %{mkdir -p #{path}/_backup}
+      system %{curl -fLo #{path}/autoload/plug.vim --create-dirs \
+               https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim}
     end
 
     def update
