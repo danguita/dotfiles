@@ -3,16 +3,9 @@ module Environment
     include Environment::Utils
 
     def install
-      prompt "Install Vim plugins? [ynq]"
+      say "Installing Vim plugins"
 
-      case STDIN.gets.chomp
-      when 'y'
-        sync_vim_plugins
-      when 'q'
-        exit
-      else
-        say "Skipping Vim plugins"
-      end
+      sync_vim_plugins
     end
 
     def update
