@@ -3,7 +3,7 @@ export ZSH_THEME="simple"
 export DEFAULT_USER="$(whoami)"
 export DISABLE_AUTO_UPDATE="true"
 export DISABLE_AUTO_TITLE="true"
-export DOTFILES=$HOME/work/dotfiles
+export DOTFILES=${DOTFILES:=$HOME/work/dotfiles}
 export ZSH_CUSTOM=$DOTFILES/zsh/custom
 
 # path
