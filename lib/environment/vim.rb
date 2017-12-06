@@ -23,10 +23,10 @@ module Environment
     end
 
     def update
-      say "Upgrading Vim-plug and plugins"
+      say "Upgrading Vim-plug"
 
       if path && File.exists?(path)
-        system %{vim -c ':PlugUpgrade | qa!'}
+        system "vim +PlugUpgrade +qa"
       else
         say "VIM_FILES not found", :error
       end
