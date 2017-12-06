@@ -63,7 +63,7 @@ set smartcase
 
 " Colorscheme
 set background=dark
-colorscheme base16-default-dark
+silent! colorscheme base16-default-dark
 highlight Normal ctermbg=none
 
 " Ignorelist
