@@ -147,8 +147,8 @@ map <Leader>/ <plug>NERDCommenterToggle<CR>
 " Tagbar toggle
 map <Leader>rt :TagbarToggle<CR>
 
-" Ack toggle
-map <Leader>f :Ack<space>
+" ALEFix toggle
+map <Leader>f :ALEFix<CR>
 
 " Fugitive
 nmap <Leader>gb :Gblame<CR>
