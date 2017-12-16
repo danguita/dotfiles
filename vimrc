@@ -87,9 +87,6 @@ set directory^=~/.vim/_temp//
 " Mouse reporting
 set mouse=a
 
-" External commands shell
-set shell=/usr/local/bin/zsh
-
 " Fast redraw
 set lazyredraw
 set ttyfast
