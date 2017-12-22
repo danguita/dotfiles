@@ -14,9 +14,9 @@ alias tm="ps -ef | ack"  # Process search
 alias get="curl -O"      # Get a file via cURL
 
 # Vim
-alias vim="/usr/local/bin/nvim"
+alias vim="nvim"
 alias vi="vim"
-alias Vi="vim ."
+alias v="vim"
 
 # Git
 alias gc="git commit -S -v"
