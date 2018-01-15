@@ -7,8 +7,6 @@ alias O="open ." # open on OSX (cwd)
 
 # Misc
 alias a="ag"             # The Silver Searcher
-alias sed="gsed"         # replace built-in sed (BSD) by GNU sed
-alias grep="ggrep"       # replace built-in grep by Homebrew"s one
 alias hs="history | ack" # History search
 alias tm="ps -ef | ack"  # Process search
 alias get="curl -O"      # Get a file via cURL
@@ -17,6 +15,11 @@ alias get="curl -O"      # Get a file via cURL
 alias vim="nvim"
 alias vi="vim"
 alias v="vim"
+# replace built-in grep with GNU grep if available
+command -v ggrep >/dev/null 2>&1 && alias grep="ggrep"
+
+# replace built-in sed with GNU sed if available
+command -v gsed >/dev/null 2>&1 && alias sed="gsed"
 
 # Git
 alias gc="git commit -S -v"
