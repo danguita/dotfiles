@@ -17,4 +17,5 @@ plugins=(git tmux)
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
 
+# Load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
