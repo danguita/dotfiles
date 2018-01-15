@@ -11,15 +11,14 @@ alias hs="history | ack" # History search
 alias tm="ps -ef | ack"  # Process search
 alias get="curl -O"      # Get a file via cURL
 
-# Vim
-alias vim="nvim"
-alias vi="vim"
-alias v="vim"
 # replace built-in grep with GNU grep if available
 command -v ggrep >/dev/null 2>&1 && alias grep="ggrep"
 
 # replace built-in sed with GNU sed if available
 command -v gsed >/dev/null 2>&1 && alias sed="gsed"
+
+# Make Neovim the default vim-compatible editor if available
+command -v nvim >/dev/null 2>&1 && alias vim="nvim"
 
 # Git
 alias gc="git commit -S -v"
