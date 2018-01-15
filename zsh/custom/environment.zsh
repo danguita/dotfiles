@@ -1,5 +1,5 @@
 # shell
-export SHELL=/usr/local/bin/zsh
+export SHELL=${SHELL:-"/usr/local/bin/zsh"}
 
 # term
 export TERM="screen-256color"
@@ -13,19 +13,10 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
 # python
-export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
-
-# nodejs
-export NODE_PATH="/usr/local/lib/node"
+export PYTHONPATH=${PYTHONPATH:-"/usr/local/lib/python2.7/site-packages"}
 
 # Go
-export GOPATH="$HOME/.go"
-
-# ack
-export ACK_OPTIONS="--pager=less --type-add php=.ctp --type-add js=.coffee" # CakePHP and CoffeeScript templates
-
-# Java
-export JAVA_HOME="$(/usr/libexec/java_home)"
+export GOPATH=${GOPATH:-"$HOME/.go"}
 
 # Amazon EC2 API/AMI tools
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
