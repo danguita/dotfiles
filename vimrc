@@ -198,6 +198,7 @@ let g:vim_markdown_folding_disabled = 1
 " https://github.com/vim-airline/vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
+let g:airline_extensions = []
 
 " Disable some powerline symbols
 if !exists('g:airline_symbols')
