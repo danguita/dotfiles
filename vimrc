@@ -211,7 +211,7 @@ let g:airline_right_sep = ''
 " vim-jsx configuration
 let g:jsx_ext_required = 0
 
-let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop']}
-let g:ale_fixers = {'javascript': ['prettier'], 'ruby': ['rubocop']}
+let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop'], 'elixir': ['mix_format']}
+let g:ale_fixers = {'javascript': ['prettier'], 'ruby': ['rubocop'], 'elixir': ['mix_format']}
 let g:ale_fix_on_save = 0
 let g:ale_javascript_prettier_use_local_config = 1
