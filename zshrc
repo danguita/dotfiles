@@ -11,6 +11,7 @@ export PATH=/usr/X11/bin:$PATH
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export PATH=/usr/share/npm/bin:/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/python@2/bin:$PATH
 
 plugins=(git tmux)
 
