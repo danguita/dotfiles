@@ -13,7 +13,7 @@ export PATH=/usr/share/npm/bin:/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/python@2/bin:$PATH
 
-plugins=(git tmux)
+plugins=(git)
 
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
