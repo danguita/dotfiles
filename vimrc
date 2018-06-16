@@ -141,6 +141,9 @@ endif
 " NERDTree toggle
 map <Leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
+" NERDTree ignore list
+let NERDTreeIgnore=['node_modules']
+
 " NERDCommenter toggle
 map <Leader>/ <plug>NERDCommenterToggle<CR>
 
