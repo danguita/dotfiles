@@ -16,22 +16,17 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ervandew/supertab'
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript', 'javascript.jsx'] }
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim', { 'on': 'Gist' }
-Plug 'elmcast/elm-vim', { 'for': 'elm' }
-Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript', 'javascript.jsx'] }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'rlue/vim-getting-things-down'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
+Plug 'sheerun/vim-polyglot'
 
 " Add plugins to &runtimepath
 call plug#end()
