@@ -27,6 +27,7 @@ Plug 'rlue/vim-getting-things-down'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
+Plug 'ryanoasis/vim-devicons'
 
 " Add plugins to &runtimepath
 call plug#end()
