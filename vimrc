@@ -60,7 +60,7 @@ set smartcase
 set background=dark
 silent! colorscheme base16-default-dark
 highlight Normal ctermbg=none
-highlight ALEWarning ctermbg=cyan ctermfg=white
+highlight ALEWarning ctermbg=darkgreen ctermfg=black
 
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
