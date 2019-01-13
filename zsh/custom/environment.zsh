@@ -24,8 +24,8 @@ export GOPATH=${GOPATH:-"$HOME/.go"}
   export EC2_URL='https://ec2.eu-west-1.amazonaws.com' # Set default region (eu-west / Ireland)
 
 # Docker
-[ -d "$HOME/.docker/machine/machines/default" ] &&
+[ -d "$HOME/.docker/machine/machines/dev" ] &&
   export DOCKER_TLS_VERIFY="1" &&
-  export DOCKER_HOST="tcp://192.168.99.100:2376" &&
-  export DOCKER_CERT_PATH="$HOME/.docker/machine/machines/default" &&
-  export DOCKER_MACHINE_NAME="default"
+  export DOCKER_HOST="tcp://192.168.99.102:2376" &&
+  export DOCKER_CERT_PATH="$HOME/.docker/machine/machines/dev" &&
+  export DOCKER_MACHINE_NAME="dev"
