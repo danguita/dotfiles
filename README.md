@@ -54,9 +54,9 @@ I have defined some key bindings for support my daily workflow, app switching an
 
 ## Installation
 
-    mkdir ~/work
-    git clone https://github.com/danguita/dotfiles.git ~/work/dotfiles
-    cd ~/work/dotfiles
+    mkdir ~/workspace
+    git clone https://github.com/danguita/dotfiles.git ~/workspace/dotfiles
+    cd ~/workspace/dotfiles
     rake install
 
 ### All tasks: Install & Update

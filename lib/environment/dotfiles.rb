@@ -12,7 +12,7 @@ module Environment
 
     def initialize(options = {})
       @path = options.fetch('path') do
-        File.join(ENV.fetch('HOME'), 'work', 'dotfiles')
+        File.join(ENV.fetch('HOME'), 'workspace', 'dotfiles')
       end
     end
 
