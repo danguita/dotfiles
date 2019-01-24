@@ -26,8 +26,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
-Plug 'ryanoasis/vim-devicons'
 Plug 'dhruvasagar/vim-zoom'
+Plug 'ryanoasis/vim-devicons' " Always load the vim-devicons as the very last one.
 
 " Add plugins to &runtimepath
 call plug#end()
