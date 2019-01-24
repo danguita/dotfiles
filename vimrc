@@ -107,7 +107,7 @@ set colorcolumn=+1
 set formatoptions-=t
 
 " Use system's clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Leader key
 let mapleader = ","
