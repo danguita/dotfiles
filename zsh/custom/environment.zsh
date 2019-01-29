@@ -15,7 +15,7 @@ export LC_CTYPE=en_US.UTF-8
 # Go
 export GOPATH=${GOPATH:-"$HOME/.go"}
 
-# Docker
+# Dev Docker machine
 [ -d "$HOME/.docker/machine/machines/dev" ] &&
   export DOCKER_TLS_VERIFY="1" &&
   export DOCKER_HOST="tcp://192.168.99.102:2376" &&
