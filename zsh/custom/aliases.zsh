@@ -2,8 +2,9 @@
 alias cp="cp -i" # confirm
 alias mv="mv -i" # confirm
 alias rm="rm -i" # confirm
-alias o="open"   # open on OSX
-alias O="open ." # open on OSX (cwd)
+
+# opens a file in the user's preferred application
+command -v xdg-open >/dev/null 2>&1 && alias o="xdg-open" || alias o="open"
 
 # Misc
 alias a="ag"             # The Silver Searcher
