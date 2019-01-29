@@ -7,8 +7,8 @@ alias O="open ." # open on OSX (cwd)
 
 # Misc
 alias a="ag"             # The Silver Searcher
-alias hs="history | ack" # History search
-alias tm="ps -ef | ack"  # Process search
+alias hs="history | a"   # History search
+alias tm="ps -ef | a"    # Process search
 alias get="curl -O"      # Get a file via cURL
 
 # replace built-in grep with GNU grep if available
