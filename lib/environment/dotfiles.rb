@@ -60,19 +60,11 @@ module Environment
     private
 
     def dotfile_target_for(dotfile)
-      File.join(ENV.fetch('HOME'), dotfile_target_name_for(dotfile))
+      File.join(ENV.fetch('HOME'), dotfile_format_for(dotfile))
     end
 
     def dotfile_format_for(dotfile)
       ".#{dotfile}"
-    end
-
-    def dotfile_name_mappings
-      { dotcss: '.css', dotjs: '.js' }
-    end
-
-    def dotfile_target_name_for(dotfile)
-      dotfile_name_mappings.fetch(dotfile.to_sym) { dotfile_format_for(dotfile) }
     end
   end
 end
