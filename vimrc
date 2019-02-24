@@ -26,8 +26,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
-Plug 'ryanoasis/vim-devicons'
 Plug 'dhruvasagar/vim-zoom'
+Plug 'ryanoasis/vim-devicons' " Always load the vim-devicons as the very last one.
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -62,6 +62,7 @@ set background=dark
 silent! colorscheme base16-default-dark
 highlight Normal ctermbg=none
 highlight ALEWarning ctermbg=darkgreen ctermfg=black
+highlight CursorLine term=none cterm=none
 
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
@@ -107,7 +108,7 @@ set colorcolumn=+1
 set formatoptions-=t
 
 " Use system's clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Leader key
 let mapleader = ","
@@ -186,7 +187,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " TagList settings
 let Tlist_Use_Right_Window = 1
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
 " Use The Silver Searcher (ag) as default text searching tool
 let g:ackprg = 'ag --nogroup --nocolor --column'
