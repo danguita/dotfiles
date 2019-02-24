@@ -5,10 +5,7 @@ module Environment
     attr_reader :path
 
     UPDATE_COMMAND = 'git pull origin master'
-    EXCLUDED_FILES = %w(
-      Rakefile Brewfile README.md zsh vim gem script screenshots fonts bin
-      iterm2 karabiner lib
-    )
+    EXCLUDED_FILES = %w(Rakefile README.md zsh vim tmux gem screenshots lib)
 
     def initialize(options = {})
       @path = options.fetch('path') do
