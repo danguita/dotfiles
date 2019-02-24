@@ -5,25 +5,31 @@
 - Vim (text editor): `vimrc`.
 - Tmux (terminal multiplexer): `tmux.conf`.
 - Zsh (interactive shell): `zshrc`.
-- Ack/The silver searcher (code search tooling): `ackrc`.
+- Ack/The silver searcher (code search tool): `ackrc`.
 - Tig (git client): `tigrc`.
 - Mutt (email client): `muttrc`.
 - Readline config: `inputrc`.
 
-## How does it look?
+## How does it look like?
 
 ![Shell overview](screenshots/shell-overview.png)
 ![Editor overview](screenshots/editor-overview.png)
 
-## Installation
+Note: I'm using GNOME terminal with the `base16-dracula` theme as
+terminal emulator.
+
+## Usage
 
 ### Disclaimer
 
-Don't blindly use these dotfiles unless you know what that entails!
+Please, don't blindly use these dotfiles unless you know what that
+entails!
 
 ### Requirements
 
-Only `ruby` and `rake` are required.
+Ruby (`rake`) is required in order to execute the installation scripts.
+
+### Installation
 
 ```
 $ mkdir ~/workspace
@@ -51,6 +57,10 @@ rake vim:install      # Install Vim plugins
 rake vim:update       # Update Vim plugins
 ```
 
-## Feel free to leave your feedback
+## Feedback
 
-Any feedback is [very welcomed](https://github.com/danguita/dotfiles/issues)!
+Any feedback is [more than welcomed](https://github.com/danguita/dotfiles/issues).
+
+## License
+
+This is just configuration files, feel free to use any of them.
