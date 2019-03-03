@@ -12,8 +12,7 @@
 
 ## How does it look like?
 
-![Shell overview](screenshots/shell-overview.png)
-![Editor overview](screenshots/editor-overview.png)
+![Terminal overview](screenshots/terminal-overview.png)
 
 Note: I'm using GNOME terminal with the `base16-dracula` theme as
 terminal emulator.
