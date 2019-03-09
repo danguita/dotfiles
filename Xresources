@@ -36,26 +36,17 @@
 *color7:       base05
 
 *color8:       base03
-*color9:       base08
-*color10:      base0B
-*color11:      base0A
-*color12:      base0D
-*color13:      base0E
-*color14:      base0C
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
 *color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*color16:      base09
-*color17:      base0F
-*color18:      base01
-*color19:      base02
-*color20:      base04
-*color21:      base06
 
 ! Settings
 
-URxvt.font: xft:Ubuntu Mono:bold:size=12
+URxvt.font: xft:Hack:bold:size=10
 URxvt.scrollBar: false
 
 ! Extensions
