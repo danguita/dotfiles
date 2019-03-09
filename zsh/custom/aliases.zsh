@@ -25,6 +25,9 @@ alias gca="git commit -S -v -a"
 alias gca!="gca --amend"
 alias gcam="git commit -S -a -m"
 
+# Vim
+alias v="vim"
+
 # File manager
 alias f="ranger"
 
