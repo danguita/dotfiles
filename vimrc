@@ -218,3 +218,30 @@ let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop'], 'elixir': ['
 let g:ale_fixers = {'javascript': ['prettier'], 'ruby': ['rubocop'], 'elixir': ['mix_format']}
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_lint_delay = 100
+
+" projectionist
+let g:projectionist_heuristics = {
+      \ "&mix.exs": {
+      \   "lib/*.ex": {
+      \     "type": "lib",
+      \     "alternate": [
+      \       "test/{}_test.exs",
+      \     ],
+      \   },
+      \   "test/*_test.exs": {
+      \     "type": "test",
+      \     "alternate": "lib/{}.ex",
+      \     "dispatch": "mix test test/{}_test.exs`=v:lnum ? ':'.v:lnum : ''`"
+      \   },
+      \   "test/test_helper.exs": { "type": "test" },
+      \   "mix.exs": {
+      \     "type": "lib",
+      \     "alternate": "mix.lock",
+      \     "dispatch": "mix deps.get"
+      \   },
+      \   "mix.lock": { "alternate": "mix.exs" },
+      \   "*": {
+      \     "make": "mix",
+      \     "console": "iex -S mix"
+      \   }
+      \ }}
