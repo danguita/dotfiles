@@ -194,9 +194,6 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 " Use The Silver Searcher (ag) as default text searching tool
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" Unfolded Markdown by default
-let g:vim_markdown_folding_disabled = 1
-
 " Airline configuration
 " https://github.com/vim-airline/vim-airline
 let g:airline_powerline_fonts = 1
