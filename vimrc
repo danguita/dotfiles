@@ -183,6 +183,9 @@ vmap <C-j> ]egv
 nnoremap <C-p> :FZF<CR>
 inoremap <C-p> <ESC>:FZF<CR>
 
+" Open file finder for current buffers
+nnoremap <Leader>; :Buffers<CR>
+
 " Set file finder's custom command to respect `.gitignore`
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
