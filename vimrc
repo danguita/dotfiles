@@ -83,6 +83,10 @@ au FileType python setlocal tabstop=4 shiftwidth=4
 set backupdir^=~/.vim/_backup//
 set directory^=~/.vim/_temp//
 
+" Permanent undo
+set undodir^=~/.vim/_undo//
+set undofile
+
 " Mouse reporting
 set mouse=a
 
