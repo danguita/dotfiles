@@ -1,6 +1,6 @@
 ! URxvt Settings
 
-URxvt.font: xft:Hack:bold:size=10
+URxvt.font: xft:Ubuntu Mono:bold:size=12
 URxvt.scrollBar: false
 
 ! URxvt Extensions
