@@ -27,6 +27,7 @@ Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'dhruvasagar/vim-zoom'
+Plug 'vimwiki/vimwiki'
 Plug 'ryanoasis/vim-devicons' " Always load the vim-devicons as the very last one.
 
 " Add plugins to &runtimepath
@@ -247,3 +248,6 @@ let g:projectionist_heuristics = {
       \     "console": "iex -S mix"
       \   }
       \ }}
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
