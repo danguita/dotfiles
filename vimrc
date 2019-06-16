@@ -61,7 +61,6 @@ set smartcase
 " Colorscheme
 set background=dark
 silent! colorscheme base16-default-dark
-highlight Normal ctermbg=none
 highlight ALEWarning ctermbg=darkmagenta ctermfg=white cterm=underline
 highlight ALEError ctermbg=darkmagenta ctermfg=white cterm=underline
 highlight CursorLine term=none cterm=none
