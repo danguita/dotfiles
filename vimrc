@@ -27,6 +27,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'vimwiki/vimwiki'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'ryanoasis/vim-devicons' " Always load the vim-devicons as the very last one.
 
 " Add plugins to &runtimepath
@@ -249,3 +250,18 @@ let g:projectionist_heuristics = {
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" coc: use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+" coc: Use <Tab> and <S-Tab> to navigate the completion list:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
