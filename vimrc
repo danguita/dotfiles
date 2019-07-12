@@ -16,7 +16,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-projectionist'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'ervandew/supertab'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript', 'javascript.jsx'] }
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
