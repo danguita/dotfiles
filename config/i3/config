@@ -185,3 +185,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Autostart Xorg compositor
+exec --no-startup-id compton -f --config $HOME/.config/compton.conf # $XDG_CONFIG_HOME
