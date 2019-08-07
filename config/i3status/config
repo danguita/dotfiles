@@ -1,0 +1,52 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+}
+
+order += "ipv6"
+order += "disk /home"
+order += "path_exists VPN"
+order += "wireless wlp5s0"
+order += "ethernet eth0"
+order += "battery 0"
+order += "load"
+order += "tztime local"
+
+wireless wlp5s0 {
+        format_up = "W:%quality at %essid (%ip)"
+        format_down = "W: down"
+}
+
+ethernet eth0 {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+battery 0 {
+        format = "%status %percentage %remaining %emptytime"
+        format_down = "No battery"
+        status_chr = "⚡ CHR"
+        status_bat = "🔋 BAT"
+        status_unk = "? UNK"
+        status_full = "FULL"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
+}
+
+path_exists VPN {
+        # path exists when a VPN tunnel launched by nmcli/nm-applet is active
+        path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+tztime local {
+        format = "%a %b %d %I:%M"
+}
+
+load {
+        format = "%5min"
+}
+
+disk "/home" {
+        format = "%free"
+}
