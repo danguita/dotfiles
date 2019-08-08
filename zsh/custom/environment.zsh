@@ -4,9 +4,6 @@ export SHELL=${SHELL:-"/usr/local/bin/zsh"}
 # term
 export TERM="screen-256color"
 
-# terminal
-export TERMINAL="gnome-terminal" # Read by `i3-sensible-terminal`.
-
 # editor
 export EDITOR="nvim"
 export VIM_FILES="$HOME/.vim"
