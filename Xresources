@@ -1,10 +1,43 @@
 ! URxvt Settings
 
-URxvt.font: xft:Ubuntu Mono:bold:size=12
+URxvt.termName: rxvt
+URxvt.depth: 32
+URxvt.transparent: false
+URxvt.font: xft:Ubuntu\ Mono:pixelsize=16:antialias=true:hinting=true
 URxvt.scrollBar: false
 
 ! URxvt Extensions
 
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
+
+! URxvt theme
+! Base16 Dracula
+! Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+
+*foreground:   #e9e9f4
+#ifdef background_opacity
+*background:   [background_opacity]#282936
+#else
+*background:   #282936
+#endif
+*cursorColor:  #e9e9f4
+
+*color0:       #282936
+*color1:       #ea51b2
+*color2:       #ebff87
+*color3:       #00f769
+*color4:       #62d6e8
+*color5:       #b45bcf
+*color6:       #a1efe4
+*color7:       #e9e9f4
+
+*color8:       #626483
+*color9:       #b45bcf
+*color10:      #3a3c4e
+*color11:      #4d4f68
+*color12:      #62d6e8
+*color13:      #f1f2f8
+*color14:      #00f769
+*color15:      #f7f7fb
