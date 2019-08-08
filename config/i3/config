@@ -184,4 +184,4 @@ bar {
 }
 
 # Autostart Xorg compositor
-exec --no-startup-id compton -f --config $HOME/.config/compton.conf # $XDG_CONFIG_HOME
+exec --no-startup-id compton -f --config $HOME/.config/compton.conf
