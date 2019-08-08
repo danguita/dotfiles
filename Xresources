@@ -8,9 +8,12 @@ URxvt.scrollBar: false
 
 ! URxvt Extensions
 
-URxvt.perl-ext-common: default,matcher,resize-font
+URxvt.perl-ext-common: default,selection-to-clipboard,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
 ! URxvt theme
 ! Base16 Dracula
