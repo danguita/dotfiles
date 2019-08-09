@@ -14,8 +14,7 @@
 
 ![Terminal overview](screenshots/terminal-overview.png)
 
-Note: I'm using GNOME terminal with the `base16-dracula` theme as
-terminal emulator.
+Note: I'm using URxvt on i3wm.
 
 ## Usage
 
