@@ -200,7 +200,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Airline configuration
 " https://github.com/vim-airline/vim-airline
-let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
 let g:airline_extensions = ['ale']
 let g:airline#extensions#ale#enabled = 1
