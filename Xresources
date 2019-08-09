@@ -5,6 +5,7 @@ URxvt.depth: 32
 URxvt.transparent: false
 URxvt.font: xft:Ubuntu\ Mono:pixelsize=16:antialias=true:hinting=true
 URxvt.scrollBar: false
+URxvt.lineSpace: 1
 
 ! URxvt Extensions
 
