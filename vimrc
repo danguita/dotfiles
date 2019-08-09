@@ -27,7 +27,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'vimwiki/vimwiki'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'ryanoasis/vim-devicons' " Always load the vim-devicons as the very last one.
 
 " Add plugins to &runtimepath
 call plug#end()
