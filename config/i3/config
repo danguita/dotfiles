@@ -33,7 +33,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec i3-sensible-terminal
 
 # start a browser
 bindsym $mod+Shift+Return exec google-chrome
