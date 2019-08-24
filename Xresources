@@ -10,6 +10,7 @@ URxvt.boldItalicFont: xft:Ubuntu Mono:style=Bold Italic:pixelsize=16:antialias=t
 URxvt.scrollBar: false
 URxvt.lineSpace: 0
 URxvt.letterSpace: 0
+URxvt.internalBorder: 0
 
 ! URxvt Extensions
 
