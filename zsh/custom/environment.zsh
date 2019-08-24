@@ -2,7 +2,7 @@
 export SHELL=${SHELL:-"/usr/local/bin/zsh"}
 
 # term
-export TERM="screen-256color"
+export TERM="xterm-256color"
 
 # editor
 export EDITOR="nvim"
