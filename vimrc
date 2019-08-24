@@ -58,6 +58,7 @@ set smartcase
 
 " Colorscheme
 set background=dark
+let base16colorspace=256 " Access colors present in 256 colorspace
 silent! colorscheme base16-default-dark
 highlight ALEWarning ctermbg=darkmagenta ctermfg=white cterm=underline
 highlight ALEError ctermbg=darkmagenta ctermfg=white cterm=underline
