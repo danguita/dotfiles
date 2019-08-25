@@ -150,6 +150,9 @@ bindsym $mod+Escape exec xdg-screensaver lock
 # shortcuts for common system configuration tasks
 bindsym $mod+c exec gnome-control-center
 
+# Make all urxvts use a 1-pixel border
+for_window [class="URxvt"] border pixel 1
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
