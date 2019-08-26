@@ -3,10 +3,7 @@
 URxvt.termName: rxvt
 URxvt.depth: 32
 URxvt.transparent: false
-URxvt.font: xft:Ubuntu Mono:style=Regular:pixelsize=16:antialias=true:hinting=true
-URxvt.boldFont: xft:Ubuntu Mono:style=Bold:pixelsize=16:antialias=true:hinting=true
-URxvt.italicFont: xft:Ubuntu Mono:style=Italic:pixelsize=16:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:Ubuntu Mono:style=Bold Italic:pixelsize=16:antialias=true:hinting=true
+URxvt.font: xft:Ubuntu Mono:style=Regular:size=12:antialias=true:hinting=true
 URxvt.scrollBar: false
 URxvt.lineSpace: 0
 URxvt.letterSpace: 0
