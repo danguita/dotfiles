@@ -8,6 +8,7 @@ URxvt.scrollBar: false
 URxvt.lineSpace: 0
 URxvt.letterSpace: 0
 URxvt.internalBorder: 0
+URxvt.iso14755: false
 
 ! URxvt Extensions
 
