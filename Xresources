@@ -3,7 +3,8 @@
 URxvt.termName: rxvt
 URxvt.depth: 32
 URxvt.transparent: false
-URxvt.font: xft:Ubuntu Mono:style=Regular:size=12:antialias=true:hinting=true
+URxvt.font: xft:Terminus:pixelsize=18:antialias=false
+URxvt.boldFont: xft:Terminus:bold:pixelsize=18:antialias=false
 URxvt.scrollBar: false
 URxvt.lineSpace: 0
 URxvt.letterSpace: 0
