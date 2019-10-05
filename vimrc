@@ -26,6 +26,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'vimwiki/vimwiki'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Add plugins to &runtimepath
