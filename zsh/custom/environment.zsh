@@ -5,7 +5,7 @@ export SHELL=${SHELL:-"/usr/local/bin/zsh"}
 export TERM="xterm-256color"
 
 # editor
-export EDITOR="nvim"
+export EDITOR="vim"
 export VIM_FILES="$HOME/.vim"
 
 # locale
