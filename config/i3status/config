@@ -32,6 +32,7 @@ battery 0 {
         status_full = "FULL"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
+        hide_seconds = true
 }
 
 path_exists VPN {
