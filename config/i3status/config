@@ -8,7 +8,7 @@ order += "ipv6"
 order += "disk /home"
 order += "path_exists VPN"
 order += "wireless wlp5s0"
-order += "ethernet eth0"
+order += "ethernet enp4s0"
 order += "battery 0"
 order += "load"
 order += "tztime local"
@@ -18,7 +18,7 @@ wireless wlp5s0 {
         format_down = "W: down"
 }
 
-ethernet eth0 {
+ethernet enp4s0 {
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
 }
