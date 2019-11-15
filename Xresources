@@ -3,8 +3,8 @@
 URxvt.termName: rxvt
 URxvt.depth: 32
 URxvt.transparent: false
-URxvt.font: xft:Terminus:pixelsize=18:antialias=false
-URxvt.boldFont: xft:Terminus:bold:pixelsize=18:antialias=false
+URxvt.font: xft:Terminus (TTF):pixelsize=18:antialias=true
+URxvt.boldFont: xft:Terminus (TTF):bold:pixelsize=18:antialias=true
 URxvt.scrollBar: false
 URxvt.lineSpace: 0
 URxvt.letterSpace: 0
