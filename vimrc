@@ -118,6 +118,9 @@ set clipboard=unnamedplus
 " Don't give |ins-completion-menu| messages
 set shortmess+=c
 
+" Always show signcolumns
+set signcolumn=yes
+
 " Leader key
 let mapleader = ","
 
