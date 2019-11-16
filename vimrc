@@ -115,6 +115,9 @@ set formatoptions-=t
 " Use system's clipboard
 set clipboard=unnamedplus
 
+" Don't give |ins-completion-menu| messages
+set shortmess+=c
+
 " Leader key
 let mapleader = ","
 
