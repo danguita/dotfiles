@@ -143,9 +143,6 @@ inoremap jk <Esc>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
 
-if has('nvim')
-  nmap <BS> :tabp<CR>
-endif
 
 " NERDTree toggle
 map <Leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
