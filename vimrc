@@ -143,6 +143,8 @@ inoremap jk <Esc>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
 
+" Remap <C-@> as <C-space> to help terminals interpret it correctly
+inoremap <C-@> <C-x><C-o>
 
 " NERDTree toggle
 map <Leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
