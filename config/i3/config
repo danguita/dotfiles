@@ -144,10 +144,10 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# lock the screen
+# Lock the screen
 bindsym $mod+Escape exec xdg-screensaver lock
 
-# shortcuts for common system configuration tasks
+# Shortcuts for common system configuration tasks
 bindsym $mod+c exec gnome-control-center
 
 # Make all urxvts use a 1-pixel border
@@ -189,5 +189,17 @@ bar {
         status_command i3status
 }
 
-# Autostart Xorg compositor
+# Keyboard layout
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
+
+# Keyboard typematic delay and rate (defaults are: 660 25)
+exec --no-startup-id xset r rate 200 30
+
+# Do not disable TouchPad while typing
+exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Disable While Typing Enabled' 0
+
+# Enable tap-to-click
+exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
+
+# Xorg compositor
 exec --no-startup-id compton -f --config $HOME/.config/compton.conf
