@@ -201,5 +201,8 @@ exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Disa
 # Enable tap-to-click
 exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
 
+# Set background
+exec --no-startup-id hsetroot -solid "#000000"
+
 # Xorg compositor
 exec --no-startup-id compton -f --config $HOME/.config/compton.conf
