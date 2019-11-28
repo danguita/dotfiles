@@ -190,19 +190,19 @@ bar {
 }
 
 # Keyboard layout
-exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
+exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
 
 # Keyboard typematic delay and rate (defaults are: 660 25)
-exec --no-startup-id xset r rate 200 30
+exec_always --no-startup-id xset r rate 200 30
 
 # Do not disable TouchPad while typing
-exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Disable While Typing Enabled' 0
+exec_always --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Disable While Typing Enabled' 0
 
 # Enable tap-to-click
-exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
+exec_always --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
 
 # Set background
-exec --no-startup-id hsetroot -solid "#000000"
+exec_always --no-startup-id hsetroot -solid "#000000"
 
 # Xorg compositor
 exec --no-startup-id compton -f --config $HOME/.config/compton.conf
