@@ -36,7 +36,7 @@ hide_edge_borders smart
 bindsym $mod+Return exec urxvt
 
 # start a browser
-bindsym $mod+Shift+Return exec google-chrome
+bindsym $mod+Shift+Return exec xdg-open 'http://'
 
 # kill focused window
 bindsym $mod+Shift+q kill
