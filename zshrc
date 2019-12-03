@@ -1,6 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_THEME="simple"
-export DEFAULT_USER="$(whoami)"
+export ZSH_THEME="danguita"
 export DISABLE_AUTO_UPDATE="true"
 export DISABLE_AUTO_TITLE="true"
 export DOTFILES=${DOTFILES:-$HOME/workspace/dotfiles}
