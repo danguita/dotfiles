@@ -9,6 +9,7 @@ export ZSH_CUSTOM=$DOTFILES/zsh/custom
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export PATH=/usr/share/npm/bin:/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 plugins=(git)
 
