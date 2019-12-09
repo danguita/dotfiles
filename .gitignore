@@ -3,3 +3,6 @@
 
 # Gem versioning
 Gemfile.lock
+
+# GTK-3.0 bookmarks
+config/gtk-3.0/bookmarks
