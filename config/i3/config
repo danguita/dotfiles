@@ -144,12 +144,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# Lock the screen
-bindsym $mod+Escape exec xdg-screensaver lock
-
-# Shortcuts for common system configuration tasks
-bindsym $mod+c exec gnome-control-center
-
 # Make all urxvts use a 1-pixel border
 for_window [class="URxvt"] border pixel 1
 
@@ -180,6 +174,24 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Handle screenshots
+bindsym --release Print exec scrot $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym --release Shift+Print exec scrot $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png -e 'xclip -selection c -t image/png < $f'
+bindsym --release $mod+Print exec scrot -s $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym --release $mod+Shift+Print exec scrot -s $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png -e 'xclip -selection c -t image/png < $f'
+
+# Lock the screen
+bindsym $mod+Escape exec --no-startup-id i3lock -c 000000
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+
+# Audio controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
 # window focus follows your mouse movements as the mouse crosses window borders
 focus_follows_mouse no
 
@@ -195,14 +207,23 @@ exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl -option ctr
 # Keyboard typematic delay and rate (defaults are: 660 25)
 exec_always --no-startup-id xset r rate 200 30
 
+# Mouse acceleration and threshold
+exec_always --no-startup-id xset mouse 3/2 0
+
 # Do not disable TouchPad while typing
 exec_always --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Disable While Typing Enabled' 0
 
 # Enable tap-to-click
 exec_always --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
 
+# Disable middle and right click in TouchPad area (defaults to: 1 2 3 4 5 6 7)
+exec_always --no-startup-id xinput set-button-map 'SynPS/2 Synaptics TouchPad' 1 1 1 4 5 6 7
+
 # Set background
 exec_always --no-startup-id hsetroot -solid "#000000"
+
+# On-screen notifications
+exec --no-startup-id dunst
 
 # Xorg compositor
 exec --no-startup-id compton -f --config $HOME/.config/compton.conf
