@@ -5,7 +5,7 @@ general {
 }
 
 order += "ipv6"
-order += "disk /home"
+order += "disk /"
 order += "path_exists VPN"
 order += "wireless wlp5s0"
 order += "ethernet enp4s0"
@@ -48,6 +48,6 @@ load {
         format = "%5min"
 }
 
-disk "/home" {
+disk "/" {
         format = "%free"
 }
