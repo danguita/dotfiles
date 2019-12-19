@@ -24,7 +24,7 @@ ethernet enp4s0 {
 }
 
 battery 0 {
-        format = "%status %percentage %remaining %emptytime"
+        format = "%status %percentage %remaining"
         format_down = "No battery"
         status_chr = "⚡ CHR"
         status_bat = "🔋 BAT"
