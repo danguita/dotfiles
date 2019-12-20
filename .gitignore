@@ -3,7 +3,6 @@
 
 # Any config files, with some exceptions
 /config/*
-!/config/compton.conf
 !/config/dunst/dunstrc
 !/config/gtk-3.0/settings.ini
 !/config/gtk-4.0/settings.ini

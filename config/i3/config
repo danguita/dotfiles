@@ -221,6 +221,3 @@ exec_always --no-startup-id hsetroot -solid "#000000"
 
 # On-screen notifications
 exec --no-startup-id dunst
-
-# Xorg compositor
-exec --no-startup-id compton -f --config $HOME/.config/compton.conf
