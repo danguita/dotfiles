@@ -216,6 +216,9 @@ exec_always --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinp
 # Disable middle and right click in TouchPad area (defaults to: 1 2 3 4 5 6 7)
 exec_always --no-startup-id xinput set-button-map 'SynPS/2 Synaptics TouchPad' 1 1 1 4 5 6 7
 
+# Disable mouse acceleration
+exec_always --no-startup-id xinput set-prop 'pointer:Logitech MX Master' 'libinput Accel Profile Enabled' 0, 1
+
 # Set background
 exec_always --no-startup-id hsetroot -solid "#000000"
 
