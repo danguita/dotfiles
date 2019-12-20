@@ -1,11 +1,17 @@
 # System files
 .DS_Store
 
-# Gem versioning
-Gemfile.lock
-
-# GTK-3.0 bookmarks
-config/gtk-3.0/bookmarks
+# Any config files, with some exceptions
+/config/*
+!/config/compton.conf
+!/config/dunst/dunstrc
+!/config/gtk-3.0/settings.ini
+!/config/gtk-4.0/settings.ini
+!/config/i3/config
+!/config/i3status/config
+!/config/nvim/coc-settings.json
+!/config/nvim/init.vim
+!/config/ranger/rc.conf
 
 # Fonts UUID
-fonts/.uuid
+/fonts/.uuid
