@@ -209,24 +209,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:airline_theme = 'base16'
 let g:airline_extensions = ['ale']
 let g:airline#extensions#ale#enabled = 1
-
-" Disable some powerline symbols
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = 'Ɇ'
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '≡'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.dirty='⚡'
+let g:airline_symbols_ascii = 1
 
 " ALE
 let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop'], 'elixir': ['mix_format'], 'haskell': ['hlint'] }
