@@ -12,5 +12,5 @@
 !/config/nvim/init.vim
 !/config/ranger/rc.conf
 
-# Fonts UUID
-/fonts/.uuid
+# Any kind of UUID files
+.uuid
