@@ -5,12 +5,6 @@ export DISABLE_AUTO_TITLE="true"
 export DOTFILES=${DOTFILES:-$HOME/workspace/dotfiles}
 export ZSH_CUSTOM=$DOTFILES/zsh/custom
 
-# path
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
-export PATH=/usr/share/npm/bin:/usr/local/share/npm/bin:$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-
 plugins=(git)
 
 # Load Oh-My-Zsh
