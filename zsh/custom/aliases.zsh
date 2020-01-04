@@ -33,3 +33,6 @@ alias f="ranger"
 
 # Launch Python based HTTP Server
 alias serve="python -m SimpleHTTPServer"
+
+# Clipboard management
+alias xclip="xclip -selection c"
