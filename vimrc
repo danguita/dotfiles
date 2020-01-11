@@ -243,9 +243,6 @@ let g:projectionist_heuristics = {
       \   }
       \ }}
 
-" vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
-
 " coc: Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
