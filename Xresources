@@ -10,11 +10,11 @@ Xft.hintstyle: hintmedium
 URxvt.termName: rxvt
 URxvt.depth: 32
 URxvt.transparent: false
-URxvt.font: xft:Terminus:pixelsize=18:antialias=true
-URxvt.boldFont: xft:Terminus:bold:pixelsize=18:antialias=true
+URxvt.font: xft:monospace:pixelsize=16:antialias=true
+URxvt.boldFont: xft:monospace:bold:pixelsize=16:antialias=true
 URxvt.scrollBar: false
 URxvt.lineSpace: 0
-URxvt.letterSpace: 0
+URxvt.letterSpace: -1
 URxvt.internalBorder: 0
 URxvt.iso14755: false
 
