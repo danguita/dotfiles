@@ -17,7 +17,7 @@ module Environment
     private
 
     def sync_vim_plugins
-      system "vim +PlugUpdate +qa"
+      system "#{ENV.fetch('EDITOR', 'vim')} +PlugUpdate +qa"
     end
   end
 end

@@ -26,7 +26,7 @@ module Environment
       say "Upgrading Vim-plug"
 
       if path && File.exists?(path)
-        system "vim +PlugUpgrade +qa"
+        system "#{ENV.fetch('EDITOR', 'vim')} +PlugUpgrade +qa"
       else
         say "VIM_FILES not found", :error
       end
