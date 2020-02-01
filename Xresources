@@ -27,7 +27,7 @@ URxvt.matcher.button: 1
 ! URxvt theme
 
 URxvt*foreground: #e4e4ef
-URxvt*background: #181818
+URxvt*background: #000000
 
 *color0:  #2E3436
 *color1:  #a40000
