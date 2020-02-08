@@ -9,6 +9,7 @@
 !/config/gtk-4.0/settings.ini
 !/config/i3/config
 !/config/i3status/config
+!/config/mimeapps.list
 !/config/nvim/coc-settings.json
 !/config/nvim/init.vim
 !/config/ranger/rc.conf
