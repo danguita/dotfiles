@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# Opens the clipboard manager using dmenu.
+#
+# clipboard-menu [--dmenu='dmenu -i']
+
+DMENU_LAUNCHER="dmenu -i"
+DMENU_OPTIONS=(-l 10)
+
+if [[ "$1" == --dmenu=* ]]; then
+  DMENU_LAUNCHER=${1:8}
+fi
+
+gpaste-client --oneline | $DMENU_LAUNCHER "${DMENU_OPTIONS[@]}" | xargs -I{} gpaste-client select {}
