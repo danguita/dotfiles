@@ -178,10 +178,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Handle screenshots
-bindsym --release Print exec scrot $HOME/Pictures/screenshots/screenshot-`date +%Y-%m-%d_%H-%M-%S`.png
-bindsym --release Shift+Print exec scrot $HOME/Pictures/screenshots/screenshot-`date +%Y-%m-%d_%H-%M-%S`.png -e 'xclip -selection c -t image/png < $f'
-bindsym --release $mod+Print exec scrot -s $HOME/Pictures/screenshots/screenshot-`date +%Y-%m-%d_%H-%M-%S`.png
-bindsym --release $mod+Shift+Print exec scrot -s $HOME/Pictures/screenshots/screenshot-`date +%Y-%m-%d_%H-%M-%S`.png -e 'xclip -selection c -t image/png < $f'
+bindsym --release Print exec take-screenshot --mode=full
+bindsym --release Shift+Print exec take-screenshot --mode=full-clipboard
+bindsym --release $mod+Print exec take-screenshot --mode=selection
+bindsym --release $mod+Shift+Print exec take-screenshot --mode=selection-clipboard
 
 # Lock the screen
 bindsym $mod+Escape exec --no-startup-id i3lock -c 000000
