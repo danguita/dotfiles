@@ -7,8 +7,23 @@
 DMENU_LAUNCHER="dmenu -i"
 DMENU_OPTIONS=(-l 10)
 
-if [[ "$1" == --dmenu=* ]]; then
-  DMENU_LAUNCHER=${1:8}
-fi
+usage()
+{
+   printf "\nUsage: %s --dmenu=<command>\n\n" "$0"
+   printf "\tdmenu\t(default: 'dmenu -i')\n"
+}
+
+for i in "$@"
+do
+  case $i in
+    --dmenu=*)
+      DMENU_LAUNCHER="${i#*=}"
+      ;;
+    --help)
+      usage
+      exit 1
+      ;;
+  esac
+done
 
 gpaste-client --oneline | $DMENU_LAUNCHER "${DMENU_OPTIONS[@]}" | xargs -I{} gpaste-client select {}
