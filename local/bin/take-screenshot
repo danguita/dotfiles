@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+#
+# Takes an screenshot in different modes and stores it accordingly.
+#
+# take-screenshot --mode={full|selection|full-clipboard|selection-clipboard}
+
+SCREENSHOTS_PATH="$HOME/Pictures/screenshots"
+SCREENSHOT_FILE="$SCREENSHOTS_PATH/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
+
+usage()
+{
+   printf "\nUsage: %s --mode=<mode>\n\n" "$0"
+   printf "\tmode\t{full|selection|full-clipboard|selection-clipboard}\n"
+}
+
+for i in "$@"
+do
+  case $i in
+    -m=*|--mode=*)
+      MODE="${i#*=}"
+      ;;
+    *)
+      usage
+      exit 1
+      ;;
+  esac
+done
+
+case $MODE in
+  "full")
+    COMMAND=(scrot "${SCREENSHOT_FILE}")
+    ;;
+  "full-clipboard")
+    COMMAND=(scrot "${SCREENSHOT_FILE}" -e "xclip -selection c -t image/png < \$f")
+    ;;
+  "selection")
+    COMMAND=(scrot -s "${SCREENSHOT_FILE}")
+    ;;
+  "selection-clipboard")
+    COMMAND=(scrot -s "${SCREENSHOT_FILE}" -e "xclip -selection c -t image/png < \$f")
+    ;;
+  *)
+    echo "ERROR: Unknown mode \"$MODE\""
+    usage
+    exit 1
+esac
+
+"${COMMAND[@]}"

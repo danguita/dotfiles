@@ -17,6 +17,7 @@
 # Any local files, with some exceptions
 /local/*
 !/local/bin/clipboard-menu
+!/local/bin/take-screenshot
 
 # Any kind of UUID files
 .uuid
