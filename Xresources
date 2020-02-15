@@ -20,7 +20,7 @@ URxvt.iso14755: false
 
 ! URxvt Extensions
 
-URxvt.perl-ext-common: default,clipboard,matcher,resize-font
+URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
