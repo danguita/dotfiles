@@ -18,6 +18,7 @@
 /local/*
 !/local/bin/clipboard-menu
 !/local/bin/take-screenshot
+!/local/bin/ix
 
 # Any kind of UUID files
 .uuid
