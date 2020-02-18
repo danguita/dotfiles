@@ -10,7 +10,7 @@ command -v xdg-open >/dev/null 2>&1 && alias o="xdg-open" || alias o="open"
 alias a="ag"             # The Silver Searcher
 alias hs="history | a"   # History search
 alias tm="ps -ef | a"    # Process search
-alias get="curl -O"      # Get a file via cURL
+alias get="curl -O -L"   # Get something via cURL
 
 # replace built-in grep with GNU grep if available
 command -v ggrep >/dev/null 2>&1 && alias grep="ggrep"
