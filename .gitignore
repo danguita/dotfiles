@@ -14,11 +14,5 @@
 !/config/nvim/init.vim
 !/config/ranger/rc.conf
 
-# Any local files, with some exceptions
-/local/*
-!/local/bin/clipboard-menu
-!/local/bin/take-screenshot
-!/local/bin/ix
-
 # Any kind of UUID files
 .uuid
