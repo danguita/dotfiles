@@ -21,6 +21,11 @@ namespace :dotfiles do
   task :update do
     Environment::Dotfiles.new(path: ENV['DOTFILES']).update
   end
+
+  desc "Clean up dotfiles"
+  task :cleanup do
+    Environment::Dotfiles.new(path: ENV['DOTFILES']).cleanup
+  end
 end
 
 namespace :vim do

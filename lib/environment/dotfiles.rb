@@ -54,10 +54,22 @@ module Environment
       end
     end
 
+    def cleanup
+      say "Removing symlinks"
+
+      targets.each do |target|
+        File.delete(target) if File.symlink?(target)
+      end
+    end
+
     private
 
     def dotfiles
       manifest.keys
+    end
+
+    def targets
+      manifest.values
     end
 
     def dotfile_target_for(file)
