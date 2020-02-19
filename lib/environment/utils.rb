@@ -18,6 +18,11 @@ module Environment
     def link_file(file, target)
       say "Linking #{file}"
 
+      if File.exist?(target) && !File.symlink?(target)
+        say "File #{file} already exists. Symlink cannot be created.", :error
+        return true
+      end
+
       system %{ln -sfn "$PWD/#{file}" "#{target}"}
     end
 
