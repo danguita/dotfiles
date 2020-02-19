@@ -5,7 +5,6 @@ module Environment
     attr_reader :path
 
     UPDATE_COMMAND = 'git pull origin master'
-    EXCLUDED_FILES = %w(Rakefile README.md zsh tmux screenshots lib)
 
     def initialize(options = {})
       @path = options.fetch('path') do
@@ -18,8 +17,6 @@ module Environment
 
       overwrite_all = false
       backup_all    = false
-
-      dotfiles = Dir.glob('*') - EXCLUDED_FILES
 
       dotfiles.each do |dotfile|
         overwrite = false
@@ -59,12 +56,20 @@ module Environment
 
     private
 
-    def dotfile_target_for(dotfile)
-      File.join(ENV.fetch('HOME'), dotfile_format_for(dotfile))
+    def dotfiles
+      manifest.keys
     end
 
-    def dotfile_format_for(dotfile)
-      ".#{dotfile}"
+    def dotfile_target_for(file)
+      manifest[file]
+    end
+
+    def manifest
+      @manifest ||= File.readlines('.dotfilesmanifest')
+                        .map(&:chomp)
+                        .map { |item| item.gsub('$HOME', ENV['HOME']) }
+                        .map { |item| item.split('|') }
+                        .to_h
     end
   end
 end

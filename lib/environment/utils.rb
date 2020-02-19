@@ -18,7 +18,7 @@ module Environment
     def link_file(file, target)
       say "Linking #{file}"
 
-      system %{ln -sf "$PWD/#{file}" "#{target}"}
+      system %{ln -sfn "$PWD/#{file}" "#{target}"}
     end
 
     def backup_file(file, remove = true)
