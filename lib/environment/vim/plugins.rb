@@ -1,23 +1,21 @@
+# frozen_string_literal: true
+
 module Environment
-  class Vim::Plugins
-    include Environment::Utils
+  module Vim
+    class Plugins
+      include Environment::Utils
 
-    def install
-      say "Installing Vim plugins"
+      def install
+        say 'Installing Vim plugins'
 
-      sync_vim_plugins
-    end
+        system "#{ENV.fetch('EDITOR', 'vim')} +PlugInstall +qa"
+      end
 
-    def update
-      say "Updating Vim plugins"
+      def update
+        say 'Updating Vim plugins'
 
-      sync_vim_plugins
-    end
-
-    private
-
-    def sync_vim_plugins
-      system "#{ENV.fetch('EDITOR', 'vim')} +PlugUpdate +qa"
+        system "#{ENV.fetch('EDITOR', 'vim')} +PlugUpdate +qa"
+      end
     end
   end
 end

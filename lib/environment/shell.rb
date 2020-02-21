@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Environment
   class Shell
     include Environment::Utils
@@ -11,33 +13,35 @@ module Environment
     end
 
     def install
-      if File.exists?(path)
-        say "Found ~/.oh-my-zsh"
+      if File.exist?(path)
+        say 'Found ~/.oh-my-zsh'
       else
-        say "Installing oh-my-zsh"
-        system %{git clone https://github.com/robbyrussell/oh-my-zsh.git #{path}}
+        say 'Installing oh-my-zsh'
+        system(
+          %(git clone https://github.com/robbyrussell/oh-my-zsh.git #{path})
+        )
       end
     end
 
     def update
-      say "Updating Oh-My-Zsh"
+      say 'Updating Oh-My-Zsh'
 
       zsh_path = ENV['ZSH']
       update_action = 'git pull origin master'
 
-      if zsh_path && File.exists?(zsh_path)
-        system %{cd "#{zsh_path}" && #{update_action}}
+      if zsh_path && File.exist?(zsh_path)
+        system %(cd "#{zsh_path}" && #{update_action})
       else
-        say "$ZSH not found", :error
+        say '$ZSH not found', :error
       end
     end
 
     def setup
       if ENV['SHELL'] =~ /zsh/
-        say "Using zsh"
+        say 'Using zsh'
       else
-        say "Switching to zsh"
-        system "chsh -s `which zsh`"
+        say 'Switching to zsh'
+        system 'chsh -s `which zsh`'
       end
     end
   end

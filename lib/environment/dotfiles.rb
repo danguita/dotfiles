@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Environment
   class Dotfiles
     include Environment::Utils
@@ -13,23 +15,23 @@ module Environment
     end
 
     def install
-      say "Installing dotfiles"
+      say 'Installing dotfiles'
 
       overwrite_all = false
       backup_all    = false
 
       dotfiles.each do |dotfile|
-        overwrite = false
-        backup    = false
-        target    = dotfile_target_for(dotfile)
+        _overwrite = false
+        backup     = false
+        target     = dotfile_target_for(dotfile)
 
-        if File.exists?(target) || File.symlink?(target)
+        if File.exist?(target) || File.symlink?(target)
           unless overwrite_all || backup_all
             prompt "File already exists: #{target}, what do you want to do? " \
-              "[s]kip [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all"
+              '[s]kip [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all'
 
             case STDIN.gets.chomp
-            when 'o' then overwrite     = true
+            when 'o' then _overwrite    = true
             when 'b' then backup        = true
             when 'O' then overwrite_all = true
             when 'B' then backup_all    = true
@@ -45,17 +47,17 @@ module Environment
     end
 
     def update
-      say "Updating dotfiles"
+      say 'Updating dotfiles'
 
-      if File.exists?(path)
-        system %{cd "#{path}" && #{UPDATE_COMMAND}}
+      if File.exist?(path)
+        system %(cd "#{path}" && #{UPDATE_COMMAND})
       else
-        say "DOTFILES does not exist", :error
+        say 'DOTFILES does not exist', :error
       end
     end
 
     def cleanup
-      say "Removing symlinks"
+      say 'Removing symlinks'
 
       targets.each do |target|
         File.delete(target) if File.symlink?(target)
