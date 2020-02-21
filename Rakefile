@@ -31,13 +31,13 @@ end
 namespace :vim do
   desc "Install Vim plugins"
   task :install do
-    Environment::Vim.new.install
+    Environment::Vim::Base.new.install
     Environment::Vim::Plugins.new.install
   end
 
   desc "Update Vim plugins"
   task :update do
-    Environment::Vim.new.update
+    Environment::Vim::Base.new.update
     Environment::Vim::Plugins.new.update
   end
 end
