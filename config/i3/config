@@ -213,6 +213,9 @@ exec_always --no-startup-id xset r rate 200 30
 # Mouse acceleration and threshold
 exec_always --no-startup-id xset mouse 3/2 0
 
+# Disable system bell
+exec_always --no-startup-id xset b off
+
 # Do not disable TouchPad while typing
 exec_always --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Disable While Typing Enabled' 0
 
