@@ -21,4 +21,5 @@ tmux.conf|$HOME/.tmux.conf
 urxvt|$HOME/.urxvt
 vimrc|$HOME/.vimrc
 Xresources|$HOME/.Xresources
+xsessionrc|$HOME/.xsessionrc
 zshrc|$HOME/.zshrc
