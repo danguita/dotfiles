@@ -7,7 +7,6 @@ config/i3|$HOME/.config/i3
 config/i3status|$HOME/.config/i3status
 config/nvim|$HOME/.config/nvim
 config/ranger|$HOME/.config/ranger
-fonts|$HOME/.fonts
 gemrc|$HOME/.gemrc
 gitignore|$HOME/.gitignore
 inputrc|$HOME/.inputrc
