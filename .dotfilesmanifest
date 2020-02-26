@@ -5,7 +5,6 @@ config/fontconfig|$HOME/.config/fontconfig
 config/gtk-3.0|$HOME/.config/gtk-3.0
 config/i3|$HOME/.config/i3
 config/i3status|$HOME/.config/i3status
-config/mimeapps.list|$HOME/.config/mimeapps.list
 config/nvim|$HOME/.config/nvim
 config/ranger|$HOME/.config/ranger
 fonts|$HOME/.fonts
