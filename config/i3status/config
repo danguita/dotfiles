@@ -9,6 +9,7 @@ order += "disk /"
 order += "path_exists VPN"
 order += "wireless wlp5s0"
 order += "ethernet enp4s0"
+order += "volume master"
 order += "battery 0"
 order += "load"
 order += "tztime local"
@@ -50,4 +51,12 @@ load {
 
 disk "/" {
         format = "%free"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
