@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+#
+# Changes screen layout using xrandr.
+#
+# change-screen-layout --mode={clone|dual|dual-vertical|external|laptop}
+
+INTERN=eDP1
+EXTERN=HDMI1
+
+usage()
+{
+   printf "\nUsage: %s --mode=<mode>\n\n" "$0"
+   printf "\tmode\t{clone|dual|dual-vertical|external|laptop}\n"
+}
+
+for i in "$@"
+do
+  case $i in
+    -m=*|--mode=*)
+      MODE="${i#*=}"
+      ;;
+    *)
+      usage
+      exit 1
+      ;;
+  esac
+done
+
+case $MODE in
+  "clone")
+    COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --auto --same-as "$INTERN")
+    ;;
+  "dual")
+    COMMAND=(xrandr --output "$INTERN" --primary --auto --output "$EXTERN" --right-of "$INTERN" --auto)
+    ;;
+  "dual-vertical")
+    COMMAND=(xrandr --output "$INTERN" --primary --auto --pos 0x1080 --output "$EXTERN" --auto --pos 0x0)
+    ;;
+  "external")
+    COMMAND=(xrandr --output "$INTERN" --off --output "$EXTERN" --auto)
+    ;;
+  "laptop")
+    COMMAND=(xrandr --output "$EXTERN" --off --output "$INTERN" --auto)
+    ;;
+  *)
+    echo "ERROR: Unknown mode \"$MODE\""
+    usage
+    exit 1
+esac
+
+"${COMMAND[@]}"
