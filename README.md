@@ -7,7 +7,6 @@
 - Zsh (interactive shell): `zshrc`.
 - Ack/The silver searcher (code search tool): `ackrc`.
 - Tig (git client): `tigrc`.
-- Mutt (email client): `muttrc`.
 - Readline config: `inputrc`.
 
 ## How does it look like?
