@@ -55,13 +55,15 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Colorscheme
+" Colors
 set background=dark
 let base16colorspace=256 " Access colors present in 256 colorspace
 silent! colorscheme base16-default-dark
-highlight ALEWarning ctermbg=darkmagenta ctermfg=white cterm=underline
-highlight ALEError ctermbg=darkmagenta ctermfg=white cterm=underline
-highlight CursorLine term=none cterm=none
+
+highlight ALEError ctermbg=red ctermfg=white
+highlight ALEWarning ctermbg=yellow ctermfg=black
+highlight ALEErrorSign ctermbg=none ctermfg=red
+highlight ALEWarningSign ctermbg=none ctermfg=yellow
 
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
