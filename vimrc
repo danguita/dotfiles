@@ -216,10 +216,15 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline_symbols_ascii = 1
 
 " ALE
-let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop'], 'elixir': ['mix_format'], 'haskell': ['hlint'] }
+" https://github.com/dense-analysis/ale
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 0
+let g:ale_lint_delay = 100
+let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop'], 'elixir': ['elixir-ls'], 'haskell': ['hlint'] }
 let g:ale_fixers = {'javascript': ['eslint'], 'ruby': ['rubocop'], 'elixir': ['mix_format'], 'haskell': ['hlint'] }
 let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_lint_delay = 100
 
 " projectionist
 let g:projectionist_heuristics = {
