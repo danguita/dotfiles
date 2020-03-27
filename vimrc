@@ -75,6 +75,7 @@ set wildignore+=*/deps/*,*/node_modules/*,*/_build/*
 " Filetypes
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake} set ft=ruby
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
+au BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 au FileType make setlocal noexpandtab
 au FileType markdown setlocal linebreak textwidth=72 nolist
 au FileType python setlocal tabstop=4 shiftwidth=4
