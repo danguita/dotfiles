@@ -11,13 +11,16 @@ Xft.lcdfilter: lcddefault
 URxvt.termName: rxvt-unicode
 URxvt.depth: 32
 URxvt.transparent: false
-URxvt.font: xft:monospace:pixelsize=16:antialias=true
-URxvt.boldFont: xft:monospace:bold:pixelsize=16:antialias=true
 URxvt.scrollBar: false
-URxvt.lineSpace: 0
-URxvt.letterSpace: -1
 URxvt.internalBorder: 0
 URxvt.iso14755: false
+URxvt.lineSpace: 0
+URxvt.letterSpace: -1
+
+URxvt.font: xft:monospace:pixelsize=16
+URxvt.boldFont: xft:monospace:style=Bold:pixelsize=16
+URxvt.italicFont: xft:monospace:style=Italic:pixelsize=16
+URxvt.boldItalicFont: xft:monospace:style=Bold Italic:pixelsize=16
 
 ! URxvt Extensions
 
