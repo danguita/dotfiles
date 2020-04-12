@@ -64,6 +64,7 @@ highlight ALEError ctermbg=red ctermfg=white
 highlight ALEWarning ctermbg=yellow ctermfg=black
 highlight ALEErrorSign ctermbg=none ctermfg=red
 highlight ALEWarningSign ctermbg=none ctermfg=yellow
+highlight Comment cterm=italic
 
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
