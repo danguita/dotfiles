@@ -23,7 +23,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
-Plug 'dhruvasagar/vim-zoom'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
