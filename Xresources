@@ -30,22 +30,42 @@ URxvt.matcher.button: 1
 
 ! Color scheme
 
-*.foreground: #e4e4ef
-*.background: #000000
-
-*.color0:     #2E3436
-*.color1:     #a40000
-*.color2:     #4E9A06
-*.color3:     #C4A000
-*.color4:     #3465A4
-*.color5:     #75507B
-*.color6:     #ce5c00
-*.color7:     #babdb9
-*.color8:     #555753
-*.color9:     #EF2929
-*.color10:    #8AE234
-*.color11:    #FCE94F
-*.color12:    #729FCF
-*.color13:    #AD7FA8
-*.color14:    #fcaf3e
-*.color15:    #EEEEEC
+*.foreground:  #dddddd
+*.background:  #191919
+!
+! Black
+*.color0:      #191919
+*.color8:      #505354
+!
+! Red
+*.color1:      #ff355b
+*.color9:      #ff355b
+!
+! Green
+*.color2:      #b7e876
+*.color10:     #b7e876
+!
+! Yellow
+*.color3:      #ffc251
+*.color11:     #ffc251
+!
+! Blue
+*.color4:      #76d4ff
+*.color12:     #76d5ff
+!
+! Magenta
+*.color5:      #ba76e7
+*.color13:     #ba76e7
+!
+! Cyan
+*.color6:      #6cbfb5
+*.color14:     #6cbfb5
+!
+! White
+*.color7:      #c2c8d7
+*.color15:     #c2c8d7
+!
+! Bold, Italic, Underline
+*.colorBD:     #9fb3c1
+!*.colorIT:
+!*.colorUL:
