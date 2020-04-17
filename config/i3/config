@@ -38,6 +38,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # start a browser
 bindsym $mod+Shift+Return exec xdg-open 'http://'
 
+# start a file manager
+bindsym $mod+Shift+f exec pcmanfm
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
