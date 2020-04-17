@@ -16,8 +16,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-projectionist'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript', 'javascript.jsx'] }
-Plug 'chriskempson/base16-vim'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
@@ -56,8 +55,7 @@ set smartcase
 
 " Colors
 set background=dark
-let base16colorspace=256 " Access colors present in 256 colorspace
-silent! colorscheme base16-default-dark
+colorscheme default
 
 highlight ALEError ctermbg=red ctermfg=white
 highlight ALEWarning ctermbg=yellow ctermfg=black
@@ -211,7 +209,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Airline configuration
 " https://github.com/vim-airline/vim-airline
-let g:airline_theme = 'base16'
 let g:airline_extensions = ['ale']
 let g:airline#extensions#ale#enabled = 1
 let g:airline_symbols_ascii = 1
