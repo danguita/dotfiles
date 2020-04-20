@@ -71,6 +71,11 @@ highlight ColorColumn ctermbg=235
 highlight TabLineFill ctermfg=235
 highlight TabLine cterm=none ctermbg=240
 
+highlight DiffAdd cterm=none ctermfg=0 ctermbg=2
+highlight DiffDelete cterm=none ctermfg=0 ctermbg=1
+highlight DiffChange cterm=none ctermfg=0 ctermbg=6
+highlight DiffText cterm=none ctermfg=0 ctermbg=6
+
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
