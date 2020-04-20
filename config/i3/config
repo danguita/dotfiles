@@ -145,9 +145,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # move the current workspace to the next output
 # in horizontal layout:
-# bindsym $mod+x move workspace to output right
+bindsym $mod+x move workspace to output right
 # in vertical layout:
-bindsym $mod+x move workspace to output up
+bindsym $mod+Shift+x move workspace to output up
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
