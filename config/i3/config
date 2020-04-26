@@ -52,7 +52,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -fn monospace:pixelsize=16'
 
 # open clipboard manager using dmenu
-bindsym $mod+c exec --no-startup-id clipboard-menu --dmenu='dmenu -i -fn monospace:pixelsize=16'
+bindsym $mod+c exec --no-startup-id clipboard-menu --dmenu='dmenu -i -fn monospace:pixelsize=14'
 
 # change focus
 bindsym $mod+Left focus left
