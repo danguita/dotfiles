@@ -54,6 +54,11 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -fn monos
 # open clipboard manager using dmenu
 bindsym $mod+c exec --no-startup-id clipboard-menu --dmenu='dmenu -i -fn monospace:pixelsize=14'
 
+# media controls
+bindsym $mod+p exec playerctl previous
+bindsym $mod+n exec playerctl next
+bindsym $mod+Shift+p exec playerctl play-pause
+
 # change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
