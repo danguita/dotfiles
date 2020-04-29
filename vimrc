@@ -87,13 +87,8 @@ au FileType make setlocal noexpandtab
 au FileType markdown setlocal linebreak textwidth=72 nolist
 au FileType python setlocal tabstop=4 shiftwidth=4
 
-" Backup and swap files
-set backupdir^=~/.vim/_backup//
-set directory^=~/.vim/_temp//
-
-" Permanent undo
-set undodir^=~/.vim/_undo//
-set undofile
+" Backup
+set nobackup
 
 " Mouse reporting
 set mouse=a
