@@ -19,5 +19,6 @@ tmux.conf|$HOME/.tmux.conf
 urxvt|$HOME/.urxvt
 vimrc|$HOME/.vimrc
 Xresources|$HOME/.Xresources
+xprofile|$HOME/.xprofile
 xsessionrc|$HOME/.xsessionrc
 zshrc|$HOME/.zshrc
