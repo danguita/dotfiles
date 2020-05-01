@@ -28,6 +28,9 @@ xinput set-prop 'pointer:Logitech MX Master' 'libinput Accel Profile Enabled' 0,
 # Set background
 hsetroot -solid "#000000"
 
+# Custom keybindings
+xbindkeys &
+
 # On-screen notifications
 dunst &
 

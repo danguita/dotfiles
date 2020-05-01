@@ -1,0 +1,33 @@
+# Audio controls.
+"pactl set-sink-volume @DEFAULT_SINK@ +5%"
+  XF86AudioRaiseVolume
+"pactl set-sink-volume @DEFAULT_SINK@ -5%"
+  XF86AudioLowerVolume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  XF86AudioMute
+"pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  XF86AudioMicMute
+
+# Screen brightness controls.
+"xbacklight -inc 20"
+  XF86MonBrightnessUp
+"xbacklight -dec 20"
+  XF86MonBrightnessDown
+
+# Media controls.
+"playerctl previous"
+  Mod4+Shift + Left
+"playerctl next"
+  Mod4+Shift + Right
+"playerctl play-pause"
+  Mod4+Shift + Down
+
+# Take screenshots.
+"take-screenshot --mode=full"
+   Print
+"take-screenshot --mode=full-clipboard"
+   Shift+Print
+"take-screenshot --mode=selection"
+   Mod4+Print
+"take-screenshot --mode=selection-clipboard"
+   Mod4+Shift + Print
