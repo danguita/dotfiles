@@ -199,9 +199,3 @@ bindsym $mod+Shift+Down exec --no-startup-id playerctl play-pause
 bar {
         status_command i3status
 }
-
-# Set background
-exec --no-startup-id hsetroot -solid "#000000"
-
-# On-screen notifications
-exec --no-startup-id dunst

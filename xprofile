@@ -1,6 +1,9 @@
 # Keyboard layout
 setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
 
+# Load .Xresources file
+xrdb -merge ~/.Xresources
+
 # Keyboard typematic delay and rate (defaults to: 660 25)
 xset r rate 200 30
 
@@ -21,3 +24,9 @@ xinput set-button-map 'SynPS/2 Synaptics TouchPad' 1 1 1 4 5 6 7
 
 # Disable mouse acceleration
 xinput set-prop 'pointer:Logitech MX Master' 'libinput Accel Profile Enabled' 0, 1
+
+# Set background
+hsetroot -solid "#000000"
+
+# On-screen notifications
+dunst &
