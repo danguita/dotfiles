@@ -6,6 +6,7 @@
 
 SCREENSHOTS_PATH="$HOME/Pictures/screenshots"
 SCREENSHOT_FILE="$SCREENSHOTS_PATH/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
+DELAY=0.2 # Seconds.
 
 usage()
 {
@@ -45,4 +46,5 @@ case $MODE in
     exit 1
 esac
 
+sleep $DELAY
 "${COMMAND[@]}"
