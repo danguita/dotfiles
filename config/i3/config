@@ -168,23 +168,23 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Handle screenshots
-bindsym --release Print exec take-screenshot --mode=full
-bindsym --release Shift+Print exec take-screenshot --mode=full-clipboard
-bindsym --release $mod+Print exec take-screenshot --mode=selection
-bindsym --release $mod+Shift+Print exec take-screenshot --mode=selection-clipboard
+bindsym --release Print exec --no-startup-id take-screenshot --mode=full
+bindsym --release Shift+Print exec --no-startup-id take-screenshot --mode=full-clipboard
+bindsym --release $mod+Print exec --no-startup-id take-screenshot --mode=selection
+bindsym --release $mod+Shift+Print exec --no-startup-id take-screenshot --mode=selection-clipboard
 
 # Lock the screen
 bindsym $mod+Escape exec --no-startup-id i3lock -c 000000
 
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 
 # Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # window focus follows your mouse movements as the mouse crosses window borders
 focus_follows_mouse no
