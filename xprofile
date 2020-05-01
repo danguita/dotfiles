@@ -30,3 +30,6 @@ hsetroot -solid "#000000"
 
 # On-screen notifications
 dunst &
+
+# Start window manager
+exec i3
