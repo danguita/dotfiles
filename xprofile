@@ -42,4 +42,4 @@ do
 done &
 
 # Start window manager
-exec i3 2> ~/tmp/i3.log
+exec dwm 2> ~/tmp/dwm.log
