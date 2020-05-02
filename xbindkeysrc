@@ -42,7 +42,7 @@
 
 # Open a browser.
 "xdg-open 'http://'"
-   Mod4+Shift + n
+   Mod4+Shift + b
 
 # Open a file manager.
 "pcmanfm $HOME"
