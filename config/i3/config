@@ -32,6 +32,9 @@ floating_modifier $mod
 # border control
 hide_edge_borders smart
 
+# window focus follows your mouse movements as the mouse crosses window borders
+focus_follows_mouse yes
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -169,9 +172,6 @@ bindsym $mod+r mode "resize"
 
 # Lock the screen
 bindsym $mod+Escape exec --no-startup-id i3lock -c 000000
-
-# window focus follows your mouse movements as the mouse crosses window borders
-focus_follows_mouse no
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
