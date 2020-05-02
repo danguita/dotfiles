@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# Uses `xsetroot` to store the current system status summary in the WM_NAME X11
+# property. It is being used by the `dwm` window manager.
+#
+# See https://dwm.suckless.org/status_monitor/
+#
+# set-system-status
+
+WIFI=$(nmcli -f ACTIVE,SSID,SIGNAL dev wifi list | awk '/yes/{ print $2 " " $3 "%" }')
+IP=$(for i in $(ip r); do echo "$i"; done | grep -A 1 src | tail -n1)
+LOAD="$(uptime | awk '{print $8}' | sed 's/,$//')"
+TIME="$(date +"%a %b %d %I:%M")"
+
+if acpi -a | grep off-line > /dev/null
+then
+  STATUS="$WIFI ($IP) | $LOAD | $TIME"
+else
+  BAT="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }')"
+  STATUS=" $WIFI ($IP) | $LOAD | bat $BAT | $TIME "
+fi
+
+xsetroot -name "$STATUS"
