@@ -31,7 +31,7 @@ URxvt.matcher.button: 1
 ! Color scheme
 
 *.foreground:  #dddddd
-*.background:  #111111
+*.background:  #000000
 !
 ! Black
 *.color0:      #191919
