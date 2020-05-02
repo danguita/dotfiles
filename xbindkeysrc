@@ -31,3 +31,19 @@
    Mod4+Print
 "take-screenshot --mode=selection-clipboard"
    Mod4+Shift + Print
+
+# Application launcher.
+"j4-dmenu-desktop --dmenu='dmenu -i -fn monospace:size=10'"
+   Mod4+Shift + p
+
+# Clipboard manager.
+"clipboard-menu --dmenu='dmenu -i -fn monospace:size=10'"
+   Mod4 + c
+
+# Open a browser.
+"xdg-open 'http://'"
+   Mod4+Shift + n
+
+# Open a file manager.
+"pcmanfm $HOME"
+   Mod4+Shift + f
