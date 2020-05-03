@@ -4,7 +4,7 @@
 
 - Vim (text editor): `vimrc`.
 - Tmux (terminal multiplexer): `tmux.conf`.
-- Zsh (interactive shell): `zshrc`.
+- Bash (interactive shell): `bashrc`.
 - dwm (window manager): `dwm/config.h`.
 - Ack/The silver searcher (code search tool): `ackrc`.
 - Tig (git client): `tigrc`.
