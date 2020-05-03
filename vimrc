@@ -68,6 +68,7 @@ highlight CursorLine cterm=none ctermbg=235
 highlight Visual cterm=reverse ctermbg=none
 highlight LineNr ctermfg=240
 highlight ColorColumn ctermbg=235
+highlight SignColumn ctermbg=none
 highlight TabLineFill ctermfg=235
 highlight TabLine cterm=none ctermbg=238 ctermfg=252
 highlight TabLineSel cterm=none ctermbg=0 ctermfg=255
