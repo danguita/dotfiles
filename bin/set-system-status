@@ -10,7 +10,7 @@
 WIFI=$(nmcli -f ACTIVE,SSID,SIGNAL dev wifi list | awk '/yes/{ print $2 " " $3 "%" }')
 IP=$(for i in $(ip r); do echo "$i"; done | grep -A 1 src | tail -n1)
 LOAD=$(awk '{ print $1 }' /proc/loadavg)
-TIME="$(date +"%a %b %d %I:%M")"
+TIME=$(date +"%a %b %d %I:%M")
 
 if acpi -a | grep off-line > /dev/null
 then
