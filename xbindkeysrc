@@ -46,4 +46,4 @@
 
 # Open a file manager.
 "pcmanfm $HOME"
-   Mod4+Shift + f
+   Mod4+Shift + n
