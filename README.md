@@ -5,6 +5,7 @@
 - Vim (text editor): `vimrc`.
 - Tmux (terminal multiplexer): `tmux.conf`.
 - Zsh (interactive shell): `zshrc`.
+- dwm (window manager): `dwm/config.h`.
 - Ack/The silver searcher (code search tool): `ackrc`.
 - Tig (git client): `tigrc`.
 - Readline config: `inputrc`.
@@ -13,7 +14,7 @@
 
 ![Terminal overview](screenshots/terminal-overview.png)
 
-Note: I'm using URxvt on i3wm.
+Note: This is rxvt-unicode on dwm.
 
 ## Usage
 
