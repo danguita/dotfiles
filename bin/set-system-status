@@ -16,7 +16,7 @@ if acpi -a | grep off-line > /dev/null
 then
   STATUS="$WIFI ($IP) | load $LOAD | $TIME"
 else
-  BAT="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }')"
+  BAT="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }' | sed 's/,//g')"
   STATUS=" $WIFI ($IP) | load $LOAD | bat $BAT | $TIME "
 fi
 
