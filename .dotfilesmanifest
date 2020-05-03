@@ -3,8 +3,6 @@ bin|$HOME/bin
 config/dunst|$HOME/.config/dunst
 config/fontconfig|$HOME/.config/fontconfig
 config/gtk-3.0|$HOME/.config/gtk-3.0
-config/i3|$HOME/.config/i3
-config/i3status|$HOME/.config/i3status
 config/nvim|$HOME/.config/nvim
 config/ranger|$HOME/.config/ranger
 gemrc|$HOME/.gemrc
