@@ -9,15 +9,15 @@
 
 WIFI=$(nmcli -f ACTIVE,SSID,SIGNAL dev wifi list | awk '/yes/{ print $2 " " $3 "%" }')
 IP=$(for i in $(ip r); do echo "$i"; done | grep -A 1 src | tail -n1)
-LOAD="$(uptime | awk '{print $8}' | sed 's/,$//')"
+LOAD=$(awk '{ print $1 }' /proc/loadavg)
 TIME="$(date +"%a %b %d %I:%M")"
 
 if acpi -a | grep off-line > /dev/null
 then
-  STATUS="$WIFI ($IP) | $LOAD | $TIME"
+  STATUS="$WIFI ($IP) | load $LOAD | $TIME"
 else
   BAT="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }')"
-  STATUS=" $WIFI ($IP) | $LOAD | bat $BAT | $TIME "
+  STATUS=" $WIFI ($IP) | load $LOAD | bat $BAT | $TIME "
 fi
 
 xsetroot -name "$STATUS"
