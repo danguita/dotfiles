@@ -1,0 +1,13 @@
+# term
+export TERM="xterm-256color"
+
+# locale
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+
+# editor
+export EDITOR="nvim"
+export VIM_FILES="$HOME/.vim"
+
+# dotfiles
+export DOTFILES=${DOTFILES:-$HOME/workspace/dotfiles}

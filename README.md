@@ -4,7 +4,7 @@
 
 - Vim (text editor): `vimrc`.
 - Tmux (terminal multiplexer): `tmux.conf`.
-- Zsh (interactive shell): `zshrc`.
+- Bash (interactive shell): `bashrc`.
 - dwm (window manager): `dwm/config.h`.
 - Ack/The silver searcher (code search tool): `ackrc`.
 - Tig (git client): `tigrc`.
@@ -49,8 +49,6 @@ rake dotfiles:cleanup  # Clean up dotfiles
 rake dotfiles:install  # Install dotfiles
 rake dotfiles:update   # Update dotfiles
 rake install           # Install dotfiles and related libraries
-rake shell:install     # Install Oh-My-Zsh and change default shell
-rake shell:update      # Update Oh-My-Zsh
 rake update            # Update dotfiles and related libraries
 rake vim:install       # Install Vim plugins
 rake vim:update        # Update Vim plugins

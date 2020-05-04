@@ -1,5 +1,9 @@
 ackrc|$HOME/.ackrc
 bin|$HOME/bin
+bash_aliases|$HOME/.bash_aliases
+bash_environment|$HOME/.bash_environment
+bash_functions|$HOME/.bash_functions
+bashrc|$HOME/.bashrc
 config/dunst|$HOME/.config/dunst
 config/fontconfig|$HOME/.config/fontconfig
 config/gtk-3.0|$HOME/.config/gtk-3.0
@@ -20,4 +24,3 @@ Xresources|$HOME/.Xresources
 xbindkeysrc|$HOME/.xbindkeysrc
 xprofile|$HOME/.xprofile
 xsessionrc|$HOME/.xsessionrc
-zshrc|$HOME/.zshrc
