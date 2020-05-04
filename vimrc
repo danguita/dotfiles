@@ -16,7 +16,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-projectionist'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript', 'javascript.jsx'] }
-Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
@@ -211,12 +210,6 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
 " Use The Silver Searcher (ag) as default text searching tool
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" Airline configuration
-" https://github.com/vim-airline/vim-airline
-let g:airline_extensions = ['ale']
-let g:airline#extensions#ale#enabled = 1
-let g:airline_symbols_ascii = 1
 
 " ALE
 " https://github.com/dense-analysis/ale
