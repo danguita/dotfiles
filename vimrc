@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomtom/tlib_vim' | Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'garbas/vim-snipmate' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter', { 'on':  '<plug>NERDCommenterToggle' }
-Plug 'ngmy/vim-rubocop', { 'on': 'RuboCop' }
 Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'majutsushi/tagbar'
