@@ -202,10 +202,6 @@ nnoremap <Leader>; :Buffers<CR>
 " Set file finder's custom command to respect `.gitignore`
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-" TagList settings
-let Tlist_Use_Right_Window = 1
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'
-
 " Use The Silver Searcher (ag) as default text searching tool
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
