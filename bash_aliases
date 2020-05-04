@@ -4,9 +4,9 @@ alias la="ls -A"
 alias l="ls -CF"
 
 # Filesystem
-alias cp="cp -i" # confirm
-alias mv="mv -i" # confirm
-alias rm="rm -i" # confirm
+alias cp="cp -i" # Prompt before overwrite
+alias mv="mv -i" # Prompt before overwrite
+alias rm="rm -i" # Prompt before overwrite
 
 # Git
 alias gc="git commit -S -v"
@@ -45,6 +45,9 @@ alias f="ranger"
 
 # Opens a file in the user's preferred application
 alias open="xdg-open"
+
+# Opens a terminal in the current directory
+alias t='x-terminal-emulator -cd "$PWD" &!'
 
 # Launches a Python based HTTP Server
 alias serve="python -m SimpleHTTPServer"
