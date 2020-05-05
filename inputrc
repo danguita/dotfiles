@@ -1,4 +1,2 @@
 set expand-tilde on
 set bell-style none
-
-"\C-n": menu-complete
