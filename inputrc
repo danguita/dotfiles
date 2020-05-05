@@ -1,2 +1,2 @@
-set expand-tilde on
+set expand-tilde off
 set bell-style none
