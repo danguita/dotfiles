@@ -16,11 +16,11 @@
 
 # Media controls.
 "playerctl previous"
-  Mod4+Shift + Left
+  Mod4+Shift + minus
 "playerctl next"
-  Mod4+Shift + Right
+  Mod4+Shift + equal
 "playerctl play-pause"
-  Mod4+Shift + Down
+  Mod4+Shift + BackSpace
 
 # Take screenshots.
 "take-screenshot --mode=full"
