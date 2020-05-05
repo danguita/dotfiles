@@ -47,3 +47,7 @@
 # Open a file manager.
 "pcmanfm $HOME"
    Mod4+Shift + n
+
+# Lock the screen.
+"slock"
+   Mod4+Escape
