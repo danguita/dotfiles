@@ -61,7 +61,7 @@ highlight ALEWarningSign ctermbg=none ctermfg=yellow
 
 highlight Comment cterm=italic
 highlight VertSplit cterm=none ctermfg=235
-highlight CursorLine cterm=none ctermbg=235
+highlight CursorLine cterm=none ctermbg=233
 highlight Visual cterm=reverse ctermbg=none
 highlight LineNr ctermfg=240
 highlight ColorColumn ctermbg=235
