@@ -45,11 +45,11 @@ alias v="vim"
 # File manager
 alias f="ranger"
 
+# Terminal multiplexer
+alias t="tmux"
+
 # Opens a file in the user's preferred application
 alias open="xdg-open"
-
-# Opens a terminal in the current directory
-alias t='x-terminal-emulator -cd "$PWD" &!'
 
 # Launches a Python based HTTP Server
 alias serve="python -m SimpleHTTPServer"
