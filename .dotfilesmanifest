@@ -4,6 +4,7 @@ bash_aliases|$HOME/.bash_aliases
 bash_environment|$HOME/.bash_environment
 bash_functions|$HOME/.bash_functions
 bashrc|$HOME/.bashrc
+config/compton.conf|$HOME/.config/compton.conf
 config/dunst|$HOME/.config/dunst
 config/fontconfig|$HOME/.config/fontconfig
 config/gtk-3.0|$HOME/.config/gtk-3.0
