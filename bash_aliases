@@ -39,6 +39,7 @@ alias get="curl -O -L" # Get something via cURL
 
 # Vim
 alias vim="nvim"
+alias vi="vim"
 alias v="vim"
 
 # File manager
