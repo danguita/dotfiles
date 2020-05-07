@@ -14,8 +14,6 @@ gemrc|$HOME/.gemrc
 gitignore|$HOME/.gitignore
 inputrc|$HOME/.inputrc
 irbrc|$HOME/.irbrc
-muttrc|$HOME/.muttrc
-screenlayout|$HOME/.screenlayout
 screenrc|$HOME/.screenrc
 tigrc|$HOME/.tigrc
 tmux.conf|$HOME/.tmux.conf
