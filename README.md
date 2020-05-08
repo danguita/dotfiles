@@ -23,35 +23,34 @@ Note: This is rxvt-unicode on dwm.
 Please, don't blindly use these dotfiles unless you know what that
 entails!
 
-### Requirements
-
-Ruby (`rake`) is required in order to execute the installation scripts.
-
 ### Installation
 
 ```
 $ mkdir ~/workspace
 $ git clone https://github.com/danguita/dotfiles.git ~/workspace/dotfiles
 $ cd ~/workspace/dotfiles
-$ rake install
+$ make install
 ```
 
 ### Update an existing install
 
 ```
-$ rake update
+$ make update
 ```
 
 ### All tasks
 
 ```
-rake dotfiles:cleanup  # Clean up dotfiles
-rake dotfiles:install  # Install dotfiles
-rake dotfiles:update   # Update dotfiles
-rake install           # Install dotfiles and related libraries
-rake update            # Update dotfiles and related libraries
-rake vim:install       # Install Vim plugins
-rake vim:update        # Update Vim plugins
+make install           Install dotfiles and vim configuration.
+make update            Update dotfiles and vim configuration.
+make clean             Remove dotfiles and vim configuration.
+make dotfiles-install  Create symlinks.
+make dotfiles-update   Update remote.
+make dotfiles-clean    Remove symlinks.
+make vim-install       Install plugin manager and plugins.
+make vim-update        Update plugin manager and plugins.
+make vim-clean         Remove plugin manager and plugins.
+make help              This help.
 ```
 
 ## Feedback
