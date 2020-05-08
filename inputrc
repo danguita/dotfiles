@@ -1,2 +1,17 @@
-set expand-tilde off
+# Disable system bell
 set bell-style none
+
+# Perform file completion in a case insensitive fashion
+set completion-ignore-case on
+
+# Treat hyphens and underscores as equivalent
+set completion-map-case on
+
+# Display matches for ambiguous patterns at first tab press
+set show-all-if-ambiguous on
+
+# Immediately add a trailing slash when autocompleting symlinks to directories
+set mark-symlinked-directories on
+
+# Show extra file information when completing, like `ls -F` does
+set visible-stats on
