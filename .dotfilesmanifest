@@ -3,6 +3,7 @@ bin|$HOME/bin
 bash_aliases|$HOME/.bash_aliases
 bash_environment|$HOME/.bash_environment
 bash_functions|$HOME/.bash_functions
+bash_logout|$HOME/.bash_logout
 bashrc|$HOME/.bashrc
 config/compton.conf|$HOME/.config/compton.conf
 config/dunst|$HOME/.config/dunst
