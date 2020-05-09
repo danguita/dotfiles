@@ -87,4 +87,4 @@ if ! shopt -oq posix; then
 fi
 
 # Source fzf.
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && . ~/.fzf.bash
