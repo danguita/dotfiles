@@ -36,6 +36,8 @@ else
   color_prompt=
 fi
 
+# Source git-prompt.
+[ -f /usr/share/git/git-prompt.sh ] && . /usr/share/git/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 
 if [ "$color_prompt" = yes ]; then
