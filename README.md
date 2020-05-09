@@ -26,10 +26,9 @@ entails!
 ### Installation
 
 ```
-$ mkdir ~/workspace
-$ git clone https://github.com/danguita/dotfiles.git ~/workspace/dotfiles
-$ cd ~/workspace/dotfiles
-$ make install
+$ mkdir -p ~/workspace
+$ git clone --recurse-submodules https://github.com/danguita/dotfiles.git ~/workspace/dotfiles
+$ make -C ~/workspace/dotfiles install
 ```
 
 ### Update an existing install
