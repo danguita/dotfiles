@@ -15,6 +15,7 @@ gemrc|.gemrc
 gitignore|.gitignore
 inputrc|.inputrc
 irbrc|.irbrc
+profile|.profile
 screenrc|.screenrc
 tigrc|.tigrc
 tmux.conf|.tmux.conf
