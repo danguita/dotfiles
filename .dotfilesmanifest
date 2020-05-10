@@ -4,6 +4,7 @@ bash_aliases|.bash_aliases
 bash_environment|.bash_environment
 bash_functions|.bash_functions
 bash_logout|.bash_logout
+bash_profile|.bash_profile
 bashrc|.bashrc
 config/compton.conf|.config/compton.conf
 config/dunst|.config/dunst
