@@ -1,2 +1,0 @@
-[ -r "$HOME/.profile" ] && . "$HOME/.profile"
-[ -r "$HOME/.xprofile" ] && . "$HOME/.xprofile"
