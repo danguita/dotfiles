@@ -22,5 +22,5 @@ urxvt|.urxvt
 vimrc|.vimrc
 Xresources|.Xresources
 xbindkeysrc|.xbindkeysrc
-xprofile|.xprofile
 xsessionrc|.xsessionrc
+xinitrc|.xinitrc
