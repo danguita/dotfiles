@@ -26,7 +26,7 @@ xinput set-button-map 'SynPS/2 Synaptics TouchPad' 1 1 1 4 5 6 7
 xinput set-prop 'pointer:Logitech MX Master' 'libinput Accel Profile Enabled' 0, 1
 
 # Set background
-hsetroot -solid "#000000"
+xsetroot -solid black
 
 # Custom keybindings
 xbindkeys &
