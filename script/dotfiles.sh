@@ -3,7 +3,7 @@
 set -e
 
 DOTFILES=${DOTFILES:-$HOME/workspace/dotfiles}
-MANIFEST="$DOTFILES/.dotfilesmanifest"
+MANIFEST="$DOTFILES/MANIFEST"
 NS=${NS:-$HOME}
 
 say() {
