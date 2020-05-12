@@ -29,7 +29,7 @@ alias gstp="git stash pop"
 alias gstl="git stash list"
 alias glg="git log"
 alias glo="git log --oneline --decorate"
-alias gg="gitg &!" # git GUI
+alias gg="git gui &!"
 
 # Misc
 alias a="ag"           # The Silver Searcher
