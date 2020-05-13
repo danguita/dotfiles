@@ -42,4 +42,4 @@ do
 done &
 
 # Start window manager
-exec dwm 2> ~/tmp/dwm.log
+exec dbus-launch dwm 2> ~/tmp/dwm.log
