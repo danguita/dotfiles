@@ -14,10 +14,10 @@ TIME=$(date +"%a %b %d %I:%M")
 
 if acpi -a | grep off-line > /dev/null
 then
-  STATUS=" $WIFI ($IP) │ $LOAD │ $TIME "
+  STATUS=" $WIFI ($IP) │ $LOAD │ $HOSTNAME - $TIME "
 else
-  BAT="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }' | sed 's/,//g')"
-  STATUS=" $WIFI ($IP) │ $LOAD │ $BAT │ $TIME "
+  BAT="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }' | sed 's/,//g;s/Unknown //g')"
+  STATUS=" $WIFI ($IP) │ $LOAD │ $BAT │ $HOSTNAME - $TIME "
 fi
 
 xsetroot -name "$STATUS"
