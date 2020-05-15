@@ -18,9 +18,6 @@ URxvt.lineSpace: 0
 URxvt.letterSpace: -1
 
 URxvt.font: xft:monospace:pixelsize=16
-URxvt.boldFont: xft:monospace:style=Bold:pixelsize=16
-URxvt.italicFont: xft:monospace:style=Italic:pixelsize=16
-URxvt.boldItalicFont: xft:monospace:style=Bold Italic:pixelsize=16
 
 ! URxvt Extensions
 
