@@ -28,6 +28,9 @@ xinput set-prop 'pointer:Logitech MX Master' 'libinput Accel Profile Enabled' 0,
 # Set background
 xsetroot -solid black
 
+# Launch a session bus instance
+eval $(dbus-launch --sh-syntax --exit-with-session)
+
 # Custom keybindings
 xbindkeys &
 
@@ -42,4 +45,4 @@ do
 done &
 
 # Start window manager
-exec dbus-launch dwm 2> ~/tmp/dwm.log
+exec dwm 2> ~/tmp/dwm.log
