@@ -59,6 +59,11 @@ highlight ALEWarning ctermbg=yellow ctermfg=black
 highlight ALEErrorSign ctermbg=none ctermfg=red
 highlight ALEWarningSign ctermbg=none ctermfg=yellow
 
+highlight Pmenu ctermbg=black ctermfg=white
+highlight PmenuSel ctermbg=magenta ctermfg=black
+highlight PmenuSbar ctermbg=white ctermfg=none
+highlight PmenuThumb ctermbg=magenta ctermfg=none
+
 highlight Comment cterm=italic
 highlight VertSplit cterm=none ctermfg=235
 highlight CursorLine cterm=none ctermbg=233
