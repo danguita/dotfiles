@@ -45,7 +45,7 @@
    Mod4+Shift + b
 
 # Open a file manager.
-"dbus-launch pcmanfm $HOME"
+"pcmanfm $HOME"
    Mod4+Shift + n
 
 # Lock the screen.
