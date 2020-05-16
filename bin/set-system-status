@@ -8,16 +8,21 @@
 # set-system-status
 
 WIFI=$(nmcli -f ACTIVE,SSID,SIGNAL dev wifi list | awk '/yes/{ print $2 " " $3 "%" }')
-IP=$(for i in $(ip r); do echo "$i"; done | grep -A 1 src | tail -n1)
-LOAD=$(awk '{ print $1 }' /proc/loadavg)
+DEV=$(ip r | awk '/^default/{ print $5 }')
+IP=$(ip r | awk -v dev="$DEV" '$3 ~ dev { print $9 }')
+CPU_LOAD=$(awk '{ print $1 }' /proc/loadavg)
 TIME=$(date +"%a %b %d %I:%M")
 
-if acpi -a | grep off-line > /dev/null
-then
-  STATUS=" $WIFI ($IP) │ $LOAD │ $HOSTNAME - $TIME "
+if [ -z "$WIFI" ]; then
+  NET='eth'
 else
-  BAT="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }' | sed 's/,//g;s/Unknown //g')"
-  STATUS=" $WIFI ($IP) │ $LOAD │ $BAT │ $HOSTNAME - $TIME "
+  NET=$WIFI
 fi
 
-xsetroot -name "$STATUS"
+if acpi -a | grep off-line > /dev/null; then
+  BAT='✕'
+else
+  BAT="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }' | sed 's/,//g;s/Unknown //g')"
+fi
+
+xsetroot -name " $NET ($IP) / $CPU_LOAD / $BAT / $HOSTNAME - $TIME "
