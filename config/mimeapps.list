@@ -1,0 +1,13 @@
+[Default Applications]
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+image/jpeg=vimiv.desktop
+image/png=vimiv.desktop
+image/svg+xml=vimiv.desktop
+image/gif=vimiv.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop
+inode/directory=pcmanfm.desktop
