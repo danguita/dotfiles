@@ -48,6 +48,10 @@
 "pcmanfm $HOME"
    Mod4+Shift + n
 
+# Re-set input devices.
+"set-input-devices"
+   Mod4+Shift + r
+
 # Lock the screen.
 "slock"
    Mod4+Escape
