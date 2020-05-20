@@ -35,6 +35,19 @@ plugin_update() {
   say "plugin_update: done."
 }
 
+extension_update() {
+  $EDITOR +CocUpdate +qa
+  $EDITOR +CocUpdateSync +qa
+  say "extension_update: done."
+}
+
+extension_install() {
+  $EDITOR '+CocInstall -sync coc-tsserver' +qa
+  $EDITOR '+CocInstall -sync coc-solargraph' +qa
+  $EDITOR '+CocInstall -sync coc-json' +qa
+  say "extension_install: done."
+}
+
 clean() {
   if [ -d "$VIM_FILES" ]; then
     rm -rf --interactive "$VIM_FILES"
