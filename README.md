@@ -54,7 +54,7 @@ make help              This help.
 
 ## Feedback
 
-Any feedback is [more than welcomed](https://github.com/danguita/dotfiles/issues).
+Any feedback is [more than welcome](https://github.com/danguita/dotfiles/issues).
 
 ## License
 
