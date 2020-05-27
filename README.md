@@ -1,14 +1,10 @@
 # @danguita's dotfiles
 
-## Overview of files
+## Overview
 
-- Vim (text editor): `vimrc`.
-- Tmux (terminal multiplexer): `tmux.conf`.
-- Bash (interactive shell): `bashrc`.
-- dwm (window manager): `dwm/config.h`.
-- Ack/The silver searcher (code search tool): `ackrc`.
-- Tig (git client): `tigrc`.
-- Readline config: `inputrc`.
+Here is a blog post describing some of the key parts of this setup:
+
+https://davidanguita.name/articles/the-postmodern-development-environment/
 
 ## How does it look like?
 
