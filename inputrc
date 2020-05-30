@@ -15,3 +15,6 @@ set mark-symlinked-directories on
 
 # Show extra file information when completing, like `ls -F` does
 set visible-stats on
+
+# Display possible completions using different colors
+set colored-stats on
