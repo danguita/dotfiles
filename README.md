@@ -52,6 +52,6 @@ make help              This help.
 
 Any feedback is [more than welcome](https://github.com/danguita/dotfiles/issues).
 
-## License
+## See also
 
-This is just configuration files, feel free to use any of them.
+- [scripts](http://github.com/danguita/scripts)
