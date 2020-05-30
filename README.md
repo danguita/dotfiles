@@ -1,4 +1,4 @@
-# @danguita's dotfiles
+# @danguita's dotfiles [![Build Status](https://travis-ci.org/danguita/dotfiles.svg?branch=master)](https://travis-ci.org/danguita/dotfiles)
 
 ## Overview
 
