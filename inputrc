@@ -18,3 +18,9 @@ set visible-stats on
 
 # Display possible completions using different colors
 set colored-stats on
+
+# Replace the word to be completed with a single match from the list
+TAB: menu-complete
+
+# Shift-TAB cycles backward
+"\e[Z": menu-complete-backward
