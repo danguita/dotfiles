@@ -12,7 +12,7 @@ URxvt.termName: rxvt-unicode
 URxvt.depth: 32
 URxvt.transparent: false
 URxvt.scrollBar: false
-URxvt.internalBorder: 2
+URxvt.internalBorder: 5
 URxvt.iso14755: false
 URxvt.lineSpace: 0
 URxvt.letterSpace: -1
