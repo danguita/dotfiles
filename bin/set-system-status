@@ -25,4 +25,4 @@ else
   bat="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }' | sed 's/,//g;s/Unknown //g')"
 fi
 
-xsetroot -name " $net / $cpu / $bat / $HOSTNAME - $time "
+xsetroot -name " $net | $cpu | $bat | $HOSTNAME - $time "
