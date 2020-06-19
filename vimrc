@@ -75,10 +75,10 @@ highlight TabLineFill ctermfg=235
 highlight TabLine cterm=none ctermbg=238 ctermfg=252
 highlight TabLineSel cterm=none ctermbg=0 ctermfg=255
 
-highlight DiffAdd ctermfg=28 ctermbg=194 cterm=none
-highlight DiffChange ctermfg=94 ctermbg=229 cterm=none
-highlight DiffDelete ctermfg=124 ctermbg=224 cterm=none
-highlight DiffText ctermfg=24 ctermbg=255 cterm=none
+highlight DiffAdd ctermfg=green ctermbg=black cterm=none
+highlight DiffChange ctermfg=yellow ctermbg=black cterm=none
+highlight DiffDelete ctermfg=red ctermbg=black cterm=none
+highlight DiffText ctermfg=blue ctermbg=black cterm=none
 
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
