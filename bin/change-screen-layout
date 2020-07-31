@@ -31,10 +31,10 @@ case $MODE in
     COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --auto --same-as "$INTERN")
     ;;
   "dual")
-    COMMAND=(xrandr --output "$INTERN" --primary --auto --output "$EXTERN" --auto --right-of "$INTERN")
+    COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --primary --auto --right-of "$INTERN")
     ;;
   "dual-vertical")
-    COMMAND=(xrandr --output "$INTERN" --primary --auto --output "$EXTERN" --auto --above "$INTERN")
+    COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --primary --auto --above "$INTERN")
     ;;
   "external")
     COMMAND=(xrandr --output "$INTERN" --off --output "$EXTERN" --auto)
