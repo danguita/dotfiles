@@ -20,7 +20,7 @@ URxvt.iso14755: false
 URxvt.lineSpace: 0
 URxvt.letterSpace: -1
 
-URxvt.font: xft:monospace:pixelsize=16
+URxvt.font: xft:monospace:size=10
 
 ! URxvt Extensions
 
