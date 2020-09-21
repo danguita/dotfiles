@@ -5,7 +5,7 @@
 # change-screen-layout --mode={clone|dual|dual-vertical|external|laptop}
 
 INTERN=eDP1
-EXTERN=HDMI1
+EXTERN=DP1
 
 usage()
 {
