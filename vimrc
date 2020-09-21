@@ -220,7 +220,7 @@ let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 0
 let g:ale_lint_delay = 100
 let g:ale_linters = {'javascript': [], 'ruby': ['rubocop'], 'elixir': ['elixir-ls'], 'haskell': ['hlint'] }
-let g:ale_fixers = {'javascript': ['eslint'], 'ruby': ['rubocop'], 'elixir': ['mix_format'], 'haskell': ['hlint'] }
+let g:ale_fixers = {'javascript': ['eslint'], 'ruby': ['rubocop'], 'elixir': ['mix_format'], 'haskell': ['hlint'], 'rust': ['rustfmt'] }
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_ruby_rubocop_executable = 'bin/rubocop'
 
