@@ -74,6 +74,7 @@ highlight SignColumn ctermbg=none
 highlight TabLineFill ctermfg=235
 highlight TabLine cterm=none ctermbg=238 ctermfg=252
 highlight TabLineSel cterm=none ctermbg=0 ctermfg=255
+highlight Search cterm=none ctermbg=yellow ctermfg=233
 
 highlight DiffAdd ctermfg=green ctermbg=black cterm=none
 highlight DiffChange ctermfg=yellow ctermbg=black cterm=none
