@@ -52,7 +52,7 @@ alias t="tmux"
 alias open="xdg-open"
 
 # Launches a Python based HTTP Server
-alias serve="python -m SimpleHTTPServer"
+alias serve="python -m http.server"
 
 # Defaults xclip selection to clipboard
 alias xclip="xclip -selection c"
