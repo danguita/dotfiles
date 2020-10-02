@@ -7,7 +7,8 @@
 #
 # set-system-status
 
-wifi=$(nmcli -f ACTIVE,SSID,SIGNAL dev wifi list | awk '/yes/{ print $2 " " $3 "%" }')
+wifi=$(nmcli -f ACTIVE,SSID,SIGNAL dev wifi list | \
+  awk '/yes/{ print $2 " " $3 "%" }')
 dev=$(ip r | awk '/^default/{ print $5 }')
 ip=$(ip r | awk -v dev="$dev" '$3 ~ dev { print $9 }')
 cpu=$(awk '{ print $1 }' /proc/loadavg)
@@ -22,7 +23,9 @@ fi
 if [ -z "$(acpi -b)" ]; then
   bat='✕'
 else
-  bat="$(acpi -b | grep -v 'rate information unavailable' | awk 'NR==1{ print $3 " " $4 }' | sed 's/,//g;s/Unknown //g')"
+  bat="$(acpi -b | grep -v 'rate information unavailable' | \
+    awk 'NR==1{ print $3 " " $4 }' | \
+    sed 's/,//g;s/Unknown //g')"
 fi
 
 xsetroot -name " $net | $cpu | $bat | $HOSTNAME - $time "
