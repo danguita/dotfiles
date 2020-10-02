@@ -2,15 +2,17 @@
 #
 # Changes screen layout using xrandr.
 #
-# change-screen-layout --mode={clone|dual|dual-vertical|external|laptop}
+# change-screen-layout --mode={clone|dual|dual-vertical|external|laptop} [--intern=eDP1] [--extern=HDMI1]
 
 INTERN=eDP1
-EXTERN=DP1
+EXTERN=HDMI1
 
 usage()
 {
-   printf "\nUsage: %s --mode=<mode>\n\n" "$0"
+   printf "\nUsage: %s --mode=<mode> [--intern=<output>] [--extern=<output>]\n\n" "$0"
    printf "\tmode\t{clone|dual|dual-vertical|external|laptop}\n"
+   printf "\tintern\tdefaults to eDP1\n"
+   printf "\textern\tdefaults to HDMI1\n"
 }
 
 for i in "$@"
@@ -18,6 +20,12 @@ do
   case $i in
     -m=*|--mode=*)
       MODE="${i#*=}"
+      ;;
+    --extern=*)
+      EXTERN="${i#*=}"
+      ;;
+    --intern=*)
+      INTERN="${i#*=}"
       ;;
     *)
       usage
