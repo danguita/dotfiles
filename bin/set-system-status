@@ -22,7 +22,7 @@ fi
 if [ -z "$(acpi -b)" ]; then
   bat='✕'
 else
-  bat="$(acpi -b | awk '/Battery 0/{ print $3 " " $4 }' | sed 's/,//g;s/Unknown //g')"
+  bat="$(acpi -b | grep -v 'rate information unavailable' | awk 'NR==1{ print $3 " " $4 }' | sed 's/,//g;s/Unknown //g')"
 fi
 
 xsetroot -name " $net | $cpu | $bat | $HOSTNAME - $time "
