@@ -210,9 +210,6 @@ nnoremap <Leader>; :Buffers<CR>
 " Set file finder's custom command to respect `.gitignore`
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-" Use The Silver Searcher (ag) as default text searching tool
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
 " ALE
 " https://github.com/dense-analysis/ale
 let g:ale_sign_error = '✘'
