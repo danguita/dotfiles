@@ -47,16 +47,32 @@ done
 
 case $MODE in
   "clone")
-    COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --auto --same-as "$INTERN")
+    COMMAND=(
+      xrandr \
+        --output "$INTERN" --auto \
+        --output "$EXTERN" --auto --same-as "$INTERN"
+      )
     ;;
   "dual")
-    COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --primary --auto --right-of "$INTERN")
+    COMMAND=(
+      xrandr \
+        --output "$INTERN" --auto \
+        --output "$EXTERN" --primary --auto --right-of "$INTERN"
+      )
     ;;
   "dual-vertical")
-    COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --primary --auto --above "$INTERN")
+    COMMAND=(
+      xrandr \
+        --output "$INTERN" --auto \
+        --output "$EXTERN" --primary --auto --above "$INTERN"
+    )
     ;;
   "external")
-    COMMAND=(xrandr --output "$INTERN" --off --output "$EXTERN" --auto)
+    COMMAND=(
+      xrandr \
+        --output "$INTERN" --off \
+        --output "$EXTERN" --auto
+      )
     ;;
   "external-dual")
     if [ -z "$EXTERN_A" ]; then
@@ -79,7 +95,11 @@ case $MODE in
     )
     ;;
   "laptop")
-    COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --off)
+    COMMAND=(
+      xrandr \
+        --output "$INTERN" --auto \
+        --output "$EXTERN" --off
+      )
     ;;
   *)
     echo "ERROR: Unknown mode \"$MODE\""
