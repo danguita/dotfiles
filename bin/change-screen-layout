@@ -2,15 +2,20 @@
 #
 # Changes screen layout using xrandr.
 #
-# change-screen-layout --mode={clone|dual|dual-vertical|external|laptop} [--intern=eDP1] [--extern=HDMI1]
+# change-screen-layout \
+#   --mode={clone|dual|dual-vertical|external|external-dual|laptop} \
+#   [--intern=eDP1] \
+#   [--extern=HDMI1] \
+#   [--extern-a=DP1] \
+#   [--extern-b=HDMI1]
 
 INTERN=eDP1
 EXTERN=HDMI1
 
 usage()
 {
-   printf "\nUsage: %s --mode=<mode> [--intern=<output>] [--extern=<output>]\n\n" "$0"
-   printf "\tmode\t{clone|dual|dual-vertical|external|laptop}\n"
+   printf "\nUsage: %s --mode=<mode> [--intern=<output>] [--extern=<output>] [--extern-a=<output>] [--extern-b=<output>]\n\n" "$0"
+   printf "\tmode\t{clone|dual|dual-vertical|external|external-dual|laptop}\n"
    printf "\tintern\tdefaults to eDP1\n"
    printf "\textern\tdefaults to HDMI1\n"
 }
@@ -23,6 +28,12 @@ do
       ;;
     --extern=*)
       EXTERN="${i#*=}"
+      ;;
+    --extern-a=*)
+      EXTERN_A="${i#*=}"
+      ;;
+    --extern-b=*)
+      EXTERN_B="${i#*=}"
       ;;
     --intern=*)
       INTERN="${i#*=}"
@@ -46,6 +57,26 @@ case $MODE in
     ;;
   "external")
     COMMAND=(xrandr --output "$INTERN" --off --output "$EXTERN" --auto)
+    ;;
+  "external-dual")
+    if [ -z "$EXTERN_A" ]; then
+      echo "ERROR: --extern-a output is missing"
+      usage
+      exit 1
+    fi
+
+    if [ -z "$EXTERN_B" ]; then
+      echo "ERROR: --extern-b output is missing"
+      usage
+      exit 1
+    fi
+
+    COMMAND=(
+      xrandr \
+        --output "$INTERN" --off \
+        --output "$EXTERN_A" --primary --auto \
+        --output "$EXTERN_B" --auto --right-of "$EXTERN_A"
+    )
     ;;
   "laptop")
     COMMAND=(xrandr --output "$INTERN" --auto --output "$EXTERN" --off)
