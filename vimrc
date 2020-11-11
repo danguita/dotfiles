@@ -14,7 +14,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-projectionist'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'eelixir', 'jsx', 'javascript', 'javascript.jsx'] }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
