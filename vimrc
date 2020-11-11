@@ -207,6 +207,8 @@ inoremap <C-p> <ESC>:FZF<CR>
 " Open file finder for current buffers
 nnoremap <Leader>; :Buffers<CR>
 
+" Get back to the good old non-popup layout
+let g:fzf_layout = { 'down': '40%' }
 
 " ALE
 " https://github.com/dense-analysis/ale
