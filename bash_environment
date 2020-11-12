@@ -11,3 +11,6 @@ export VIM_FILES="$HOME/.vim"
 
 # dotfiles
 export DOTFILES=${DOTFILES:-$HOME/workspace/dotfiles}
+
+# misc
+export FZF_DEFAULT_COMMAND='ag -g ""'
