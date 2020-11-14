@@ -19,7 +19,7 @@ dunst &
 while true
 do
   "$HOME/bin/set-system-status"
-  sleep 10s # Refresh interval
+  sleep 5s # Refresh interval
 done &
 
 # Start window manager
