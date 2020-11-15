@@ -28,6 +28,10 @@ URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
+! xterm Settings
+
+xterm*faceName: monospace:size=12
+
 ! Color scheme
 
 ! -----------------------------------------------------------------------------
