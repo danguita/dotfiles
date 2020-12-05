@@ -21,7 +21,6 @@ profile|.profile
 screenrc|.screenrc
 tigrc|.tigrc
 tmux.conf|.tmux.conf
-urxvt|.urxvt
 vimrc|.vimrc
 Xresources|.Xresources
 xbindkeysrc|.xbindkeysrc
