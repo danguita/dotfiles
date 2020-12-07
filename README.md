@@ -55,3 +55,5 @@ Any feedback is [more than welcome](https://github.com/danguita/dotfiles/issues)
 ## See also
 
 - [scripts](http://github.com/danguita/scripts)
+- [dwm custom build](http://github.com/danguita/dwm)
+- [st custom build](http://github.com/danguita/st)
