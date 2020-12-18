@@ -9,7 +9,7 @@
 
 wifi=$(nmcli -f ACTIVE,SSID,SIGNAL dev wifi list | \
   awk '/yes/{ print $2 " " $3 "%" }')
-dev=$(ip r | awk '/^default/{ print $5 }')
+dev=$(ip r | awk '/^default/{ print $5; exit }')
 ip=$(ip r | awk -v dev="$dev" '$3 ~ dev { print $9 }')
 cpu=$(awk '{ print $1 }' /proc/loadavg)
 mem=$(free -h --si | awk '/^Mem:/ { print $3 }')
