@@ -29,4 +29,4 @@ else
     sed 's/,//g;s/Unknown //g')"
 fi
 
-xsetroot -name " $net | cpu $cpu | mem $mem | $bat | $time "
+xsetroot -name " $net | cpu $cpu | mem $mem | bat $bat | $time "
