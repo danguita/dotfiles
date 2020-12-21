@@ -1,3 +1,4 @@
+# Set up X input devices
 "$HOME/bin/set-input-devices"
 
 # Load .Xresources file
