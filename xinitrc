@@ -16,12 +16,8 @@ xbindkeys &
 # On-screen notifications
 dunst &
 
-# Status loop
-while true
-do
-  "$HOME/bin/set-system-status"
-  sleep 5s # Refresh interval
-done &
+# Status monitor
+slstatus &
 
 # Start window manager
 exec dwm 2> ~/tmp/dwm.log
