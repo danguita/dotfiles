@@ -6,7 +6,6 @@ bash_functions|.bash_functions
 bash_logout|.bash_logout
 bash_profile|.bash_profile
 bashrc|.bashrc
-config/compton.conf|.config/compton.conf
 config/dunst|.config/dunst
 config/fontconfig|.config/fontconfig
 config/gtk-3.0|.config/gtk-3.0
