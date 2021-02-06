@@ -43,6 +43,7 @@ extension_update() {
 }
 
 extension_install() {
+  $EDITOR '+CocInstall -sync coc-snippets' +qa
   $EDITOR '+CocInstall -sync coc-tsserver' +qa
   $EDITOR '+CocInstall -sync coc-solargraph' +qa
   $EDITOR '+CocInstall -sync coc-json' +qa
