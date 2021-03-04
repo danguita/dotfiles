@@ -1,6 +1,6 @@
 ! Xft Settings
 
-Xft.dpi: 96
+Xft.dpi: 120
 ! Scaled (125%): 96*1.25 = 120
 ! HiDPI (150%): 96*1.5 = 144
 
