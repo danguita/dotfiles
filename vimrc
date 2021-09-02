@@ -174,11 +174,11 @@ map <Leader>rt :TagbarToggle<CR>
 map <Leader>f :ALEFix<CR>
 
 " Fugitive
-nmap <Leader>gb :Gblame<CR>
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>gl :Glog<CR>
-nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>gb :Git blame<CR>
+nmap <Leader>gs :Git status<CR>
+nmap <Leader>gd :Git diff<CR>
+nmap <Leader>gl :Git log<CR>
+nmap <Leader>gc :Git commit<CR>
 nmap <Leader>gp :Git push<CR>
 
 " format the entire file
