@@ -87,5 +87,5 @@ if ! shopt -oq posix; then
 fi
 
 # Source fzf keybindings and completion features.
-[ -f /usr/share/doc/fzf/key-bindings.bash ] && . /usr/share/doc/fzf/key-bindings.bash
-[ -f /usr/share/doc/fzf/completion.bash ] && . /usr/share/doc/fzf/completion.bash
+[ -f /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
+[ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
