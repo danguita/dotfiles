@@ -69,6 +69,7 @@ highlight VertSplit cterm=none ctermfg=234
 highlight CursorLine cterm=none ctermbg=233
 highlight Visual cterm=reverse ctermbg=none
 highlight LineNr ctermfg=240
+highlight CursorLineNr cterm=none
 highlight ColorColumn ctermbg=234
 highlight SignColumn ctermbg=none
 highlight TabLineFill ctermfg=235
