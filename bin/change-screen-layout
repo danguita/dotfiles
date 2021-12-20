@@ -50,28 +50,32 @@ case $MODE in
     COMMAND=(
       xrandr \
         --output "$INTERN" --auto \
-        --output "$EXTERN" --auto --same-as "$INTERN"
+        --output "$EXTERN" --auto --same-as "$INTERN" \
+        --set audio off
       )
     ;;
   "dual")
     COMMAND=(
       xrandr \
-        --output "$INTERN" --auto \
-        --output "$EXTERN" --primary --auto --right-of "$INTERN"
+        --output "$INTERN" --primary --auto \
+        --output "$EXTERN" --auto --right-of "$INTERN" \
+        --set audio off
       )
     ;;
   "dual-vertical")
     COMMAND=(
       xrandr \
         --output "$INTERN" --auto \
-        --output "$EXTERN" --primary --auto --above "$INTERN"
+        --output "$EXTERN" --primary --auto --above "$INTERN" \
+        --set audio off
     )
     ;;
   "external")
     COMMAND=(
       xrandr \
         --output "$INTERN" --off \
-        --output "$EXTERN" --auto
+        --output "$EXTERN" --auto \
+        --set audio off
       )
     ;;
   "external-dual")
