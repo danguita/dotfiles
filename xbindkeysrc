@@ -36,6 +36,10 @@
 "j4-dmenu-desktop --dmenu='dmenu -i -fn monospace:size=10'"
    Mod4+Shift + p
 
+# Emoji selector.
+"emoji-selector list | dmenu -i -fn monospace:size=10 | emoji-selector copy"
+   Mod4 + e
+
 # Clipboard manager.
 "clipboard-menu --dmenu='dmenu -i -fn monospace:size=10'"
    Mod4 + c
