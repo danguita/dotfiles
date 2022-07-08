@@ -9,9 +9,9 @@
   XF86AudioMicMute
 
 # Screen brightness controls.
-"xbacklight -inc 20"
+"xbacklight -ctrl intel_backlight -inc 10"
   XF86MonBrightnessUp
-"xbacklight -dec 20"
+"xbacklight -ctrl intel_backlight -dec 10"
   XF86MonBrightnessDown
 
 # Media controls.
