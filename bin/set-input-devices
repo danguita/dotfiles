@@ -6,6 +6,9 @@
 
 set -e
 
+touchpad_id='ELAN0676:00 04F3:3195 Touchpad'
+mouse_id='Logitech MX Master'
+
 set_keyboard() {
   # Set keyboard layout
   setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
@@ -22,16 +25,16 @@ set_mouse() {
   xset mouse 3/2 0
 
   # Do not disable TouchPad while typing
-  xinput set-prop 'Elan Touchpad' 'libinput Disable While Typing Enabled' 0
+  xinput set-prop "${touchpad_id}" 'libinput Disable While Typing Enabled' 0
 
   # Enable tap-to-click
-  xinput set-prop 'Elan Touchpad' 'libinput Tapping Enabled' 1
+  xinput set-prop "${touchpad_id}" 'libinput Tapping Enabled' 1
 
   # Disable middle and right click in TouchPad area (defaults to: 1 2 3 4 5 6 7)
-  xinput set-button-map 'Elan Touchpad' 1 1 1 4 5 6 7
+  xinput set-button-map "${touchpad_id}" 1 1 1 4 5 6 7
 
   # Disable mouse acceleration
-  xinput set-prop 'pointer:Logitech MX Master' 'libinput Accel Profile Enabled' 0, 1
+  xinput set-prop "pointer:${mouse_id}" 'libinput Accel Profile Enabled' 0, 1
 }
 
 set_all() {
