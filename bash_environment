@@ -14,3 +14,11 @@ export DOTFILES=${DOTFILES:-$HOME/workspace/dotfiles}
 
 # misc
 export FZF_DEFAULT_COMMAND='ag -g ""'
+
+# Qt
+# QT_AUTO_SCREEN_SCALE_FACTOR [boolean] enables automatic scaling, based on the
+# monitor's pixel density. This won't change the size of point-sized fonts,
+# since point is a physical measurement unit. Multiple screens may get different
+# scale factors.
+# https://doc.qt.io/qt-5/highdpi.html#high-dpi-support-in-qt
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
