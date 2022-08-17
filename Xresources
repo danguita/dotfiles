@@ -22,7 +22,7 @@ Xft.lcdfilter: lcddefault
 ! -----------------------------------------------------------------------------
 
 *background: #1d2021
-! soft contrast: *background: #282828, 32302f
+! soft contrast: *background: #282828, #32302f
 *foreground: #ebdbb2
 ! Black + DarkGrey
 *color0:  #282828
