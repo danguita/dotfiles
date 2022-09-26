@@ -4,12 +4,12 @@
 #
 # change-screen-layout \
 #   --mode={clone|dual|dual-vertical|external|external-dual|laptop} \
-#   [--intern=eDP1] \
+#   [--intern=eDP-1] \
 #   [--extern=HDMI1] \
 #   [--extern-a=DP1] \
 #   [--extern-b=HDMI1]
 
-INTERN=eDP1
+INTERN=eDP-1
 EXTERN=HDMI1
 
 usage()
