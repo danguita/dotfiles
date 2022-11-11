@@ -10,7 +10,7 @@
 #   [--extern-b=HDMI1]
 
 INTERN=eDP-1
-EXTERN=HDMI1
+EXTERN=HDMI-1
 
 usage()
 {
