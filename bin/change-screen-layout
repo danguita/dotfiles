@@ -16,8 +16,8 @@ usage()
 {
    printf "\nUsage: %s --mode=<mode> [--intern=<output>] [--extern=<output>] [--extern-a=<output>] [--extern-b=<output>]\n\n" "$0"
    printf "\tmode\t{clone|dual|dual-vertical|external|external-dual|laptop|tv}\n"
-   printf "\tintern\tdefaults to eDP1\n"
-   printf "\textern\tdefaults to HDMI1\n"
+   printf "\tintern\tdefaults to %s\n" "$INTERN"
+   printf "\textern\tdefaults to %s\n" "$EXTERN"
 }
 
 for i in "$@"
