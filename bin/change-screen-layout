@@ -3,7 +3,7 @@
 # Changes screen layout using xrandr.
 #
 # change-screen-layout \
-#   --mode={clone|dual|dual-vertical|external|external-dual|laptop} \
+#   --mode={clone|dual|dual-vertical|external|external-dual|laptop|tv} \
 #   [--intern=eDP-1] \
 #   [--extern=HDMI1] \
 #   [--extern-a=DP1] \
@@ -15,7 +15,7 @@ EXTERN=HDMI-1
 usage()
 {
    printf "\nUsage: %s --mode=<mode> [--intern=<output>] [--extern=<output>] [--extern-a=<output>] [--extern-b=<output>]\n\n" "$0"
-   printf "\tmode\t{clone|dual|dual-vertical|external|external-dual|laptop}\n"
+   printf "\tmode\t{clone|dual|dual-vertical|external|external-dual|laptop|tv}\n"
    printf "\tintern\tdefaults to eDP1\n"
    printf "\textern\tdefaults to HDMI1\n"
 }
@@ -103,6 +103,14 @@ case $MODE in
       xrandr \
         --output "$INTERN" --auto \
         --output "$EXTERN" --off
+      )
+    ;;
+  "tv")
+    COMMAND=(
+      xrandr \
+        --output "$INTERN" --primary --auto \
+        --output "$EXTERN" --auto --left-of "$INTERN" \
+        --set audio on
       )
     ;;
   *)
