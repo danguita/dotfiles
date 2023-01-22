@@ -51,8 +51,8 @@ set ignorecase
 set smartcase
 
 " Colors
-set background=dark
 colorscheme default
+set background=dark
 
 highlight ALEError ctermbg=red ctermfg=white
 highlight ALEWarning ctermbg=yellow ctermfg=black
