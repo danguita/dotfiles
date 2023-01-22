@@ -202,8 +202,7 @@ vmap <C-k> [egv
 vmap <C-j> ]egv
 
 " Open file finder
-nnoremap <C-p> :FZF<CR>
-inoremap <C-p> <ESC>:FZF<CR>
+nnoremap <Leader>p :FZF<CR>
 
 " Open file finder for current buffers
 nnoremap <Leader>; :Buffers<CR>
