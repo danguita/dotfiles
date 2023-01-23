@@ -54,34 +54,6 @@ set smartcase
 colorscheme default
 set background=dark
 
-highlight ALEError ctermbg=red ctermfg=white
-highlight ALEWarning ctermbg=yellow ctermfg=black
-highlight ALEErrorSign ctermbg=none ctermfg=red
-highlight ALEWarningSign ctermbg=none ctermfg=yellow
-
-highlight Pmenu ctermbg=233 ctermfg=white
-highlight PmenuSel ctermbg=magenta ctermfg=black
-highlight PmenuSbar ctermbg=white ctermfg=none
-highlight PmenuThumb ctermbg=magenta ctermfg=none
-
-highlight Comment cterm=italic
-highlight VertSplit cterm=none ctermfg=234
-highlight CursorLine cterm=none ctermbg=233
-highlight Visual cterm=reverse ctermbg=none
-highlight LineNr ctermfg=240
-highlight CursorLineNr cterm=none
-highlight ColorColumn ctermbg=234
-highlight SignColumn ctermbg=none
-highlight TabLineFill ctermfg=235
-highlight TabLine cterm=none ctermbg=238 ctermfg=252
-highlight TabLineSel cterm=none ctermbg=0 ctermfg=255
-highlight Search cterm=none ctermbg=yellow ctermfg=233
-
-highlight DiffAdd ctermfg=green ctermbg=black cterm=none
-highlight DiffChange ctermfg=yellow ctermbg=black cterm=none
-highlight DiffDelete ctermfg=red ctermbg=black cterm=none
-highlight DiffText ctermfg=blue ctermbg=black cterm=none
-
 " Ignorelist
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
