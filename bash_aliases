@@ -37,12 +37,6 @@ alias hs="history | a" # History search
 alias tm="ps -ef | a"  # Process search
 alias get="curl -O -L" # Get something via cURL
 
-# File manager
-alias f="ranger"
-
-# Terminal multiplexer
-alias t="tmux"
-
 # Opens a file in the user's preferred application
 alias open="xdg-open"
 
