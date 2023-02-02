@@ -45,3 +45,6 @@ alias serve="python -m http.server"
 
 # Defaults xclip selection to clipboard
 alias xclip="xclip -selection c"
+
+# Vim
+alias vim="vim-x11"
