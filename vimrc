@@ -91,9 +91,8 @@ set showbreak=↪
 " Split separator character
 set fillchars+=vert:│
 
-" Highlight 81 column
+" Wrap to 80 characters
 set textwidth=80
-set colorcolumn=+1
 
 " Avoid word wrapping
 set formatoptions-=t
