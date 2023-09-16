@@ -1,16 +1,8 @@
-! Xft Settings
-
+! Xft
 ! 100%:           96
 ! 125%: 96*1.25 = 120
 ! 150%: 96*1.5  = 144
 ! 200%: 96*2.0  = 192
-Xft.dpi: 144
-
-Xft.antialias: 1
-Xft.hinting: 1
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
-
-! xterm Settings
+Xft.dpi: 120
 
 xterm*faceName: monospace:size=10
