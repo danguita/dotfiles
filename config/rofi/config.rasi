@@ -1,0 +1,5 @@
+configuration {
+  modes: "window,drun,run,ssh";
+  font: "monospace 14";
+}
+@theme "DarkBlue"
