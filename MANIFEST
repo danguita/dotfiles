@@ -13,6 +13,7 @@ config/mimeapps.list|.config/mimeapps.list
 config/ranger|.config/ranger
 config/polybar|.config/polybar
 config/rofi|.config/rofi
+cwmrc|.cwmrc
 gemrc|.gemrc
 gitignore|.gitignore
 inputrc|.inputrc
