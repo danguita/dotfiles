@@ -11,6 +11,7 @@ config/fontconfig|.config/fontconfig
 config/gtk-3.0|.config/gtk-3.0
 config/mimeapps.list|.config/mimeapps.list
 config/ranger|.config/ranger
+config/polybar|.config/polybar
 gemrc|.gemrc
 gitignore|.gitignore
 inputrc|.inputrc
