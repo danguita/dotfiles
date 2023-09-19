@@ -10,7 +10,7 @@ https://davidanguita.name/articles/the-postmodern-development-environment/
 
 ![Terminal overview](screenshots/terminal-overview.png)
 
-Note: This is rxvt-unicode on dwm.
+Note: This is xterm on cwm.
 
 ## Usage
 

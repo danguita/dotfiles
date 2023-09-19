@@ -1,54 +1,18 @@
-! Xft Settings
-
+! Xft
 ! 100%:           96
 ! 125%: 96*1.25 = 120
 ! 150%: 96*1.5  = 144
 ! 200%: 96*2.0  = 192
-Xft.dpi: 144
+Xft.dpi: 120
 
-Xft.antialias: 1
-Xft.hinting: 1
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
-
-! Color scheme
-
-! -----------------------------------------------------------------------------
-! File: gruvbox-dark.xresources
-! Description: Retro groove colorscheme generalized
-! Author: morhetz <morhetz@gmail.com>
-! Source: https://github.com/morhetz/gruvbox-generalized
-! Last Modified: 6 Sep 2014
-! -----------------------------------------------------------------------------
-
-*background: #1d2021
-! soft contrast: *background: #282828, #32302f
-*foreground: #ebdbb2
-! Black + DarkGrey
-*color0:  #282828
-*color8:  #928374
-! DarkRed + Red
-*color1:  #cc241d
-*color9:  #fb4934
-! DarkGreen + Green
-*color2:  #98971a
-*color10: #b8bb26
-! DarkYellow + Yellow
-*color3:  #d79921
-*color11: #fabd2f
-! DarkBlue + Blue
-*color4:  #458588
-*color12: #83a598
-! DarkMagenta + Magenta
-*color5:  #b16286
-*color13: #d3869b
-! DarkCyan + Cyan
-*color6:  #689d6a
-*color14: #8ec07c
-! LightGrey + White
-*color7:  #a89984
-*color15: #ebdbb2
-
-! xterm Settings
-
-xterm*faceName: monospace:size=10
+! xterm
+xterm.vt100.faceName: monospace:size=12
+xterm.vt100.eightBitInput: false
+xterm.vt100.reverseVideo: true
+xterm.vt100.printerCommand: select-url
+xterm.vt100.translations: #override \
+    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>W: print(noAttrs, noNewLine) \n\
+    Ctrl Shift <Key>minus: smaller-vt-font() \n\
+    Ctrl Shift <Key>plus: larger-vt-font()

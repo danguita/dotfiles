@@ -1,23 +1,17 @@
-# Set up X input devices
-"$HOME/bin/set-input-devices"
-
-# Load .Xresources file
+# Load X configuration
 xrdb -merge "$HOME/.Xresources"
 
 # Set background
 xsetroot -solid black
 
-# Launch a session bus instance
-eval "$(dbus-launch --sh-syntax --exit-with-session)"
-
-# Custom keybindings
-xbindkeys &
+# Set up input devices
+"$HOME/bin/set-input-devices"
 
 # On-screen notifications
 dunst &
 
-# Status monitor
-slstatus &
+# Status bar
+polybar &
 
-# Start window manager
-exec dwm 2> ~/tmp/dwm.log
+# Window manager
+exec dbus-launch --exit-with-session cwm 2> ~/tmp/cwm.log
