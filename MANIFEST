@@ -23,5 +23,4 @@ profile|.profile
 screenrc|.screenrc
 tmux.conf|.tmux.conf
 vimrc|.vimrc
-xbindkeysrc|.xbindkeysrc
 xinitrc|.xinitrc
