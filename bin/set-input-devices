@@ -11,7 +11,7 @@ readonly MOUSE_IDS=('MX Master' 'Logitech Wireless Mouse MX Master')
 
 set_keyboard() {
   # Set keyboard layout
-  setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
+  setxkbmap -layout us -variant altgr-intl -option ctrl:swapcaps
 
   # Set keyboard typematic delay and rate (defaults to: 660 25)
   xset r rate 200 30
