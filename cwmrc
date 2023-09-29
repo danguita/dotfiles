@@ -88,7 +88,7 @@ bind-key 4-m window-maximize
 # Window stick (stick current window to all groups)
 bind-key 4S-s window-stick
 
-# Window management
+# Delete window
 bind-key 4-w window-delete
 
 # Snap windows
