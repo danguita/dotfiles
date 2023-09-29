@@ -40,9 +40,9 @@ set_mouse() {
   done
 }
 
-set_all() {
+set_devices() {
   set_keyboard
   set_mouse
 }
 
-set_all
+set_devices
