@@ -4,7 +4,7 @@
 sticky yes
 
 # Default font
-fontname "monospace:pixelsize=22"
+fontname "monospace:pixelsize=18"
 
 # Appearance
 borderwidth 1
