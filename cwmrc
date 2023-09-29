@@ -98,16 +98,10 @@ bind-key 4S-k window-snap-up
 bind-key 4S-l window-snap-right
 
 # Move windows
-bind-key 4M-h window-move-left
-bind-key 4M-j window-move-down
-bind-key 4M-k window-move-up
-bind-key 4M-l window-move-right
-
-# Resize windows
-bind-key 4S-h window-resize-left
-bind-key 4S-j window-resize-down
-bind-key 4S-k window-resize-up
-bind-key 4S-l window-resize-right
+bind-key MS-h window-move-left-big
+bind-key MS-j window-move-down-big
+bind-key MS-k window-move-up-big
+bind-key MS-l window-move-right-big
 
 # Window tiling
 bind-key 4-v window-vtile
@@ -129,12 +123,6 @@ bind-mouse 4-1 window-move
 bind-mouse 4-3 window-resize
 bind-mouse 4-2 window-lower
 bind-mouse 4S-2 window-hide
-
-# Move pointer
-bind-key MS-h pointer-move-left-big
-bind-key MS-j pointer-move-down-big
-bind-key MS-k pointer-move-up-big
-bind-key MS-l pointer-move-right-big
 
 # Commands
 bind-key 4-Escape slock
