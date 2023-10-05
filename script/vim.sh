@@ -43,10 +43,12 @@ extension_update() {
 }
 
 extension_install() {
-  $EDITOR '+CocInstall -sync coc-snippets' +qa
-  $EDITOR '+CocInstall -sync coc-tsserver' +qa
-  $EDITOR '+CocInstall -sync coc-solargraph' +qa
-  $EDITOR '+CocInstall -sync coc-json' +qa
+  $EDITOR '+CocInstall -sync coc-snippets' +qa      # Various snippets
+  $EDITOR '+CocInstall -sync coc-tsserver' +qa      # TS
+  $EDITOR '+CocInstall -sync coc-solargraph' +qa    # Ruby
+  $EDITOR '+CocInstall -sync coc-json' +qa          # JSON
+  $EDITOR '+CocInstall -sync coc-rust-analyzer' +qa # Rust
+
   say "extension_install: done."
 }
 
