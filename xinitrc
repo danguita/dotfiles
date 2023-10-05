@@ -1,9 +1,6 @@
 # Load X configuration
 xrdb -merge "$HOME/.Xresources"
 
-# Set background
-xsetroot -solid black
-
 # Set up input devices
 "$HOME/bin/set-input-devices"
 
