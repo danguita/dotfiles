@@ -6,7 +6,7 @@
 Xft.dpi: 120
 
 ! xterm
-xterm.vt100.faceName: monospace:size=12
+xterm.vt100.faceName: monospace:size=13:antialias=true:autohint=true
 xterm.vt100.eightBitInput: false
 xterm.vt100.reverseVideo: true
 xterm.vt100.printerCommand: select-url
