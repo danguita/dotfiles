@@ -1,4 +1,4 @@
 configuration {
-  modes: "window,drun,run,ssh";
-  font: "monospace 14";
+  modes: "window,drun,run";
+  font: "monospace bold 16";
 }
