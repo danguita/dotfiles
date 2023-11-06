@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+j4-dmenu-desktop --dmenu="dmenu -i -fn monospace:size=12"

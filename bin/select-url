@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Extracts unique URIs from the stdin and pipes them to be displayed in a rofi
+# Extracts unique URIs from the stdin and pipes them to be displayed in a
 # dialog.
 #
 # It is intended to be executed from a terminal emulator.
@@ -9,5 +9,5 @@
 
 grep -Eo '\bhttps?://\S+\b' |
     uniq |
-    rofi -dmenu -i -p "Open URL" -auto-select |
+    dmenu -fn monospace:size=12 -i -p "Open URL:" |
     xargs xdg-open
