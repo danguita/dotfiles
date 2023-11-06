@@ -38,8 +38,6 @@ ignore dunst
 # Remove all default keybindings
 unbind-key all
 
-# Open terminal
-bind-key 4S-Return terminal
 
 # Cycle through windows
 bind-key M-Tab window-cycle
@@ -124,12 +122,18 @@ bind-mouse 4-3 window-resize
 bind-mouse 4-2 window-lower
 bind-mouse 4S-2 window-hide
 
+# Commands.
+bind-key 4S-Return terminal
 # Commands
 bind-key 4-Escape slock
 bind-key 4S-p "rofi -show combi -modes combi -combi-modes \"window,drun,run\""
 bind-key 4S-b xdg-open 'https://'
 bind-key 4S-n pcmanfm
-bind-key 4-e emoji-selector
+bind-key 4S-b xdg-open 'https://'
+bind-key 4S-p "rofi -show combi -modes combi -combi-modes \"drun,run\""
+bind-key 4S-e emoji-selector
+bind-key 4S-i set-input-devices
+bind-key 4-Escape slock
 
 # Screen brightness controls.
 bind-key XF86MonBrightnessUp "xbacklight -ctrl intel_backlight -inc 10"
