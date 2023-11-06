@@ -1,30 +1,30 @@
 # cwm config file
 
-# Automatically add new windows to the current group
+# Automatically add new windows to the current group.
 sticky yes
 
-# Default font
+# Font.
 fontname "monospace:pixelsize=18"
 
-# Appearance
+# Appearance.
 borderwidth 1
 color activeborder "#5294E2"
 color inactiveborder "#565656"
 color urgencyborder "#cc241d"
 
-# Menu colors
+# Colors.
 color font "#eeeeee"
 color selfont "#eeeeee"
 color menubg "#161616"
 color menufg "#5294E2"
 
-# Gaps
+# Gaps.
 gap 24 0 0 0
 
-# How many pixels a window gets moved by
+# How many pixels a window gets moved by.
 moveamount 5
 
-# Ignore, and do not warp to, windows with these names
+# Ignore, and do not warp to, windows with these names.
 ignore polybar
 ignore dunst
 
@@ -35,18 +35,21 @@ ignore dunst
 # C = control
 # M = meta (alt)
 
-# Remove all default keybindings
+# Remove all default keybindings.
 unbind-key all
 
+# Lower and raise windows.
+bind-key 4-j window-lower
+bind-key 4-k window-raise
 
-# Cycle through windows
+# Cycle through windows.
 bind-key M-Tab window-cycle
 bind-key MS-Tab window-rcycle
 
-# Go to last group
+# Go to last group.
 bind-key 4-Tab group-last
 
-# mod + $N = show only windows for group $N
+# mod + $N = show only windows for group $N.
 bind-key 4-1 group-only-1
 bind-key 4-2 group-only-2
 bind-key 4-3 group-only-3
@@ -57,7 +60,7 @@ bind-key 4-7 group-only-7
 bind-key 4-8 group-only-8
 bind-key 4-9 group-only-9
 
-# Toggle group n's visibility, without hiding active group
+# Toggle group n's visibility, without hiding active group.
 bind-key 4M-1 group-toggle-1
 bind-key 4M-2 group-toggle-2
 bind-key 4M-3 group-toggle-3
@@ -68,7 +71,7 @@ bind-key 4M-7 group-toggle-7
 bind-key 4M-8 group-toggle-8
 bind-key 4M-9 group-toggle-9
 
-# mod + shift + $N = move window to group $N
+# mod + shift + $N = move window to group $N.
 bind-key 4S-1 window-movetogroup-1
 bind-key 4S-2 window-movetogroup-2
 bind-key 4S-3 window-movetogroup-3
@@ -79,55 +82,46 @@ bind-key 4S-7 window-movetogroup-7
 bind-key 4S-8 window-movetogroup-8
 bind-key 4S-9 window-movetogroup-9
 
-# Window size
+# Window management.
 bind-key 4-f window-fullscreen
 bind-key 4-m window-maximize
-
-# Window stick (stick current window to all groups)
-bind-key 4S-s window-stick
-
-# Delete window
 bind-key 4-w window-delete
+bind-key 4-s window-stick
 
-# Snap windows
+# Snap windows.
 bind-key 4S-h window-snap-left
 bind-key 4S-j window-snap-down
 bind-key 4S-k window-snap-up
 bind-key 4S-l window-snap-right
 
-# Move windows
+# Move windows.
 bind-key MS-h window-move-left-big
 bind-key MS-j window-move-down-big
 bind-key MS-k window-move-up-big
 bind-key MS-l window-move-right-big
 
-# Window tiling
+# Window tiling.
 bind-key 4-v window-vtile
 bind-key 4S-v window-htile
 
-# Menus
+# Menus.
 bind-key 4-slash menu-window
 bind-key 4-g menu-group
 bind-key 4-d menu-cmd
 bind-key 4-question menu-exec
 bind-key 4-period menu-ssh
 
-# Restart and quit
+# Restart and quit.
 bind-key 4S-r restart
 bind-key 4S-q quit
 
-# Mouse bindings
+# Mouse bindings.
 bind-mouse 4-1 window-move
-bind-mouse 4-3 window-resize
 bind-mouse 4-2 window-lower
-bind-mouse 4S-2 window-hide
+bind-mouse 4-3 window-resize
 
 # Commands.
 bind-key 4S-Return terminal
-# Commands
-bind-key 4-Escape slock
-bind-key 4S-p "rofi -show combi -modes combi -combi-modes \"window,drun,run\""
-bind-key 4S-b xdg-open 'https://'
 bind-key 4S-n pcmanfm
 bind-key 4S-b xdg-open 'https://'
 bind-key 4S-p "rofi -show combi -modes combi -combi-modes \"drun,run\""
