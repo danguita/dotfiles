@@ -1,4 +1,0 @@
-configuration {
-  modes: "window,drun,run";
-  font: "monospace 14";
-}
