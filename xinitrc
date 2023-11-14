@@ -4,11 +4,17 @@ xrdb -merge "$HOME/.Xresources"
 # Set up input devices
 "$HOME/bin/set-input-devices"
 
+# Set background
+xsetroot -gray
+
+# Key bindings
+xbindkeys &
+
 # On-screen notifications
 dunst &
 
 # Status bar
-polybar &
+slstatus &
 
 # Window manager
-exec dbus-launch --exit-with-session cwm 2> ~/tmp/cwm.log
+exec dbus-launch --exit-with-session dwm 2> ~/tmp/dwm.log
