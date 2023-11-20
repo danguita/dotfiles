@@ -34,7 +34,6 @@ set shiftwidth=2
 set expandtab
 set list
 set backspace=indent,eol,start
-set cursorline
 set laststatus=2
 
 " Chars
