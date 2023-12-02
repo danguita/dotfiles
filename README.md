@@ -1,4 +1,4 @@
-# @danguita's dotfiles [![Build Status](https://travis-ci.org/danguita/dotfiles.svg?branch=master)](https://travis-ci.org/danguita/dotfiles)
+# @danguita's dotfiles ![Build Status](https://github.com/danguita/dotfiles/actions/workflows/main.yml/badge.svg)
 
 ## Overview
 
