@@ -53,22 +53,6 @@ set smartcase
 colorscheme default
 set background=dark
 
-" Ignorelist
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/tmp/*
-set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
-set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
-set wildignore+=*.swp,*~,._*
-set wildignore+=*/deps/*,*/node_modules/*,*/_build/*
-
-" Filetypes
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,Guardfile,config.ru,*.rake} set filetype=ruby
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=markdown
-au BufRead,BufNewFile *.jsx set filetype=javascript.jsx
-
-au FileType make setlocal noexpandtab
-au FileType markdown setlocal linebreak textwidth=72 nolist
-au FileType python setlocal tabstop=4 shiftwidth=4
-
 " Backup
 set nobackup
 
