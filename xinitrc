@@ -5,7 +5,7 @@ xrdb -merge "$HOME/.Xresources"
 "$HOME/bin/set-input-devices"
 
 # Set background
-xsetroot -gray
+xsetroot -solid black
 
 # Key bindings
 xbindkeys &
