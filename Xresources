@@ -3,10 +3,10 @@
 ! 125%: 96*1.25 = 120
 ! 150%: 96*1.5  = 144
 ! 200%: 96*2.0  = 192
-Xft.dpi: 120
+Xft.dpi: 144
 
 ! xterm
-xterm.vt100.faceName: monospace:size=12:antialias=true:autohint=true
+xterm.vt100.faceName: monospace:size=10:antialias=true:autohint=true
 xterm.vt100.eightBitInput: false
 xterm.vt100.reverseVideo: true
 xterm.vt100.printerCommand: select-url
