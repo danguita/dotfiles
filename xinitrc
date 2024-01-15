@@ -10,6 +10,9 @@ xsetroot -solid black
 # Key bindings
 xbindkeys &
 
+# Battery monitor
+batsignal &
+
 # On-screen notifications
 dunst &
 
