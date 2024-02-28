@@ -47,4 +47,4 @@ alias serve="python -m http.server"
 alias xclip="xclip -selection c"
 
 # Vim
-alias vim="vim-x11"
+alias vim="nvim"
