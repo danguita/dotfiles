@@ -173,3 +173,11 @@ let g:ale_linters = { 'javascript': ['eslint'], 'typescript': ['eslint'], 'types
 let g:ale_fixers = { 'javascript': ['prettier'], 'typescript': ['prettier'], 'typescriptreact': ['prettier'], 'ruby': ['rubocop'], 'elixir': ['mix_format'], 'haskell': ['hlint'], 'rust': ['rustfmt'] }
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_ruby_rubocop_executable = 'bin/rubocop'
+
+" CoC
+" Use <c-space> to trigger completion: >
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
