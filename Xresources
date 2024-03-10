@@ -3,7 +3,7 @@
 ! 125%: 96*1.25 = 120
 ! 150%: 96*1.5  = 144
 ! 200%: 96*2.0  = 192
-Xft.dpi: 144
+Xft.dpi: 120
 
 ! xterm
 xterm.vt100.faceName: monospace:size=10:antialias=true:autohint=true
