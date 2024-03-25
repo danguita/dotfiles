@@ -15,7 +15,7 @@ case "$1" in
     fi
     ;;
   "")
-    bash $0 list | dmenu -i -fn monospace:size=10 -p 'Emoji: ' | bash $0 copy
+    bash $0 list | dmenu -i -fn "monospace:size=10:antialias=false" -p 'Emoji: ' | bash $0 copy
     ;;
 esac
 
