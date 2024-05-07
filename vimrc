@@ -171,14 +171,6 @@ let g:ale_fixers = { 'javascript': ['prettier'], 'typescript': ['prettier'], 'ty
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_ruby_rubocop_executable = 'bin/rubocop'
 
-" CoC
-" Use <c-space> to trigger completion: >
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
 " NERDTree
 " ignore list
 let NERDTreeIgnore=['node_modules']
