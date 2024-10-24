@@ -9,5 +9,5 @@
 
 grep -Eo '\bhttps?://\S+\b' |
     uniq |
-    dmenu -fn "monospace:size=10:antialias=false" -i -p "Open URL:" |
+    dmenu -fn "monospace:size=12:antialias=false" -i -p "Open URL:" |
     xargs xdg-open
