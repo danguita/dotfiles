@@ -140,19 +140,11 @@ nmap <Leader>gp :Git push<CR>
 " format the entire file
 nnoremap <leader>fef :normal! gg=G``<CR>
 
-" Map the arrow keys to be based on display lines, not physical lines
-map <Down> gj
-map <Up> gk
-
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
 nmap <C-k> [e
 nmap <C-j> ]e
 
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
 vmap <C-k> [egv
 vmap <C-j> ]egv
 
