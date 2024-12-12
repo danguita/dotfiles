@@ -21,6 +21,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+" avante.nvim
+Plug 'stevearc/dressing.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+
 " Add plugins to &runtimepath
 call plug#end()
 
