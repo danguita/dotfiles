@@ -56,10 +56,8 @@ set smartcase
 
 " Colors
 colorscheme default
-if has('nvim')
-  colorscheme vim
-endif
 set background=dark
+set termguicolors
 
 " Backup
 set nobackup
