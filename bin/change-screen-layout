@@ -66,7 +66,7 @@ case $MODE in
     COMMAND=(
       xrandr \
         --output "$INTERN" --auto \
-        --output "$EXTERN" --primary --auto --above "$INTERN" \
+        --output "$EXTERN" --primary --auto --above "$INTERN" --mode 2560x1440 --rate 120 \
         --set audio off
     )
     ;;
@@ -74,7 +74,7 @@ case $MODE in
     COMMAND=(
       xrandr \
         --output "$INTERN" --off \
-        --output "$EXTERN" --auto \
+        --output "$EXTERN" --auto --mode 2560x1440 --rate 120 \
         --set audio off
       )
     ;;
