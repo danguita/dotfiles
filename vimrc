@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter', { 'on':  '<plug>NERDCommenterToggle' }
 Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
