@@ -21,13 +21,11 @@ dotfiles-clean: ## Remove symlinks.
 
 .PHONY: vim-install
 vim-install: ## Install plugin manager and plugins.
-	./script/vim.sh manager_install
 	./script/vim.sh plugin_install
 	./script/vim.sh extension_install
 
 .PHONY: vim-update
 vim-update: ## Update plugin manager and plugins.
-	./script/vim.sh manager_update
 	./script/vim.sh plugin_update
 	./script/vim.sh extension_update
 

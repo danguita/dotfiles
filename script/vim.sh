@@ -5,34 +5,17 @@ set -e
 VIM_FILES=${VIM_FILES:-$HOME/.vim}
 EDITOR=${EDITOR:-vim}
 
-vim_plug_src="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-
 say() {
   printf "[$(basename "$0")] %s\n" "$1"
 }
 
-manager_install() {
-  dest_file=$VIM_FILES/autoload/plug.vim
-  if [ -f "$dest_file" ]; then
-    say "error: already installed."
-  else
-    curl -fLo "$dest_file" --create-dirs "$vim_plug_src"
-    say "manager_install: done."
-  fi
-}
-
-manager_update() {
-  $EDITOR +PlugUpgrade +qa
-  say "manager_update: done."
-}
-
 plugin_install() {
-  $EDITOR +PlugInstall +qa
+  $EDITOR --headless "+Lazy! sync" +qa
   say "plugin_install: done."
 }
 
 plugin_update() {
-  $EDITOR +PlugUpdate +qa
+  $EDITOR --headless "+Lazy! update" +qa
   say "plugin_update: done."
 }
 
