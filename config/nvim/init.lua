@@ -40,12 +40,6 @@ require("lazy").setup({
 
   -- Language and Completion
   {'neoclide/coc.nvim', branch = 'release'},
-
-  -- Avante and Supporting Plugins
-  'stevearc/dressing.nvim',
-  'nvim-lua/plenary.nvim',
-  'MunifTanjim/nui.nvim',
-  {'yetone/avante.nvim', branch = 'main', build = 'make'},
 })
 
 -- Vim Settings
