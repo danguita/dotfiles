@@ -15,8 +15,9 @@
 ## Architecture
 
 - **Dotfiles manifest**: `MANIFEST` is the single source of truth for symlinks. Each line is `repo_path|symlink_path` relative to `$DOTFILES` and `$NS` (default `$HOME`). Managed by `script/dotfiles.sh`.
-- **Neovim** (`config/nvim/`): Primary editor config. Uses `lazy.nvim` for plugins and `coc.nvim` for LSP/completion.
-- **Legacy Vim** (`vimrc`): Uses `vim-plug`. The Makefile/scripts do *not* manage its plugins; run `:PlugInstall` manually in Vim if needed.
+- **Neovim** (`config/nvim/init.lua`): Primary editor config. Uses `lazy.nvim` for plugins and `coc.nvim` for LSP/completion. Sources `shared.vim` for all settings, keymaps, and plugin configuration.
+- **Legacy Vim** (`vimrc`): Uses `vim-plug`. Sources `~/.config/nvim/shared.vim` for all settings, keymaps, and plugin configuration. The Makefile/scripts do *not* manage its plugins; run `:PlugInstall` manually in Vim if needed.
+- **Shared config** (`config/nvim/shared.vim`): Single source of truth for editor settings, keymaps, and plugin configuration (`let g:...`) shared between Neovim and Vim. Do not put plugin manager code here.
 - **User scripts**: `bin/` contains standalone utility scripts.
 - **App configs**: `config/` holds configs for `dunst`, `fontconfig`, `gtk-3.0`, `nvim`, `ranger`.
 
