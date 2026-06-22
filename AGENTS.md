@@ -21,8 +21,13 @@
 - **User scripts**: `bin/` contains standalone utility scripts.
 - **App configs**: `config/` holds configs for `dunst`, `fontconfig`, `gtk-3.0`, `nvim`, `ranger`.
 
+## Conventions
+
+- **Commits**: Use `(scope) Description` style — e.g., `(vim)`, `(x11)`, `(doc)`.
+
 ## Toolchain quirks
 
 - **Neovim plugin management requires `EDITOR=nvim`**. `script/vim.sh` defaults `EDITOR` to `vim`, but the `Lazy!` and `Coc*` commands are Neovim-specific. The install/update targets will fail unless `EDITOR` resolves to Neovim (e.g., `EDITOR=nvim make install`).
+- **Vim plugin list parity**: Adding or removing a plugin requires updating both `vimrc` (vim-plug) and `config/nvim/init.lua` (lazy.nvim). `shared.vim` is for settings and config only — it does not declare plugins.
 - **Git submodules**: `tmux/plugins/tmux-resurrect` is a submodule. Clone with `--recurse-submodules`.
 - **Vim plugin script installs hardcoded `coc` extensions**: `coc-snippets`, `coc-tsserver`, `coc-solargraph`, `coc-json`, `coc-rust-analyzer` (see `script/vim.sh`).
