@@ -1,13 +1,15 @@
 [Default Applications]
-text/html=firefox.desktop
-x-scheme-handler/http=firefox.desktop
-x-scheme-handler/https=firefox.desktop
-x-scheme-handler/about=firefox.desktop
-x-scheme-handler/unknown=firefox.desktop
+text/html=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
 image/jpeg=feh.desktop
 image/png=feh.desktop
 image/svg+xml=feh.desktop
-image/gif=firefox.desktop
+image/gif=chromium.desktop
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop
 inode/directory=pcmanfm.desktop
+x-scheme-handler/webcal=chromium.desktop
+x-scheme-handler/lemonade=lemonade-desktop-handler.desktop
