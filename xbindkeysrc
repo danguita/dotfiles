@@ -33,7 +33,7 @@
    Mod4+Shift + Print
 
 # Application launcher.
-"dbus-launch dmenu-desktop"
+"dmenu-desktop"
    Mod4+Shift + p
 
 # Emoji selector.

@@ -11,13 +11,12 @@ xsetroot -solid black
 xbindkeys &
 
 # Battery monitor
-batsignal &
+#batsignal &
 
-# On-screen notifications
-dunst &
-
-# Status bar
-slstatus &
-
-# Window manager
-exec dbus-launch --exit-with-session dwm 2> ~/tmp/dwm.log
+# Window manager: run dunst and slstatus inside the D-Bus session so they
+# register on the correct bus and don't trigger extra autolaunch instances.
+exec dbus-launch --exit-with-session sh -c '
+  dunst &
+  slstatus &
+  exec dwm
+' 2> ~/tmp/dwm.log
