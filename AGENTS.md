@@ -9,8 +9,13 @@
 
 ## Verification
 
-- The only automated check is **ShellCheck** in CI (`.github/workflows/main.yml`):
-  - Run locally: `shellcheck -s bash script/*.sh`
+- **ShellCheck** runs in CI (`.github/workflows/main.yml`) and should be run locally on shell scripts:
+  - `shellcheck -s bash script/*.sh xinitrc`
+
+## Runtime
+
+- **Login manager**: `lemurs` on TTY, then `startx`.
+- **X11 D-Bus**: Arch uses `dbus-broker` via systemd. Do not wrap `dwm` with `dbus-launch` (it spawns a private bus). Source `/etc/X11/xinit/xinitrc.d/` so the systemd user session gets `DISPLAY`/`XAUTHORITY`. If needed, explicitly set `DBUS_SESSION_BUS_ADDRESS` to `unix:path=/run/user/$(id -u)/bus`.
 
 ## Architecture
 
