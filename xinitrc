@@ -4,15 +4,18 @@ xrdb -merge "$HOME/.Xresources"
 # Set up input devices
 "$HOME/bin/set-input-devices"
 
-# Use the systemd user session bus, overriding any stale dbus-launch address
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
-
-# Source system xinitrc.d scripts (exports DISPLAY/XAUTHORITY to systemd and D-Bus)
+# Source system xinitrc.d scripts if present (e.g. for DISPLAY/XAUTHORITY setup)
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"
  done
  unset f
+fi
+
+# Start D-Bus session bus on non-systemd systems (e.g. Void Linux)
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+    export DBUS_SESSION_BUS_ADDRESS
 fi
 
 # Set background
