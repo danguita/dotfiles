@@ -13,6 +13,7 @@ config/gtk-3.0|.config/gtk-3.0
 config/mimeapps.list|.config/mimeapps.list
 config/nvim|.config/nvim
 config/ranger|.config/ranger
+config/alacritty|.config/alacritty
 gemrc|.gemrc
 gitignore|.gitignore
 inputrc|.inputrc
