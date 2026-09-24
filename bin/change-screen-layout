@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-#
+set -e
+
 # Changes screen layout using xrandr.
 #
 # change-screen-layout \
 #   --mode={clone|dual|dual-vertical|external|external-dual|laptop|tv} \
 #   [--intern=eDP-1] \
-#   [--extern=HDMI1] \
-#   [--extern-a=DP1] \
-#   [--extern-b=HDMI1]
+#   [--extern=HDMI-1] \
+#   [--extern-a=DP-1] \
+#   [--extern-b=HDMI-1]
 
 INTERN=eDP-1
 EXTERN=HDMI-1
@@ -18,6 +19,8 @@ usage()
    printf "\tmode\t{clone|dual|dual-vertical|external|external-dual|laptop|tv}\n"
    printf "\tintern\tdefaults to %s\n" "$INTERN"
    printf "\textern\tdefaults to %s\n" "$EXTERN"
+   printf "\textern-a\tdefaults to %s\n" "$EXTERN_A"
+   printf "\textern-b\tdefaults to %s\n" "$EXTERN_B"
 }
 
 for i in "$@"
@@ -45,6 +48,12 @@ do
   esac
 done
 
+if [ -z "$MODE" ]; then
+  echo "ERROR: --mode is required"
+  usage
+  exit 1
+fi
+
 case $MODE in
   "clone")
     COMMAND=(
@@ -61,17 +70,19 @@ case $MODE in
       )
     ;;
   "dual-vertical")
+    # Hardcoded resolution 2560x1440 @ 120Hz for external display
     COMMAND=(
       xrandr \
         --output "$INTERN" --auto \
-        --output "$EXTERN" --primary --auto --above "$INTERN" --mode 2560x1440 --rate 120
+        --output "$EXTERN" --primary --auto --above "$INTERN" --mode 2560x1440 --rate 120 --set audio off
     )
     ;;
   "external")
+    # Hardcoded resolution 2560x1440 @ 120Hz for external display
     COMMAND=(
       xrandr \
         --output "$INTERN" --off \
-        --output "$EXTERN" --auto --mode 2560x1440 --rate 120
+        --output "$EXTERN" --auto --mode 2560x1440 --rate 120 --set audio off
       )
     ;;
   "external-dual")
