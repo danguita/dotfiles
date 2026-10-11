@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# Usage:
+#   - Install as a systemd sleep hook in /usr/lib/systemd/system-sleep/
+#     (receives "pre" or "post" as first argument)
+#   - Or run directly (no arguments) to suspend
+
+case $1 in
+  pre)
+    ;;
+  post)
+    # Nothing to do on resume
+    ;;
+  *)
+    systemctl suspend
+    ;;
+esac

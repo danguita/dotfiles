@@ -33,7 +33,7 @@
    Mod4+Shift + Print
 
 # Application launcher.
-"dmenu-desktop"
+"j4-dmenu-desktop"
    Mod4+Shift + p
 
 # Emoji selector.
@@ -52,9 +52,13 @@
 "set-input-devices"
    Mod4+Shift + r
 
+# Suspend (stops LM Studio first, which can block the kernel freezer).
+"suspend-safe"
+    XF86PowerOff
+
 # Lock the screen.
 "slock"
-   Mod4+Escape
+    Mod4+Escape
 
 # Mouse movement.
 "xdotool mousemove_relative --sync -- 0 -10"
