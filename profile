@@ -24,3 +24,6 @@ fi
 if [ -d "$HOME/.cargo/bin" ] ; then
   PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/home/david/.lmstudio/bin"

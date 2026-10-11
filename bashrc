@@ -89,3 +89,6 @@ fi
 # Source fzf keybindings and completion features.
 [ -f /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
 [ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/home/david/.lmstudio/bin"
