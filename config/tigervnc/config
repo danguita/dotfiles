@@ -1,0 +1,7 @@
+## Default settings for VNC servers started by the vncserver service
+#
+# These settings are used by the `vncserver` wrapper script.  The
+# systemd user service (vncserver@.service) in this repo invokes
+# Xvnc directly, so geometry/depth are hardcoded there instead.
+#
+alwaysshared

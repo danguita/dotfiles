@@ -1,11 +1,11 @@
 .PHONY: install
-install: dotfiles-install vim-install ## Install dotfiles and vim configuration.
+install: dotfiles-install vim-install vnc-install ## Install dotfiles, vim, and vnc.
 
 .PHONY: update
 update: dotfiles-update vim-update ## Update dotfiles and vim configuration.
 
 .PHONY: clean
-clean: dotfiles-clean vim-clean ## Remove dotfiles and vim configuration.
+clean: dotfiles-clean vim-clean vnc-clean ## Remove dotfiles, vim, and vnc.
 
 .PHONY: dotfiles-install
 dotfiles-install: ## Create symlinks.
@@ -32,6 +32,14 @@ vim-update: ## Update plugin manager and plugins.
 .PHONY: vim-clean
 vim-clean: ## Remove plugin manager and plugins.
 	./script/vim.sh clean
+
+.PHONY: vnc-install
+vnc-install: ## Set up VNC password and enable user service.
+	./script/vnc.sh install
+
+.PHONY: vnc-clean
+vnc-clean: ## Stop and disable VNC user service.
+	./script/vnc.sh clean
 
 .PHONY: help
 help: ## This help.

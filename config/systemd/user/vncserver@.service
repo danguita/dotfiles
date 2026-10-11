@@ -1,0 +1,11 @@
+[Unit]
+Description=Remote desktop service (VNC) for display %i
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/xinit %h/.xinitrc -- /usr/bin/Xvnc %i -geometry 1920x1080 -depth 24 -PasswordFile %h/.config/tigervnc/passwd -SecurityTypes VncAuth,TLSVnc -desktop %H%i
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

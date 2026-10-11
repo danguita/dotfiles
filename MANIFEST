@@ -14,6 +14,8 @@ config/mimeapps.list|.config/mimeapps.list
 config/nvim|.config/nvim
 config/ranger|.config/ranger
 config/alacritty|.config/alacritty
+config/systemd/user/vncserver@.service|.config/systemd/user/vncserver@.service
+config/tigervnc/config|.config/tigervnc/config
 gemrc|.gemrc
 gitignore|.gitignore
 inputrc|.inputrc
